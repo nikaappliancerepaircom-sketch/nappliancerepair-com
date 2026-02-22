@@ -11,3 +11,4 @@ fix-defer.js
 fix-remaining.js
 gen-sitemap.js
 inject-meta.js
+.vercel
