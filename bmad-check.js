@@ -31,9 +31,11 @@ const CHECKS = [
 
 let globalTotal = 0, globalPass = 0;
 
+const EXCLUDE = ['service-template.html', '404.html'];
+
 sites.forEach(({ dir, domain }) => {
   if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.html') && f !== 'service-template.html');
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.html') && !EXCLUDE.includes(f));
 
   let siteTotal = 0, sitePass = 0;
   const failsByCheck = {};

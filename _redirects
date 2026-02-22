@@ -1,0 +1,5 @@
+# Vercel handles www→apex redirect via domain settings
+# These are Netlify-style redirects (Vercel uses vercel.json)
+# Keeping for compatibility if ever migrated to Netlify
+
+https://www.nappliancerepair.com/* https://nappliancerepair.com/:splat 301!
