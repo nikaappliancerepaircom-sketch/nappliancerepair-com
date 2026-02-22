@@ -56,199 +56,199 @@
   "rewrites": [
     {
       "source": "/services/fridge-repair",
-      "destination": "/fridge-repair.html"
+      "destination": "/fridge-repair"
     },
     {
       "source": "/services/refrigerator-repair",
-      "destination": "/fridge-repair.html"
+      "destination": "/fridge-repair"
     },
     {
       "source": "/services/washer-repair",
-      "destination": "/washer-repair.html"
+      "destination": "/washer-repair"
     },
     {
       "source": "/services/dryer-repair",
-      "destination": "/dryer-repair.html"
+      "destination": "/dryer-repair"
     },
     {
       "source": "/services/dishwasher-repair",
-      "destination": "/dishwasher-repair.html"
+      "destination": "/dishwasher-repair"
     },
     {
       "source": "/services/oven-repair",
-      "destination": "/oven-repair.html"
+      "destination": "/oven-repair"
     },
     {
       "source": "/services/stove-repair",
-      "destination": "/stove-repair.html"
+      "destination": "/stove-repair"
     },
     {
       "source": "/services/freezer-repair",
-      "destination": "/fridge-repair.html"
+      "destination": "/fridge-repair"
     },
     {
       "source": "/services/microwave-repair",
-      "destination": "/oven-repair.html"
+      "destination": "/oven-repair"
     },
     {
       "source": "/brands/samsung",
-      "destination": "/samsung-repair.html"
+      "destination": "/samsung-repair"
     },
     {
       "source": "/brands/lg",
-      "destination": "/lg-repair.html"
+      "destination": "/lg-repair"
     },
     {
       "source": "/brands/whirlpool",
-      "destination": "/whirlpool-repair.html"
+      "destination": "/whirlpool-repair"
     },
     {
       "source": "/brands/ge",
-      "destination": "/ge-repair.html"
+      "destination": "/ge-repair"
     },
     {
       "source": "/brands/bosch",
-      "destination": "/bosch-repair.html"
+      "destination": "/bosch-repair"
     },
     {
       "source": "/brands/frigidaire",
-      "destination": "/frigidaire-repair.html"
+      "destination": "/frigidaire-repair"
     },
     {
       "source": "/brands/kenmore",
-      "destination": "/kenmore-repair.html"
+      "destination": "/kenmore-repair"
     },
     {
       "source": "/brands/maytag",
-      "destination": "/maytag-repair.html"
+      "destination": "/maytag-repair"
     },
     {
       "source": "/brands/kitchenaid",
-      "destination": "/kitchenaid-repair.html"
+      "destination": "/kitchenaid-repair"
     },
     {
       "source": "/locations/toronto",
-      "destination": "/toronto.html"
+      "destination": "/toronto"
     },
     {
       "source": "/locations/scarborough",
-      "destination": "/scarborough.html"
+      "destination": "/scarborough"
     },
     {
       "source": "/locations/north-york",
-      "destination": "/north-york.html"
+      "destination": "/north-york"
     },
     {
       "source": "/locations/etobicoke",
-      "destination": "/etobicoke.html"
+      "destination": "/etobicoke"
     },
     {
       "source": "/locations/mississauga",
-      "destination": "/mississauga.html"
+      "destination": "/mississauga"
     },
     {
       "source": "/locations/brampton",
-      "destination": "/brampton.html"
+      "destination": "/brampton"
     },
     {
       "source": "/locations/vaughan",
-      "destination": "/vaughan.html"
+      "destination": "/vaughan"
     },
     {
       "source": "/locations/richmond-hill",
-      "destination": "/richmond-hill.html"
+      "destination": "/richmond-hill"
     },
     {
       "source": "/locations/markham",
-      "destination": "/markham.html"
+      "destination": "/markham"
     },
     {
       "source": "/locations/oakville",
-      "destination": "/oakville.html"
+      "destination": "/oakville"
     },
     {
       "source": "/locations/burlington",
-      "destination": "/burlington.html"
+      "destination": "/burlington"
     },
     {
       "source": "/locations/pickering",
-      "destination": "/pickering.html"
+      "destination": "/pickering"
     },
     {
       "source": "/locations/ajax",
-      "destination": "/ajax.html"
+      "destination": "/ajax"
     },
     {
       "source": "/locations/whitby",
-      "destination": "/whitby.html"
+      "destination": "/whitby"
     },
     {
       "source": "/locations/oshawa",
-      "destination": "/oshawa.html"
+      "destination": "/oshawa"
     },
     {
       "source": "/areas/toronto",
-      "destination": "/toronto.html"
+      "destination": "/toronto"
     },
     {
       "source": "/areas/scarborough",
-      "destination": "/scarborough.html"
+      "destination": "/scarborough"
     },
     {
       "source": "/areas/north-york",
-      "destination": "/north-york.html"
+      "destination": "/north-york"
     },
     {
       "source": "/areas/etobicoke",
-      "destination": "/etobicoke.html"
+      "destination": "/etobicoke"
     },
     {
       "source": "/areas/mississauga",
-      "destination": "/mississauga.html"
+      "destination": "/mississauga"
     },
     {
       "source": "/areas/brampton",
-      "destination": "/brampton.html"
+      "destination": "/brampton"
     },
     {
       "source": "/areas/vaughan",
-      "destination": "/vaughan.html"
+      "destination": "/vaughan"
     },
     {
       "source": "/areas/richmond-hill",
-      "destination": "/richmond-hill.html"
+      "destination": "/richmond-hill"
     },
     {
       "source": "/areas/markham",
-      "destination": "/markham.html"
+      "destination": "/markham"
     },
     {
       "source": "/areas/oakville",
-      "destination": "/oakville.html"
+      "destination": "/oakville"
     },
     {
       "source": "/areas/burlington",
-      "destination": "/burlington.html"
+      "destination": "/burlington"
     },
     {
       "source": "/areas/pickering",
-      "destination": "/pickering.html"
+      "destination": "/pickering"
     },
     {
       "source": "/areas/ajax",
-      "destination": "/ajax.html"
+      "destination": "/ajax"
     },
     {
       "source": "/areas/whitby",
-      "destination": "/whitby.html"
+      "destination": "/whitby"
     },
     {
       "source": "/areas/oshawa",
-      "destination": "/oshawa.html"
+      "destination": "/oshawa"
     },
     {
       "source": "/blog",
-      "destination": "/blog/index.html"
+      "destination": "/blog/index"
     }
   ]
 }
