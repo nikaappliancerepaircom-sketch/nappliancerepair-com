@@ -3,29 +3,252 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/(.*)\\.(js|css|woff|woff2|ttf|eot|svg|png|jpg|jpeg|webp|ico)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/(.*)\\.html",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
       ]
     }
   ],
   "trailingSlash": false,
-  "cleanUrls": false,
+  "cleanUrls": true,
   "redirects": [
-    { "source": "/home", "destination": "/", "permanent": true }
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/services/fridge-repair",
+      "destination": "/fridge-repair.html"
+    },
+    {
+      "source": "/services/refrigerator-repair",
+      "destination": "/fridge-repair.html"
+    },
+    {
+      "source": "/services/washer-repair",
+      "destination": "/washer-repair.html"
+    },
+    {
+      "source": "/services/dryer-repair",
+      "destination": "/dryer-repair.html"
+    },
+    {
+      "source": "/services/dishwasher-repair",
+      "destination": "/dishwasher-repair.html"
+    },
+    {
+      "source": "/services/oven-repair",
+      "destination": "/oven-repair.html"
+    },
+    {
+      "source": "/services/stove-repair",
+      "destination": "/stove-repair.html"
+    },
+    {
+      "source": "/services/freezer-repair",
+      "destination": "/fridge-repair.html"
+    },
+    {
+      "source": "/services/microwave-repair",
+      "destination": "/oven-repair.html"
+    },
+    {
+      "source": "/brands/samsung",
+      "destination": "/samsung-repair.html"
+    },
+    {
+      "source": "/brands/lg",
+      "destination": "/lg-repair.html"
+    },
+    {
+      "source": "/brands/whirlpool",
+      "destination": "/whirlpool-repair.html"
+    },
+    {
+      "source": "/brands/ge",
+      "destination": "/ge-repair.html"
+    },
+    {
+      "source": "/brands/bosch",
+      "destination": "/bosch-repair.html"
+    },
+    {
+      "source": "/brands/frigidaire",
+      "destination": "/frigidaire-repair.html"
+    },
+    {
+      "source": "/brands/kenmore",
+      "destination": "/kenmore-repair.html"
+    },
+    {
+      "source": "/brands/maytag",
+      "destination": "/maytag-repair.html"
+    },
+    {
+      "source": "/brands/kitchenaid",
+      "destination": "/kitchenaid-repair.html"
+    },
+    {
+      "source": "/locations/toronto",
+      "destination": "/toronto.html"
+    },
+    {
+      "source": "/locations/scarborough",
+      "destination": "/scarborough.html"
+    },
+    {
+      "source": "/locations/north-york",
+      "destination": "/north-york.html"
+    },
+    {
+      "source": "/locations/etobicoke",
+      "destination": "/etobicoke.html"
+    },
+    {
+      "source": "/locations/mississauga",
+      "destination": "/mississauga.html"
+    },
+    {
+      "source": "/locations/brampton",
+      "destination": "/brampton.html"
+    },
+    {
+      "source": "/locations/vaughan",
+      "destination": "/vaughan.html"
+    },
+    {
+      "source": "/locations/richmond-hill",
+      "destination": "/richmond-hill.html"
+    },
+    {
+      "source": "/locations/markham",
+      "destination": "/markham.html"
+    },
+    {
+      "source": "/locations/oakville",
+      "destination": "/oakville.html"
+    },
+    {
+      "source": "/locations/burlington",
+      "destination": "/burlington.html"
+    },
+    {
+      "source": "/locations/pickering",
+      "destination": "/pickering.html"
+    },
+    {
+      "source": "/locations/ajax",
+      "destination": "/ajax.html"
+    },
+    {
+      "source": "/locations/whitby",
+      "destination": "/whitby.html"
+    },
+    {
+      "source": "/locations/oshawa",
+      "destination": "/oshawa.html"
+    },
+    {
+      "source": "/areas/toronto",
+      "destination": "/toronto.html"
+    },
+    {
+      "source": "/areas/scarborough",
+      "destination": "/scarborough.html"
+    },
+    {
+      "source": "/areas/north-york",
+      "destination": "/north-york.html"
+    },
+    {
+      "source": "/areas/etobicoke",
+      "destination": "/etobicoke.html"
+    },
+    {
+      "source": "/areas/mississauga",
+      "destination": "/mississauga.html"
+    },
+    {
+      "source": "/areas/brampton",
+      "destination": "/brampton.html"
+    },
+    {
+      "source": "/areas/vaughan",
+      "destination": "/vaughan.html"
+    },
+    {
+      "source": "/areas/richmond-hill",
+      "destination": "/richmond-hill.html"
+    },
+    {
+      "source": "/areas/markham",
+      "destination": "/markham.html"
+    },
+    {
+      "source": "/areas/oakville",
+      "destination": "/oakville.html"
+    },
+    {
+      "source": "/areas/burlington",
+      "destination": "/burlington.html"
+    },
+    {
+      "source": "/areas/pickering",
+      "destination": "/pickering.html"
+    },
+    {
+      "source": "/areas/ajax",
+      "destination": "/ajax.html"
+    },
+    {
+      "source": "/areas/whitby",
+      "destination": "/whitby.html"
+    },
+    {
+      "source": "/areas/oshawa",
+      "destination": "/oshawa.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    }
   ]
 }
