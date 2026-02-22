@@ -24,5 +24,8 @@
     }
   ],
   "trailingSlash": false,
-  "cleanUrls": false
+  "cleanUrls": false,
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true }
+  ]
 }
