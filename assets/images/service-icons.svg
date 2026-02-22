@@ -1,0 +1,30 @@
+<!-- Service Icons SVG Library -->
+<!-- Include this file or use individual icons as needed -->
+
+<!-- Refrigerator Icon -->
+<svg class="service-icon refrigerator-icon" viewBox="0 0 24 24" width="48" height="48">
+    <rect x="4" y="2" width="16" height="20" rx="2" fill="currentColor" opacity="0.1"/>
+    <rect x="4" y="2" width="16" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+    <line x1="4" y1="9" x2="20" y2="9" stroke="currentColor" stroke-width="2"/>
+    <line x1="8" y1="5" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="16" y1="13" x2="16" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+<!-- Washer Icon -->
+<svg class="service-icon washer-icon" viewBox="0 0 24 24" width="48" height="48">
+    <rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.1"/>
+    <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.2"/>
+    <circle cx="7" cy="7" r="1" fill="currentColor"/>
+    <circle cx="17" cy="7" r="1" fill="currentColor"/>
+</svg>
+
+<!-- Dryer Icon -->
+<svg class="service-icon dryer-icon" viewBox="0 0 24 24" width="48" height="48">
+    <rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor" opacity="0.1"/>
+    <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="12" cy="14" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 14 L14 12 L12 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="7" y1="7" x2="17" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
