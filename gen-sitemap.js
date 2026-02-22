@@ -34,8 +34,9 @@ sites.forEach(({ dir, domain }) => {
   if (!fs.existsSync(dir)) { console.log(name + ': NOT FOUND'); return; }
 
   // Get all HTML files recursively (root + blog/)
+  const exclude = ['service-template.html', '404.html'];
   let files = fs.readdirSync(dir)
-    .filter(f => f.endsWith('.html') && f !== 'service-template.html')
+    .filter(f => f.endsWith('.html') && !exclude.includes(f))
     .map(f => f);
 
   // Also check blog/ subfolder
@@ -48,7 +49,12 @@ sites.forEach(({ dir, domain }) => {
   }
 
   const urls = files.map(f => {
-    const url = domain + '/' + f;
+    // Clean URLs: strip .html, index.html → parent dir
+    let urlPath = f.replace(/\.html$/, '');
+    if (urlPath === 'index' || urlPath.endsWith('/index')) {
+      urlPath = urlPath.replace(/\/?index$/, '');
+    }
+    const url = domain + '/' + urlPath;
     const priority = getPriority(f);
     const changefreq = getChangefreq(f);
     return `  <url>
