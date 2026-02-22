@@ -1,0 +1,152 @@
+{
+  "toronto": {
+    "display": "Toronto",
+    "region": "GTA",
+    "angle": "dense urban mix of condos and older detached homes",
+    "homes": "1950s-70s detached homes and newer high-rise condos",
+    "water": "hard water from Lake Ontario accelerates mineral buildup in appliances",
+    "brands": "Samsung, LG, Whirlpool, GE, Bosch, and Miele are all common",
+    "landmarks": "the Annex, Leslieville, Junction Triangle, and Scarborough Junction",
+    "tip": "Toronto condo residents: our team calls ahead and works within building service elevator windows to minimize disruption."
+  },
+  "north-york": {
+    "display": "North York",
+    "region": "GTA",
+    "angle": "suburban mix of ranch-style bungalows and Yonge corridor high-rises",
+    "homes": "ranch-style bungalows from the 1960s-80s and mid-rise condos along Yonge-Sheppard",
+    "water": "moderately hard municipal water contributes to scale buildup over time",
+    "brands": "Whirlpool, GE, and Frigidaire in older homes; Samsung and LG in newer units",
+    "landmarks": "Willowdale, Don Mills, Bathurst Manor, and Victoria Village",
+    "tip": "Many North York homes have laundry rooms in the basement. Our technicians are equipped to work in tight utility spaces."
+  },
+  "etobicoke": {
+    "display": "Etobicoke",
+    "region": "GTA West",
+    "angle": "family-oriented neighbourhood with a strong stock of 1950s-60s post-war bungalows",
+    "homes": "post-war bungalows and semi-detached homes from the 1950s-60s in Mimico, Long Branch, and Bloor West Village",
+    "water": "Lake Ontario-sourced water with moderate hardness levels",
+    "brands": "Whirlpool, Maytag, and GE are most common; many households have run the same brand for decades",
+    "landmarks": "Humber Bay Shores, Rexdale, Mimico, and Islington Village",
+    "tip": "If your bungalow has a stacked washer-dryer unit in a closet, let us know when booking. Our technicians carry tools to safely pull units from tight spaces."
+  },
+  "scarborough": {
+    "display": "Scarborough",
+    "region": "East Toronto",
+    "angle": "vibrant diverse community with a mix of bungalows, semis, and high-rise apartment towers",
+    "homes": "bungalows and semi-detached homes from the 1960s-80s alongside high-rise towers near Rouge Valley",
+    "water": "hard tap water from Lake Ontario, consistent with the rest of Toronto",
+    "brands": "Samsung and LG are very popular; Whirlpool and Frigidaire also common in older homes",
+    "landmarks": "Agincourt, West Hill, Malvern, and Guildwood",
+    "tip": "Households using front-load washers at high temperatures see accelerated door gasket and bearing wear. Running a monthly drum-clean cycle makes a measurable difference in machine lifespan."
+  },
+  "mississauga": {
+    "display": "Mississauga",
+    "region": "Peel Region",
+    "angle": "sprawling suburb with newer large-format construction and a growing Square One condo corridor",
+    "homes": "large detached homes from the 1980s-2000s and a growing number of Square One-area condos",
+    "water": "treated Lake Ontario water, relatively soft compared to well-water municipalities",
+    "brands": "Samsung and LG dominate newer homes; Bosch and KitchenAid popular in upscale Mineola and Port Credit",
+    "landmarks": "Port Credit, Meadowvale, Streetsville, and the City Centre",
+    "tip": "Many Mississauga homeowners purchased matching appliance suites in the late 2000s. If one unit is failing, others in the same age group may not be far behind."
+  },
+  "brampton": {
+    "display": "Brampton",
+    "region": "Peel Region",
+    "angle": "one of the fastest-growing cities in Canada with a large stock of newer homes and young families",
+    "homes": "newer detached and semi-detached homes from the 2000s-2010s in growing subdivisions",
+    "water": "treated municipal water from Credit Valley Conservation, moderately soft",
+    "brands": "Samsung, LG, and Whirlpool are dominant; many households received full appliance packages with new home builds",
+    "landmarks": "Bramalea, Mount Pleasant, Fletchers Creek, and Castlemore",
+    "tip": "Front-load washers running daily with full loads wear out drum bearings faster. If your washer makes a grinding sound during spin, that is typically the drum bearing — repair it promptly to avoid a complete failure."
+  },
+  "vaughan": {
+    "display": "Vaughan",
+    "region": "York Region",
+    "angle": "upscale York Region suburb with large custom homes and a high concentration of premium appliances",
+    "homes": "large custom and semi-custom homes from the 1990s-2000s in Woodbridge, Maple, and Kleinburg",
+    "water": "York Region municipal water with low-to-moderate hardness",
+    "brands": "Miele, Bosch, Wolf, Sub-Zero, and Thermador are all common alongside Samsung and LG",
+    "landmarks": "Woodbridge, Maple, Kleinburg, and Concord",
+    "tip": "Premium appliances in Vaughan are often worth repairing even when the quote seems high. A Miele washer or Wolf range can last 20+ years with proper service."
+  },
+  "markham": {
+    "display": "Markham",
+    "region": "York Region",
+    "angle": "tech corridor city with newer subdivisions and a tech-comfortable homeowner base",
+    "homes": "newer subdivisions from the 1990s-2010s with significant concentration in Cornell and Unionville",
+    "water": "York Region municipal supply, treated and low-to-moderate hardness",
+    "brands": "Samsung and LG are the most popular brands in Markham; Bosch is also common in newer builds",
+    "landmarks": "Unionville, Cornell, Milliken, and Cathedraltown",
+    "tip": "If your smart fridge or washer is showing a connectivity error, always try a 60-second power reset first. If the error returns, it is a hardware issue that needs a technician."
+  },
+  "richmond-hill": {
+    "display": "Richmond Hill",
+    "region": "York Region",
+    "angle": "affluent York Region suburb with a mix of heritage Mill Pond homes and newer construction",
+    "homes": "1970s-80s established homes near Mill Pond and newer subdivisions in Oak Ridges and Jefferson",
+    "water": "York Region water with low hardness, generally gentle on appliances",
+    "brands": "Whirlpool and GE common in older homes; Bosch, Samsung, and LG in newer builds",
+    "landmarks": "Mill Pond, Oak Ridges, Bayview Hill, and Langstaff",
+    "tip": "Homeowners with older Whirlpool or GE appliances from the 1990s are well positioned for repair. Parts availability for those models is excellent. Do not replace a unit that still has service life remaining."
+  },
+  "ajax": {
+    "display": "Ajax",
+    "region": "Durham Region",
+    "angle": "growing commuter town with a practical mix of 1980s-2000s family homes",
+    "homes": "1980s-2000s subdivisions with ongoing new construction in the north end",
+    "water": "Durham Region water supply, treated and moderate hardness",
+    "brands": "Whirlpool, Maytag, and GE are the mainstays; Samsung and LG growing in newer builds",
+    "landmarks": "Westney Heights, Salem Road, and the lakefront communities",
+    "tip": "Ajax is close to Lake Ontario and seasonal humidity is real. Check periodically for rust on drum interiors and the underside of the washer tub in basement laundry rooms."
+  },
+  "whitby": {
+    "display": "Whitby",
+    "region": "Durham Region",
+    "angle": "fast-growing Durham suburb with newer subdivisions and active young families",
+    "homes": "newer subdivisions from the 1990s-2000s throughout Port Whitby, Pringle Creek, and Williamsburg",
+    "water": "Durham Region treated municipal water, moderate hardness",
+    "brands": "Whirlpool, Samsung, and LG are most common; many homes have builder-grade appliances still in service",
+    "landmarks": "Port Whitby, Williamsburg, Pringle Creek, and Brooklin",
+    "tip": "If your builder-grade appliances are approaching 10 years old, a professional assessment is worthwhile. Many compressors and control boards can be refreshed for a fraction of replacement cost."
+  },
+  "oakville": {
+    "display": "Oakville",
+    "region": "Halton Region",
+    "angle": "affluent lakeside town with upscale homes and the highest concentration of premium appliances in the GTA",
+    "homes": "upscale detached homes from older Bronte and Old Oakville heritage properties to newer Glen Abbey and Preserve builds",
+    "water": "Halton Region water with low hardness, among the softest municipal supply in the GTA",
+    "brands": "Miele, Bosch, Wolf, Sub-Zero, Fisher and Paykel, and Thermador are all common in Oakville",
+    "landmarks": "Old Oakville, Glen Abbey, Bronte, and the Preserve",
+    "tip": "Never let an unfamiliar technician attempt to repair a Miele or Sub-Zero without confirming brand familiarity first. These appliances have proprietary diagnostic systems and unauthorized repairs can void warranty coverage."
+  },
+  "burlington": {
+    "display": "Burlington",
+    "region": "Halton Region",
+    "angle": "lakeside city with a blend of older Aldershot homes and newer Tyandaga and Headon builds",
+    "homes": "older bungalows and split-levels from the 1950s-70s in Aldershot alongside newer 1990s-2000s homes in Tyandaga and Headon Forest",
+    "water": "Halton Region treated water with low hardness, easier on appliances than the GTA average",
+    "brands": "older Aldershot homes have Whirlpool and Maytag; newer west Burlington neighbourhoods lean toward Samsung, LG, and Bosch",
+    "landmarks": "Aldershot, Tyandaga, the waterfront, and Millcroft",
+    "tip": "Burlington homeowners near Lake Ontario experience more humidity than inland GTA cities. This accelerates refrigerator seal degradation and promotes mold in front-load washer door gaskets. Leaving the washer door ajar between uses helps significantly."
+  },
+  "pickering": {
+    "display": "Pickering",
+    "region": "Durham Region",
+    "angle": "established Durham city with a mix of 1970s-80s west-end homes and newer east-end subdivisions",
+    "homes": "established 1970s-80s subdivisions near the old town and Brock Road alongside newer 2000s developments in Duffin Heights and Seaton",
+    "water": "Durham Region municipal supply with moderate hardness",
+    "brands": "GE, Whirlpool, and Frigidaire common in older west-end homes; Samsung and LG in newer Duffin Heights builds",
+    "landmarks": "Dunbarton, Duffin Heights, the Pickering Town Centre area, and Seaton",
+    "tip": "Pickering waterfront properties experience significant seasonal humidity swings. Condensation inside your refrigerator or excessive frost buildup is often a door seal issue — inexpensive to fix."
+  },
+  "oshawa": {
+    "display": "Oshawa",
+    "region": "Durham Region",
+    "angle": "Durham Region largest city with working-class roots and a wide range of home ages from the downtown core to newer northern suburbs",
+    "homes": "older homes from the 1940s-70s near downtown alongside growing northern suburbs with 1990s-2000s construction in Kedron and Windfields",
+    "water": "Durham Region treated municipal water with moderate hardness",
+    "brands": "Whirlpool, Maytag, GE, and Frigidaire dominate the older downtown stock; Samsung and LG are growing in the north end",
+    "landmarks": "the downtown core, Kedron, Farewell, and Windfields",
+    "tip": "If you have had the same washer or dryer for 15+ years and it is acting up, get a diagnosis before replacing. Many 1990s and early 2000s machines were built to last and a bearing replacement or pump swap can add years of service."
+  }
+}
