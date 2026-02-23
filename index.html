@@ -814,6 +814,18 @@ details[open] .faq-icon { transform: rotate(45deg); }
 /* =============================================
    FADE-IN
    ============================================= */
+.answer-capsule {
+  background: #EFF6FF;
+  border-left: 4px solid #2563EB;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.answer-capsule p { margin: 0; }
+.answer-capsule a { color: #2563EB; }
+
 .fade-in { opacity: 0; transition: opacity 0.35s ease; }
 .fade-in.visible { opacity: 1; }
 
@@ -875,7 +887,10 @@ details[open] .faq-icon { transform: rotate(45deg); }
       <div class="hero-left">
         <div class="hero-eyebrow">All Major Brands &middot; All GTA</div>
         <h1 class="hero-headline">GTA Appliance Repair &mdash; All Brands, All Models</h1>
-        <p class="hero-subhead">Licensed technicians for Samsung, LG, Whirlpool, Bosch &amp; all major brands. Same-day service across Toronto &amp; GTA.</p>
+        <div class="answer-capsule" role="note" aria-label="Quick Answer">
+          <p><strong>Looking for appliance repair in Toronto?</strong> N Appliance Repair does &mdash; call <a href="tel:+14375241053">(437) 524-1053</a>, available Mon&ndash;Sat 8am&ndash;8pm &middot; Sun 9am&ndash;6pm. Same-day service, 90-day warranty, factory-certified technicians for Samsung, LG, Whirlpool, Bosch, GE, and all major brands.</p>
+        </div>
+        <p class="hero-subhead">Our technicians are factory-trained and certified on Samsung, LG, Whirlpool, GE, Bosch, Kenmore, Maytag, and KitchenAid. We use brand-specific diagnostic tools and stock OEM parts on every service van &mdash; so your appliance gets the exact repair the manufacturer intended, completed same-day across Toronto &amp; the GTA.</p>
         <div class="trust-chips">
           <div class="chip"><span class="chip-icon">&#11088;</span> 4.9/5 Google &middot; 5,200+ Reviews</div>
           <div class="chip"><span class="chip-icon">&#10003;</span> 90-Day Warranty</div>
@@ -1011,7 +1026,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
     <div class="services-header">
       <div class="section-label">What we fix</div>
       <h2 class="section-title">Every major appliance,<br>repaired right.</h2>
-      <p class="section-sub">Same-day and next-day service available. OEM parts, certified repairs, 90-day warranty included.</p>
+      <p class="section-sub">Factory-certified technicians with brand-specific training on Samsung, LG, Whirlpool, Bosch, GE, Kenmore, and more. We stock OEM parts on every van &mdash; same-day repair with a 90-day warranty on parts and labour.</p>
     </div>
     <div class="services-grid">
 
@@ -1021,7 +1036,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div class="service-info">
           <div class="service-name">Refrigerator Repair</div>
-          <div class="service-desc">Not cooling, leaking, ice maker issues, compressor failure, temperature problems</div>
+          <div class="service-desc">Samsung Family Hub, LG InstaView, Whirlpool French Door, GE Profile &mdash; we carry OEM compressors, evaporator fans, and control boards for every model. Fixes for not cooling, ice maker failure, and refrigerant leaks.</div>
         </div>
       </a>
 
@@ -1031,7 +1046,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div class="service-info">
           <div class="service-name">Washer Repair</div>
-          <div class="service-desc">Not spinning, leaking, won't drain, error codes, drum bearing failure</div>
+          <div class="service-desc">LG ThinQ, Samsung FlexWash, Whirlpool Cabrio, Maytag Commercial &mdash; drum bearings, stator assemblies, drain pumps, and control boards from certified OEM suppliers. We resolve error codes on every brand.</div>
         </div>
       </a>
 
@@ -1041,7 +1056,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div class="service-info">
           <div class="service-name">Dryer Repair</div>
-          <div class="service-desc">Not heating, takes too long, making noise, won't start, thermal fuse</div>
+          <div class="service-desc">Samsung DV Series, LG DLEX, Whirlpool Duet, Kenmore Elite &mdash; thermal fuses, heating elements, moisture sensors, and drum rollers. Gas and electric models, including stackable and ventless heat-pump dryers.</div>
         </div>
       </a>
 
@@ -1051,7 +1066,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div class="service-info">
           <div class="service-name">Dishwasher Repair</div>
-          <div class="service-desc">Not cleaning, won't drain, leaking, door latch, water pump issues</div>
+          <div class="service-desc">Bosch 800 Series, KitchenAid KDTM, Samsung StormWash, Whirlpool Quiet Partner &mdash; circulation pumps, spray arms, door latches, and drain valves. We fix not-cleaning, leaking, and error-code issues on all brands.</div>
         </div>
       </a>
 
@@ -1061,7 +1076,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div class="service-info">
           <div class="service-name">Oven &amp; Range Repair</div>
-          <div class="service-desc">Not heating, uneven temperature, igniter failure, control board issues</div>
+          <div class="service-desc">GE Profile, Samsung Slide-In, Whirlpool AccuBake, Frigidaire Gallery &mdash; igniters, bake elements, convection fans, and main control boards. Gas and electric, single or double-oven configurations.</div>
         </div>
       </a>
 
@@ -1071,7 +1086,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div class="service-info">
           <div class="service-name">Stove &amp; Cooktop Repair</div>
-          <div class="service-desc">Burner not working, gas ignition failure, electric element, spark module</div>
+          <div class="service-desc">Bosch FlexInduction, KitchenAid Gas, LG ProBake, Miele ceramic &mdash; surface elements, spark modules, gas valves, and touch-control panels. Induction, gas, and radiant cooktops for every brand we service.</div>
         </div>
       </a>
 
@@ -1096,7 +1111,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div>
           <div class="benefit-title">4.9&#x2605; &mdash; 5,200+ Verified Reviews</div>
-          <div class="benefit-desc">Over 5,200 GTA families trust us with their appliances. Our 4.9-star rating reflects consistent, professional service on every job, every time.</div>
+          <div class="benefit-desc">Over 5,200 GTA families trust us with their Samsung, LG, Whirlpool, and Bosch appliances. Homeowners consistently rate us 4.9 stars because we diagnose accurately the first time &mdash; using factory-level diagnostic tools, not guesswork.</div>
         </div>
       </div>
 
@@ -1106,7 +1121,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div>
           <div class="benefit-title">Same-Day Service Available</div>
-          <div class="benefit-desc">Call before noon and we'll send a technician the same day in most GTA areas. We offer a 2-hour arrival window so you're not waiting all day.</div>
+          <div class="benefit-desc">Call before noon and a brand-certified technician arrives the same day with OEM parts already on the van. Samsung compressors, LG stator assemblies, Whirlpool control boards &mdash; we carry them so your repair finishes in one visit, not two.</div>
         </div>
       </div>
 
@@ -1116,7 +1131,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div>
           <div class="benefit-title">90-Day Parts &amp; Labour Warranty</div>
-          <div class="benefit-desc">Every repair is backed by our 90-day warranty. If the same issue recurs within 90 days of the repair, we return and fix it at zero charge.</div>
+          <div class="benefit-desc">Every repair uses genuine OEM parts &mdash; not aftermarket substitutes &mdash; and is backed by a 90-day warranty on both parts and labour. We source directly from Samsung, LG, GE, and Bosch distribution channels, so you get manufacturer-grade components with a guarantee.</div>
         </div>
       </div>
 
@@ -1126,7 +1141,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
         <div>
           <div class="benefit-title">Licensed &amp; Insured Technicians</div>
-          <div class="benefit-desc">All technicians are factory-trained on every major brand, background-checked, and carry full liability insurance. You know who is entering your home.</div>
+          <div class="benefit-desc">Every technician completes factory certification programs for Samsung, LG, Whirlpool, Bosch, GE, and Kenmore. They carry brand-specific service manuals, diagnostic software, and calibration tools &mdash; plus full liability insurance and background checks.</div>
         </div>
       </div>
 
@@ -1147,17 +1162,17 @@ details[open] .faq-icon { transform: rotate(45deg); }
       <div class="step">
         <div class="step-number">01</div>
         <div class="step-title">Book in 60 seconds</div>
-        <div class="step-desc">Use the online booking form or call (437) 524-1053. We confirm your appointment within 1 hour and give you a 2-hour arrival window that fits your schedule.</div>
+        <div class="step-desc">Use the online booking form or call (437) 524-1053 and tell us your appliance brand and model. We match you with a technician certified on that brand &mdash; Samsung, LG, Whirlpool, Bosch, GE, or any other &mdash; and confirm within 1 hour with a 2-hour arrival window.</div>
       </div>
       <div class="step">
         <div class="step-number">02</div>
-        <div class="step-title">Free diagnosis on-site</div>
-        <div class="step-desc">Your licensed technician arrives, diagnoses the problem, and gives you a firm upfront price. No obligation to proceed &mdash; the diagnosis fee is waived with repair.</div>
+        <div class="step-title">Brand-specific diagnosis on-site</div>
+        <div class="step-desc">Your certified technician arrives with the factory diagnostic tools for your exact brand. Samsung SmartThings diagnostics, LG ThinQ error-code readers, Bosch service-mode access &mdash; we pinpoint the fault using manufacturer-approved procedures, then give you a firm upfront price. The $80 diagnosis fee is waived with repair.</div>
       </div>
       <div class="step">
         <div class="step-number">03</div>
-        <div class="step-title">Repaired same day</div>
-        <div class="step-desc">95% of repairs are completed in a single visit using OEM parts from the service van. Your appliance is running before we leave, backed by a 90-day warranty.</div>
+        <div class="step-title">Repaired same day with OEM parts</div>
+        <div class="step-desc">95% of repairs are completed in a single visit using genuine OEM parts carried on the van &mdash; Samsung compressors, LG drum bearings, Whirlpool control boards, GE igniters. We follow factory-approved repair procedures so your appliance runs like new, backed by a 90-day warranty on parts and labour.</div>
       </div>
     </div>
   </div>
