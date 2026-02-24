@@ -1,5 +1,5 @@
 /**
- * Google Indexing API — Fast submission for priority pages
+ * Google Indexing API — Fast submission for priority pages (~70 URLs/site)
  *
  * PREREQUISITES:
  * 1. DNS must be pointing to Vercel (A record: 76.76.21.21)
@@ -9,6 +9,7 @@
  *
  * Usage:
  *   GOOGLE_INDEXING_SA="$(cat service-account.json)" node fast-index.js
+ *   GOOGLE_INDEXING_SA="$(cat service-account.json)" node fast-index.js --site nar
  */
 
 const https = require('https');
@@ -18,63 +19,261 @@ const SITES = [
     domain: 'https://nappliancerepair.com',
     name: 'nappliancerepair',
     urls: [
+      // Homepage
       '/',
-      '/washing-machine-repair.html',
-      '/refrigerator-repair.html',
-      '/dryer-repair.html',
-      '/dishwasher-repair.html',
-      '/stove-repair.html',
-      '/near-me.html',
-      '/toronto.html',
-      '/emergency.html',
-      '/lg-appliance-repair.html',
-      '/samsung-appliance-repair.html',
-      '/bosch-appliance-repair.html',
-      '/about.html',
-      '/blog/fridge-not-cooling-fix.html',
-      '/blog/washer-wont-drain.html',
+      // Core service pages
+      '/fridge-repair',
+      '/washer-repair',
+      '/dryer-repair',
+      '/dishwasher-repair',
+      '/oven-repair',
+      '/stove-repair',
+      '/dishwasher-installation',
+      '/gas-appliance-repair',
+      '/gas-stove-repair',
+      '/gas-dryer-repair',
+      '/gas-oven-repair',
+      // City hub pages
+      '/toronto',
+      '/mississauga',
+      '/brampton',
+      '/scarborough',
+      '/north-york',
+      '/etobicoke',
+      '/markham',
+      '/richmond-hill',
+      '/vaughan',
+      '/oakville',
+      '/burlington',
+      '/ajax',
+      '/whitby',
+      '/pickering',
+      '/oshawa',
+      // Fridge repair × top cities
+      '/fridge-repair-mississauga',
+      '/fridge-repair-north-york',
+      '/fridge-repair-scarborough',
+      '/fridge-repair-vaughan',
+      '/fridge-repair-etobicoke-village',
+      // Washer repair × top cities
+      '/washer-repair-north-york',
+      '/washer-repair-scarborough',
+      '/washer-repair-etobicoke',
+      '/washer-repair-markham',
+      '/washer-repair-mississauga',
+      // Dryer repair × top cities
+      '/dryer-repair-toronto',
+      '/dryer-repair-mississauga',
+      '/dryer-repair-brampton',
+      '/dryer-repair-markham',
+      '/dryer-repair-east-york',
+      // Oven repair × top areas
+      '/oven-repair-toronto',
+      '/oven-repair-mississauga',
+      '/oven-repair-willowdale',
+      '/oven-repair-midtown',
+      '/oven-repair-the-annex',
+      // Dishwasher repair × top areas
+      '/dishwasher-repair-toronto',
+      '/dishwasher-repair-mississauga',
+      '/dishwasher-repair-midtown',
+      '/dishwasher-repair-scarborough-village',
+      '/dishwasher-repair-willowdale',
+      // Brand pages
+      '/lg-repair',
+      '/samsung-repair',
+      '/whirlpool-repair',
+      '/bosch-repair',
+      '/ge-repair',
+      '/miele-repair',
+      '/frigidaire-repair',
+      '/kenmore-repair',
+      '/kitchenaid-repair',
+      '/maytag-repair',
+      // Utility
+      '/about',
+      '/book',
+      '/blog/index',
+      // Top blog posts
+      '/blog/washer-wont-drain',
+      '/blog/dryer-not-heating',
+      '/blog/fridge-not-cooling-fix',
+      '/blog/whirlpool-washer-problems',
+      '/blog/whirlpool-washer-f21-error-code',
     ],
   },
   {
     domain: 'https://appliancerepairneary.com',
     name: 'appliancerepairneary',
     urls: [
+      // Homepage
       '/',
-      '/appliance-repair-near-me.html',
-      '/fridge-repair-near-me.html',
-      '/washer-repair-near-me.html',
-      '/dryer-repair-near-me.html',
-      '/dishwasher-repair-near-me.html',
-      '/stove-repair-near-me.html',
-      '/emergency-appliance-repair-near-me.html',
-      '/appliance-repair-toronto.html',
-      '/washer-not-draining-near-me.html',
-      '/fridge-not-cooling-near-me.html',
-      '/about.html',
-      '/blog/find-appliance-repair-near-me.html',
-      '/blog/same-day-repair-worth-it.html',
-      '/blog/appliance-repair-cost-gta-2026.html',
+      // Core near-me service pages
+      '/fridge-repair-near-me',
+      '/washer-repair-near-me',
+      '/dryer-repair-near-me',
+      '/dishwasher-repair-near-me',
+      '/oven-repair-near-me',
+      '/stove-repair-near-me',
+      // Symptom-based near-me pages
+      '/fridge-not-cooling-near-me',
+      '/dryer-not-heating-near-me',
+      '/dishwasher-not-draining-near-me',
+      '/freezer-not-working-near-me',
+      '/fridge-leaking-near-me',
+      '/washer-not-draining-near-me',
+      '/washer-making-noise-near-me',
+      '/washer-dryer-repair-near-me',
+      '/oven-not-heating-near-me',
+      // Fridge repair × top cities
+      '/fridge-repair-toronto',
+      '/fridge-repair-mississauga',
+      '/fridge-repair-brampton',
+      '/fridge-repair-scarborough',
+      '/fridge-repair-north-york',
+      // Washer repair × top cities
+      '/washer-repair-toronto',
+      '/washer-repair-mississauga',
+      '/washer-repair-brampton',
+      '/washer-repair-scarborough',
+      '/washer-repair-north-york',
+      // Dryer repair × top cities
+      '/dryer-repair-toronto',
+      '/dryer-repair-mississauga',
+      '/dryer-repair-brampton',
+      '/dryer-repair-scarborough',
+      '/dryer-repair-north-york',
+      // Oven repair × top cities
+      '/oven-repair-toronto',
+      '/oven-repair-mississauga',
+      '/oven-repair-brampton',
+      '/oven-repair-scarborough',
+      '/oven-repair-north-york',
+      // Dishwasher repair × top cities
+      '/dishwasher-repair-toronto',
+      '/dishwasher-repair-mississauga',
+      '/dishwasher-repair-brampton',
+      '/dishwasher-repair-scarborough',
+      '/dishwasher-repair-north-york',
+      // Brand pages
+      '/lg-repair',
+      '/samsung-repair',
+      '/whirlpool-repair',
+      '/bosch-repair',
+      '/ge-repair',
+      '/miele-repair',
+      '/frigidaire-repair',
+      '/kenmore-repair',
+      '/kitchenaid-repair',
+      '/maytag-repair',
+      // Gas pages
+      '/gas-appliance-repair',
+      '/gas-stove-repair',
+      '/gas-dryer-repair',
+      '/gas-oven-repair',
+      '/gas-appliance-repair-toronto',
+      '/gas-appliance-repair-mississauga',
+      '/gas-appliance-repair-scarborough',
+      '/gas-appliance-repair-north-york',
+      '/gas-appliance-repair-etobicoke',
+      '/gas-dryer-repair-toronto',
+      // Utility
+      '/about',
+      '/book',
+      '/areas',
+      '/blog/index',
+      // Top blog posts
+      '/blog/find-appliance-repair-near-me',
+      '/blog/same-day-repair-worth-it',
+      '/blog/appliance-repair-cost-gta-2026',
+      '/blog/dryer-not-heating-near-me',
+      '/blog/fridge-not-cooling-near-me',
     ],
   },
   {
     domain: 'https://fixlifyservices.com',
     name: 'fixlifyservices',
     urls: [
+      // Homepage
       '/',
-      '/appliance-repair-toronto.html',
-      '/fridge-repair-toronto.html',
-      '/washer-repair-toronto.html',
-      '/dryer-repair-toronto.html',
-      '/dishwasher-repair-toronto.html',
-      '/oven-repair-toronto.html',
-      '/emergency-appliance-repair-toronto.html',
-      '/samsung-appliance-repair.html',
-      '/lg-appliance-repair.html',
-      '/bosch-appliance-repair.html',
-      '/about.html',
-      '/blog/fridge-repair-cost-toronto-2026.html',
-      '/blog/online-appliance-repair-booking-guide.html',
-      '/blog/washer-repair-replace-calculator.html',
+      // Core service pages
+      '/fridge-repair',
+      '/washer-repair',
+      '/dryer-repair',
+      '/dishwasher-repair',
+      '/oven-repair',
+      '/stove-repair',
+      '/dishwasher-installation',
+      '/emergency',
+      '/appliance-repair-cost-toronto',
+      '/gas-appliance-repair',
+      // City hub pages
+      '/toronto',
+      '/mississauga',
+      '/brampton',
+      '/scarborough',
+      '/north-york',
+      '/etobicoke',
+      '/markham',
+      '/richmond-hill',
+      '/vaughan',
+      '/oakville',
+      '/burlington',
+      '/whitby',
+      '/pickering',
+      '/oshawa',
+      '/ajax',
+      // Fridge repair × top cities
+      '/fridge-repair-toronto',
+      '/fridge-repair-mississauga',
+      '/fridge-repair-brampton',
+      '/fridge-repair-scarborough',
+      '/fridge-repair-north-york',
+      // Washer repair × top cities
+      '/washer-repair-toronto',
+      '/washer-repair-mississauga',
+      '/washer-repair-brampton',
+      '/washer-repair-scarborough',
+      '/washer-repair-north-york',
+      // Dryer repair × top cities
+      '/dryer-repair-toronto',
+      '/dryer-repair-mississauga',
+      '/dryer-repair-brampton',
+      '/dryer-repair-scarborough',
+      '/dryer-repair-north-york',
+      // Oven repair × top cities
+      '/oven-repair-toronto',
+      '/oven-repair-mississauga',
+      '/oven-repair-brampton',
+      '/oven-repair-scarborough',
+      '/oven-repair-north-york',
+      // Dishwasher repair × top cities
+      '/dishwasher-repair-toronto',
+      '/dishwasher-repair-mississauga',
+      '/dishwasher-repair-brampton',
+      '/dishwasher-repair-scarborough',
+      '/dishwasher-repair-north-york',
+      // Brand pages
+      '/lg-repair',
+      '/samsung-repair',
+      '/whirlpool-repair',
+      '/bosch-appliance-repair',
+      '/ge-repair',
+      '/miele-repair',
+      '/frigidaire-repair',
+      '/kenmore-appliance-repair',
+      '/kitchenaid-repair',
+      '/maytag-repair',
+      // Utility
+      '/about',
+      '/book',
+      '/blog/index',
+      // Top blog posts
+      '/blog/fridge-repair-cost-toronto-2026',
+      '/blog/samsung-fridge-problems-toronto',
+      '/blog/oven-repair-cost-toronto',
+      '/blog/washer-repair-replace-calculator',
+      '/blog/online-appliance-repair-booking-guide',
     ],
   },
 ];
@@ -147,8 +346,12 @@ async function main() {
   if (!saJson) {
     console.error('ERROR: Set GOOGLE_INDEXING_SA env var with service account JSON');
     console.log('\nTo use: GOOGLE_INDEXING_SA="$(cat service-account.json)" node fast-index.js');
+    console.log('Filter to one site: GOOGLE_INDEXING_SA="..." node fast-index.js --site nar');
     process.exit(1);
   }
+
+  const args = process.argv.slice(2);
+  const siteFilter = args.includes('--site') ? args[args.indexOf('--site') + 1] : null;
 
   let token;
   try {
@@ -159,8 +362,12 @@ async function main() {
     process.exit(1);
   }
 
-  for (const site of SITES) {
-    console.log(`=== ${site.name} ===`);
+  const sitesToProcess = siteFilter
+    ? SITES.filter(s => s.name.includes(siteFilter))
+    : SITES;
+
+  for (const site of sitesToProcess) {
+    console.log(`=== ${site.name} (${site.urls.length} URLs) ===`);
     for (const path of site.urls) {
       const url = site.domain + path;
       const result = await submitUrl(token, url);

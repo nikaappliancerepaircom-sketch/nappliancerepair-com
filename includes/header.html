@@ -55,7 +55,7 @@
       </div>
 
       <!-- Hamburger -->
-      <button class="nar-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nar-mobile-menu">
+      <button class="nar-hamburger" onclick="narToggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nar-mobile-menu">
         <span class="nar-bar"></span>
         <span class="nar-bar"></span>
         <span class="nar-bar"></span>
@@ -343,35 +343,37 @@
 </style>
 
 <script>
-(function() {
+// Global toggle — called via onclick on the hamburger button
+function narToggleMenu() {
   var hamburger = document.querySelector('.nar-hamburger');
   var mobileMenu = document.getElementById('nar-mobile-menu');
   if (!hamburger || !mobileMenu) return;
+  var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', String(!isOpen));
+  if (isOpen) {
+    mobileMenu.setAttribute('hidden', '');
+  } else {
+    mobileMenu.removeAttribute('hidden');
+  }
+}
 
-  hamburger.addEventListener('click', function() {
-    var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', String(!isOpen));
-    if (isOpen) {
-      mobileMenu.setAttribute('hidden', '');
-    } else {
-      mobileMenu.removeAttribute('hidden');
-    }
-  });
-
-  // Dropdown keyboard support
+// Dropdown keyboard support + close menu on nav link click
+(function() {
   document.querySelectorAll('.nar-dropdown-toggle').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!expanded));
     });
   });
-
-  // Close mobile menu on link click
-  mobileMenu.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      mobileMenu.setAttribute('hidden', '');
-      hamburger.setAttribute('aria-expanded', 'false');
+  var mobileMenu = document.getElementById('nar-mobile-menu');
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.setAttribute('hidden', '');
+        var hamburger = document.querySelector('.nar-hamburger');
+        if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+      });
     });
-  });
+  }
 }());
 </script>

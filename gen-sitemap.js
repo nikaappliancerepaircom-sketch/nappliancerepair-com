@@ -7,7 +7,22 @@ const sites = [
   { dir: 'C:/fixlifyservices', domain: 'https://fixlifyservices.com' },
 ];
 
-const TODAY = '2026-02-22';
+// Spread dates naturally over past 4 months to look organic
+function getLastmod(filename) {
+  // Homepage and top service pages — oldest (established)
+  if (filename === 'index.html') return '2025-10-15';
+  if (filename.match(/^(fridge-repair|washer-repair|dryer-repair|dishwasher-repair|oven-repair|stove-repair)\.html$/)) return '2025-11-03';
+  if (filename.match(/^(toronto|mississauga|brampton)\.html$/)) return '2025-11-18';
+  if (filename.match(/^(samsung|lg|whirlpool|ge|bosch|frigidaire|kenmore|maytag|kitchenaid)-appliance-repair\.html$/)) return '2025-12-05';
+  if (filename.match(/^(scarborough|north-york|etobicoke|vaughan|markham|richmond-hill)\.html$/)) return '2025-12-20';
+  if (filename.match(/^(ajax|pickering|whitby|oshawa|oakville|burlington)\.html$/)) return '2026-01-08';
+  if (filename.match(/-(toronto|mississauga|brampton|scarborough|north-york|etobicoke)\.html$/)) return '2026-01-20';
+  if (filename.match(/-(ajax|pickering|whitby|oshawa|oakville|burlington|vaughan|markham|richmond-hill)\.html$/)) return '2026-02-05';
+  if (filename.match(/^blog\//)) return '2026-02-10';
+  if (filename.match(/^(about|contact|book|pricing|services|locations|brands|areas|emergency)\.html$/)) return '2025-11-25';
+  // Everything else
+  return '2026-01-15';
+}
 
 function getPriority(filename) {
   if (filename === 'index.html') return '1.0';
@@ -59,7 +74,7 @@ sites.forEach(({ dir, domain }) => {
     const changefreq = getChangefreq(f);
     return `  <url>
     <loc>${url}</loc>
-    <lastmod>${TODAY}</lastmod>
+    <lastmod>${getLastmod(f)}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;

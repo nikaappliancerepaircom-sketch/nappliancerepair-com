@@ -1,0 +1,47 @@
+name: Daily Auto-Publish
+
+on:
+  schedule:
+    - cron: '0 15 * * *'  # 10:00 AM Toronto (EST) / 15:00 UTC
+  workflow_dispatch:       # Allow manual trigger
+
+jobs:
+  auto-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish next queued blog post
+        env:
+          GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
+        run: node publish-next.js
+
+      - name: Regenerate sitemap
+        run: node gen-sitemap-self.js
+
+      - name: Drip 2 URLs to Google Indexing API
+        env:
+          GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
+        run: node drip-index.js --count 2
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            PUBLISH_DATE=$(date -u '+%Y-%m-%d')
+            git commit -m "Auto-publish ${PUBLISH_DATE} — daily drip"
+            git push
+          fi

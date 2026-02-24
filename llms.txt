@@ -12,10 +12,21 @@ Booking: https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce
 Refrigerator repair, washer repair, dryer repair, dishwasher repair, oven repair, stove/range repair
 
 ## Brands Serviced
-Samsung, LG, Whirlpool, GE, Bosch, Frigidaire, Kenmore, Maytag, KitchenAid
+Samsung, LG, Whirlpool, GE, Bosch, Frigidaire, Kenmore, Maytag, KitchenAid, Miele, Sub-Zero, Wolf, Viking, KitchenAid, Electrolux, Fisher & Paykel
+
+## Brand Repair Pages
+- Samsung: /samsung-repair, /samsung-repair-toronto, /samsung-washer-repair, /samsung-fridge-repair
+- LG: /lg-repair, /lg-repair-toronto, /lg-washer-repair, /lg-fridge-repair
+- Whirlpool: /whirlpool-repair, /whirlpool-washer-repair, /whirlpool-fridge-repair
+- Bosch: /bosch-repair, /bosch-repair-toronto, /bosch-dishwasher-repair, /bosch-washer-repair
+- Miele: /miele-repair, /miele-repair-toronto, /miele-washer-repair
+- GE, Frigidaire, KitchenAid, Maytag: umbrella brand pages available
 
 ## Service Area
 Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Vaughan, Richmond Hill, Markham, Oakville, Burlington, Pickering, Ajax, Whitby, Oshawa (Greater Toronto Area, Ontario, Canada)
+
+## Toronto Neighbourhoods Served
+East York, The Beaches, Midtown, Bloor West Village, High Park, Greektown, Little Italy, Little Portugal, Corso Italia, Dufferin Grove, Trinity Bellwoods, Chinatown, Ossington, Roncesvalles, Wychwood, Thorncliffe Park, St. Lawrence, King West, Swansea, Etobicoke Village, Willowdale, Bayview Village, Don Mills, Forest Hill, Rosedale, The Annex, Leslieville, Liberty Village, Riverdale, Danforth Village, Parkdale, The Junction, Leaside, Lawrence Park, Davisville Village, Cabbagetown, Islington Village, Humber Valley, Birchcliff, Scarborough Village
 
 ## Key Facts
 - 4.9★ rating from 5,200+ verified customers
