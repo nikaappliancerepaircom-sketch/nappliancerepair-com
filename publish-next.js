@@ -132,6 +132,21 @@ async function main() {
     }
   }
 
+  // Add to sitemap-published.json + regenerate sitemap.xml
+  const publishedFile = path.join(__dirname, 'sitemap-published.json');
+  const sitemapFile = path.join(__dirname, 'sitemap.xml');
+  if (fs.existsSync(publishedFile)) {
+    const published = JSON.parse(fs.readFileSync(publishedFile, 'utf8'));
+    const today = new Date().toISOString().split('T')[0];
+    if (!published.find(p => p.url === url)) {
+      published.push({ url, lastmod: date ? date.split('T')[0] : today, priority: '0.7' });
+      fs.writeFileSync(publishedFile, JSON.stringify(published, null, 2));
+      const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${published.map(u => `  <url>\n    <loc>${u.url}</loc>\n    <lastmod>${u.lastmod}</lastmod>\n    <priority>${u.priority}</priority>\n  </url>`).join('\n')}\n</urlset>`;
+      fs.writeFileSync(sitemapFile, xml);
+      console.log(`  ✓ Added to sitemap: ${published.length} total URLs`);
+    }
+  }
+
   // Submit to Google Indexing API
   if (process.env.GOOGLE_INDEXING_SA) {
     const status = await submitIndexing(url);
