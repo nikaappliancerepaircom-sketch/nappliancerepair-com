@@ -100,7 +100,10 @@ async function main() {
   }
 
   const saJson = process.env.GOOGLE_INDEXING_SA;
-  if (!saJson) { console.error('ERROR: Set GOOGLE_INDEXING_SA env var'); process.exit(1); }
+  if (!saJson) {
+    console.warn('WARN: GOOGLE_INDEXING_SA not set — skipping Indexing API, queue not advanced.');
+    return;
+  }
 
   const token = await getAccessToken(saJson);
 
