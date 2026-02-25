@@ -31,7 +31,7 @@ jobs:
       - name: Drip 2 URLs to Google Indexing API
         env:
           GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
-        run: node drip-index.js --count 4
+        run: node drip-index.js --count 3
 
       - name: Commit and push changes
         run: |
