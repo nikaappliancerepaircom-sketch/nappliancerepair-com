@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- v2 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nappliancerepair.com/</loc>
@@ -349,6 +348,11 @@
   <url>
     <loc>https://nappliancerepair.com/blog/whirlpool-washer-f21-error-code</loc>
     <lastmod>2026-02-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nappliancerepair.com/blog/bosch-dishwasher-error-codes-toronto</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
