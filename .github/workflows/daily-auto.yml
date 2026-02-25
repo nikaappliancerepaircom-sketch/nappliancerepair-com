@@ -45,3 +45,10 @@ jobs:
             git commit -m "Auto-publish ${PUBLISH_DATE} — daily drip"
             git push
           fi
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: npx vercel --prod --yes --token "$VERCEL_TOKEN"
