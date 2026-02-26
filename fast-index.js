@@ -282,7 +282,7 @@ async function getAccessToken(saJson) {
   // Simple JWT-based service account auth
   const { createSign } = require('crypto');
   const sa = JSON.parse(saJson);
-  const now = Math.floor(Date.now() / 1000);
+  const now = Math.floor(Date.now() / 1000) - 3600; // subtract 1h for local clock skew
   const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
   const payload = Buffer.from(JSON.stringify({
     iss: sa.client_email,

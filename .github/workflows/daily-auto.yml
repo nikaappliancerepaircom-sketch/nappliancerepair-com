@@ -28,10 +28,10 @@ jobs:
       - name: Regenerate sitemap
         run: node gen-sitemap-self.js
 
-      - name: Drip 2 URLs to Google Indexing API
+      - name: Drip 4 URLs to Google Indexing API
         env:
           GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
-        run: node drip-index.js --count 3
+        run: node drip-index.js --count 4
 
       - name: Commit and push changes
         run: |
