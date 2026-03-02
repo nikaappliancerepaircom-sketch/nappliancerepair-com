@@ -83,7 +83,7 @@ async function main() {
   const { desc, date, tag, h1 } = extractMeta(html);
   const slug = file.replace('.html', '');
   const url = `${DOMAIN}/blog/${slug}`;
-  const displayDate = formatDate(date);
+  const displayDate = formatDate(date); // original date for logging only
 
   console.log(`Publishing: ${file}`);
   console.log(`  Title: ${h1}`);
@@ -95,15 +95,24 @@ async function main() {
     return;
   }
 
-  // Move file to blog/
-  fs.copyFileSync(srcPath, destPath);
+  // Rewrite dates to today's actual date (avoid future/past date mismatch)
+  const today = new Date();
+  const todayISO = today.toISOString().split('T')[0];
+  const todayDisplay = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Toronto' });
+  let updatedHtml = html
+    .replace(/"datePublished"\s*:\s*"[^"]+"/g, `"datePublished":"${todayISO}"`)
+    .replace(/"dateModified"\s*:\s*"[^"]+"/g, `"dateModified":"${todayISO}"`)
+    .replace(/Published\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s*\d{4}/g, `Published ${todayDisplay}`);
+
+  // Move file to blog/ with corrected date
+  fs.writeFileSync(destPath, updatedHtml);
   fs.unlinkSync(srcPath);
 
   // Inject card into blog/index.html
   if (fs.existsSync(BLOG_INDEX)) {
     let indexHtml = fs.readFileSync(BLOG_INDEX, 'utf8');
     const card = `
-        <!-- Auto-published ${date} -->
+        <!-- Auto-published ${todayISO} -->
         <article class="post-card">
           <div class="post-card-stripe"></div>
           <div class="post-card-header">
@@ -114,7 +123,7 @@ async function main() {
             <p class="post-excerpt">${desc}</p>
           </div>
           <div class="post-card-footer">
-            <span class="post-date">${displayDate}</span>
+            <span class="post-date">${todayDisplay}</span>
             <a href="/blog/${slug}" class="read-more">
               Read More
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
