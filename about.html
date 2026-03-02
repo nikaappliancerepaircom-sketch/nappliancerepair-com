@@ -268,20 +268,24 @@ h1.page-h1 {
   padding: 32px 28px;
 }
 .team-avatar {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: #EFF6FF;
   border: 2px solid #BFDBFE;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #2563EB;
-  letter-spacing: -0.02em;
   margin-bottom: 16px;
   flex-shrink: 0;
+  overflow: hidden;
+}
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
 }
 .team-name {
   font-size: 1rem;
@@ -570,28 +574,28 @@ h1.page-h1 {
     <div class="team-grid">
 
       <div class="team-card">
-        <div class="team-avatar">AM</div>
+        <div class="team-avatar"><img src="/img/team-nar-alex.jpg" alt="Alex M. - Lead Technician" loading="lazy" /></div>
         <div class="team-name">Alex M.</div>
         <div class="team-role">Lead Technician</div>
         <div class="team-bio">Alex has been part of the team since day one in 2017 and brings factory certifications from Samsung, LG, and Whirlpool. He is our refrigeration and control board specialist, covering North York and Scarborough. Repeat customers request him by name because he explains every step, quotes honestly, and gets the job done on the first visit.</div>
       </div>
 
       <div class="team-card">
-        <div class="team-avatar">MS</div>
+        <div class="team-avatar"><img src="/img/team-nar-maria.jpg" alt="Maria S. - Senior Technician" loading="lazy" /></div>
         <div class="team-name">Maria S.</div>
         <div class="team-role">Senior Technician</div>
         <div class="team-bio">Maria joined in 2019 with Bosch and GE factory certifications and quickly became our washer and dryer expert. She covers Mississauga, Brampton, and Etobicoke and is known for clear, jargon-free explanations. Customers regularly mention how she takes the time to show them what went wrong and how to prevent the same issue in the future.</div>
       </div>
 
       <div class="team-card">
-        <div class="team-avatar">DK</div>
+        <div class="team-avatar"><img src="/img/team-nar-david.jpg" alt="David K. - Appliance Technician" loading="lazy" /></div>
         <div class="team-name">David K.</div>
         <div class="team-role">Appliance Technician</div>
         <div class="team-bio">David came on board in 2022 with a fresh trade diploma in appliance service technology and factory training on KitchenAid and Frigidaire. He handles dishwasher, oven, and stove repairs across Vaughan, Markham, and Richmond Hill. He is meticulous about leaving the workspace cleaner than he found it, a detail customers mention in every review.</div>
       </div>
 
       <div class="team-card">
-        <div class="team-avatar">SC</div>
+        <div class="team-avatar"><img src="/img/team-nar-sofia.jpg" alt="Sofia C. - Appliance Technician" loading="lazy" /></div>
         <div class="team-name">Sofia C.</div>
         <div class="team-role">Appliance Technician</div>
         <div class="team-bio">Sofia joined in 2023 with a diploma in appliance technology and a background in electronics that makes her especially sharp with modern smart appliances and inverter systems. She is our primary technician in the Ajax, Pickering, and Whitby area and specialises in front-load washer and dryer repairs. Her attention to detail earns consistent five-star feedback.</div>
