@@ -810,6 +810,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
 .review-text { font-size: 15px; color: var(--color-text-muted, #6B7280); line-height: 1.7; flex: 1; margin-bottom: 20px; font-style: italic; }
 .review-author { display: flex; align-items: center; gap: 12px; }
 .review-avatar { width: 42px; height: 42px; border-radius: var(--radius-full, 9999px); background: linear-gradient(135deg, var(--color-primary, #2563EB), var(--color-primary-dark, #1D4ED8)); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.review-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 .review-location { display: block; font-size: 13px; color: var(--color-text-light, #9CA3AF); }
 
 /* =============================================
@@ -1167,7 +1168,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
         <p class="review-text">"Our Samsung French Door fridge stopped cooling on a Friday night. Called N Appliance Repair Saturday morning and Alex arrived by noon with the exact compressor relay our model needed. He diagnosed a faulty start relay and replaced it on the spot &mdash; fridge was back to temperature within two hours. Saved us from losing a full freezer of food. Highly recommend for anyone in Scarborough."</p>
         <div class="review-author">
-          <div class="review-avatar">PR</div>
+          <div class="review-avatar"><img src="/img/reviewers/pr.jpg" alt="Reviewer photo" width="200" height="200" loading="lazy"></div>
           <div><strong>Priya R.</strong><span class="review-location">Scarborough</span></div>
         </div>
       </div>
@@ -1176,7 +1177,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
         <p class="review-text">"Our Whirlpool Cabrio washer was leaking all over the laundry room floor and throwing an F5 error code. The technician arrived same-day, identified a worn door boot seal and a clogged drain pump, and had both OEM parts on the van. Total repair took about 90 minutes and the price matched the quote exactly. No surprises &mdash; just honest, professional work. Great service in North York."</p>
         <div class="review-author">
-          <div class="review-avatar">MT</div>
+          <div class="review-avatar"><img src="/img/reviewers/mt.jpg" alt="Reviewer photo" width="200" height="200" loading="lazy"></div>
           <div><strong>Michael T.</strong><span class="review-location">North York</span></div>
         </div>
       </div>
@@ -1185,7 +1186,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
         <p class="review-text">"Bosch 800 Series dishwasher wasn't draining and the E24 error kept flashing. Maria came out to our Etobicoke home and found a blocked drain hose plus a failing circulation pump. She replaced both with genuine Bosch parts and even ran a full diagnostic cycle before leaving to make sure everything was perfect. Very thorough and reasonably priced &mdash; $220 all in."</p>
         <div class="review-author">
-          <div class="review-avatar">SK</div>
+          <div class="review-avatar"><img src="/img/reviewers/sk.jpg" alt="Reviewer photo" width="200" height="200" loading="lazy"></div>
           <div><strong>Sarah K.</strong><span class="review-location">Etobicoke</span></div>
         </div>
       </div>
@@ -1194,7 +1195,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
         <p class="review-text">"LG dryer was running but clothes came out damp every cycle. The technician found a burned-out heating element and a faulty thermal fuse &mdash; apparently common on LG DLEX models. He had both parts ready and finished the repair in under an hour. Dryer heats perfectly now. Fair price and they even cleaned the lint buildup from the exhaust vent. Very happy with the service in Mississauga."</p>
         <div class="review-author">
-          <div class="review-avatar">JC</div>
+          <div class="review-avatar"><img src="/img/reviewers/jc.jpg" alt="Reviewer photo" width="200" height="200" loading="lazy"></div>
           <div><strong>James C.</strong><span class="review-location">Mississauga</span></div>
         </div>
       </div>
@@ -1203,7 +1204,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
         <p class="review-text">"GE Profile oven wouldn't heat past 200 degrees &mdash; right before Thanksgiving dinner. Called N Appliance Repair in a panic and David came out the same afternoon downtown. Turned out to be a failing bake element and a worn igniter. He swapped both with OEM GE parts and calibrated the temperature sensor. Oven heated to 425 perfectly. Saved our holiday dinner &mdash; cannot thank them enough."</p>
         <div class="review-author">
-          <div class="review-avatar">LW</div>
+          <div class="review-avatar"><img src="/img/reviewers/lw.jpg" alt="Reviewer photo" width="200" height="200" loading="lazy"></div>
           <div><strong>Lisa W.</strong><span class="review-location">Toronto (Downtown)</span></div>
         </div>
       </div>
@@ -1212,7 +1213,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
         <div class="review-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
         <p class="review-text">"Our 8-year-old Kenmore upright freezer started making a loud buzzing noise and the temperature climbed to &minus;5&deg;C. The tech diagnosed a failing evaporator fan motor and frost buildup on the coils caused by a defective defrost timer. Both were replaced with OEM parts in about 90 minutes. Freezer is quiet again and holding &minus;18&deg;C steady. Excellent service here in Brampton &mdash; will call again."</p>
         <div class="review-author">
-          <div class="review-avatar">AN</div>
+          <div class="review-avatar"><img src="/img/reviewers/an.jpg" alt="Reviewer photo" width="200" height="200" loading="lazy"></div>
           <div><strong>Ahmed N.</strong><span class="review-location">Brampton</span></div>
         </div>
       </div>
