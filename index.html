@@ -809,7 +809,8 @@ details[open] .faq-icon { transform: rotate(45deg); }
 .review-stars span { font-size: 17px; color: var(--color-accent, #F59E0B); }
 .review-text { font-size: 15px; color: var(--color-text-muted, #6B7280); line-height: 1.7; flex: 1; margin-bottom: 20px; font-style: italic; }
 .review-author { display: flex; align-items: center; gap: 12px; }
-.review-avatar { width: 42px; height: 42px; border-radius: var(--radius-full, 9999px); background: linear-gradient(135deg, var(--color-primary, #2563EB), var(--color-primary-dark, #1D4ED8)); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.review-avatar { width: 48px; height: 48px; border-radius: var(--radius-full, 9999px); background: linear-gradient(135deg, var(--color-primary, #2563EB), var(--color-primary-dark, #1D4ED8)); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+.review-avatar:has(img) { background: none; }
 .review-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 .review-location { display: block; font-size: 13px; color: var(--color-text-light, #9CA3AF); }
 
@@ -1472,7 +1473,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
 
       <div class="pricing-card">
         <div class="pricing-tier">Diagnostic Visit</div>
-        <div class="pricing-price">$80 <span class="price-note">flat fee</span></div>
+        <div class="pricing-price">$65 <span class="price-note">flat fee</span></div>
         <div class="pricing-waived">Waived when you book the repair</div>
         <div class="pricing-divider"></div>
         <div class="pricing-desc">A licensed technician visits your home, identifies the problem, and provides a detailed written quote at no obligation.</div>
