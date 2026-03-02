@@ -41,13 +41,29 @@
     },
     {
       "@type": "Service",
-      "name": "Washer Repair in The Junction",
+      "serviceType": "Washing Machine Repair",
+      "name": "Washing Machine Repair in The Junction",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "The Junction",
-      "description": "Professional washer repair service in The Junction"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "The Junction",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in The Junction. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

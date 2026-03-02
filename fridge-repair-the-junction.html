@@ -41,13 +41,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in The Junction",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "The Junction",
-      "description": "Professional refrigerator repair service in The Junction"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "The Junction",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in The Junction. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

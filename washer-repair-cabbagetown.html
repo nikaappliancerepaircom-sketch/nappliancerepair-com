@@ -41,13 +41,29 @@
     },
     {
       "@type": "Service",
-      "name": "Washer Repair in Cabbagetown",
+      "serviceType": "Washing Machine Repair",
+      "name": "Washing Machine Repair in Cabbagetown",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Cabbagetown",
-      "description": "Professional washer repair service in Cabbagetown"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Cabbagetown",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in Cabbagetown. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

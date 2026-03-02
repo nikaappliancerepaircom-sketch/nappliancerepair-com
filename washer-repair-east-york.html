@@ -20,26 +20,99 @@
       "name": "N Appliance Repair",
       "telephone": "+14375241053",
       "url": "https://nappliancerepair.com",
-      "address": {"@type": "PostalAddress","addressLocality": "East York","addressRegion": "Ontario","addressCountry": "CA"},
-      "aggregateRating": {"@type": "AggregateRating","ratingValue": "4.9","reviewCount": "312"},
-      "openingHours": ["Mo-Sa 08:00-20:00","Su 09:00-18:00"]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "East York",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "312"
+      },
+      "openingHours": [
+        "Mo-Sa 08:00-20:00",
+        "Su 09:00-18:00"
+      ]
     },
     {
       "@type": "Service",
+      "serviceType": "Washing Machine Repair",
       "name": "Washing Machine Repair in East York",
-      "provider": {"@type": "LocalBusiness","name": "N Appliance Repair"},
-      "areaServed": "East York",
-      "description": "Professional washer repair service in East York, Toronto"
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "N Appliance Repair"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "East York",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in East York. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question","name": "How much does washer repair cost in East York?","acceptedAnswer": {"@type": "Answer","text": "Washing machine repair in East York typically costs $140–$360. The $89 diagnostic fee is applied to the repair if you proceed. East York's older Whirlpool top-loaders and GE machines are among the most cost-effective to repair — parts are affordable and widely available for machines 10–18 years old."}},
-        {"@type": "Question","name": "My East York basement laundry area is tight — can you still work on the washer?","acceptedAnswer": {"@type": "Answer","text": "Absolutely. Most East York bungalows keep washers in basement utility areas or main-floor laundry closets with limited clearance. Our technicians carry compact tools and work in tight spaces regularly. We pull the machine out only as far as needed for safe repair and protect your floors throughout."}},
-        {"@type": "Question","name": "What washer brands do you repair in East York?","acceptedAnswer": {"@type": "Answer","text": "We service Whirlpool, GE, Maytag, Kenmore, LG, Samsung, Frigidaire, and Amana washers in East York. Whirlpool and GE top-loaders from the 1990s and 2000s are especially common in the neighbourhood's bungalows — we stock the most-requested parts for these machines and often complete repairs in one visit."}},
-        {"@type": "Question","name": "My top-loader washer won't spin in East York — what's wrong?","acceptedAnswer": {"@type": "Answer","text": "A washer that fills and agitates but won't spin typically points to a worn lid switch, a failed drive belt, or a clutch assembly issue in older top-loaders. In newer electronic top-loaders, a faulty motor control board can prevent the spin cycle from engaging. We diagnose the exact cause and provide a written quote before any repair."}},
-        {"@type": "Question","name": "Can you repair a front-load washer in East York?","acceptedAnswer": {"@type": "Answer","text": "Yes. We repair front-load washers from LG, Samsung, Whirlpool, Bosch, and other brands in East York. Front-loaders are increasingly common in renovated East York homes. Common issues include door boot seal tears, bearing failures, drain pump clogs, and control board faults — all repairs we handle regularly."}},
-        {"@type": "Question","name": "Do you warranty washer repairs in East York?","acceptedAnswer": {"@type": "Answer","text": "Every washing machine repair in East York comes with our 90-day parts and labour warranty. If the repaired component fails again within 90 days, we come back and fix it at no charge. We use OEM or manufacturer-equivalent parts on every repair."}}
+        {
+          "@type": "Question",
+          "name": "How much does washer repair cost in East York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Washing machine repair in East York typically costs $140–$360. The $89 diagnostic fee is applied to the repair if you proceed. East York's older Whirlpool top-loaders and GE machines are among the most cost-effective to repair — parts are affordable and widely available for machines 10–18 years old."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My East York basement laundry area is tight — can you still work on the washer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Most East York bungalows keep washers in basement utility areas or main-floor laundry closets with limited clearance. Our technicians carry compact tools and work in tight spaces regularly. We pull the machine out only as far as needed for safe repair and protect your floors throughout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What washer brands do you repair in East York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We service Whirlpool, GE, Maytag, Kenmore, LG, Samsung, Frigidaire, and Amana washers in East York. Whirlpool and GE top-loaders from the 1990s and 2000s are especially common in the neighbourhood's bungalows — we stock the most-requested parts for these machines and often complete repairs in one visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My top-loader washer won't spin in East York — what's wrong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A washer that fills and agitates but won't spin typically points to a worn lid switch, a failed drive belt, or a clutch assembly issue in older top-loaders. In newer electronic top-loaders, a faulty motor control board can prevent the spin cycle from engaging. We diagnose the exact cause and provide a written quote before any repair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you repair a front-load washer in East York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We repair front-load washers from LG, Samsung, Whirlpool, Bosch, and other brands in East York. Front-loaders are increasingly common in renovated East York homes. Common issues include door boot seal tears, bearing failures, drain pump clogs, and control board faults — all repairs we handle regularly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you warranty washer repairs in East York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every washing machine repair in East York comes with our 90-day parts and labour warranty. If the repaired component fails again within 90 days, we come back and fix it at no charge. We use OEM or manufacturer-equivalent parts on every repair."
+          }
+        }
       ]
     }
   ]

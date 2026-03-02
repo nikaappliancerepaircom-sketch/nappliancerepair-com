@@ -39,13 +39,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Dishwasher Repair",
       "name": "Dishwasher Repair in Don Mills",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Don Mills",
-      "description": "Professional dishwasher repair service in Don Mills, North York"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Don Mills",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional dishwasher repair service in Don Mills. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "120",
+        "highPrice": "350"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

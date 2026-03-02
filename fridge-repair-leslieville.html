@@ -39,13 +39,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in Leslieville",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Leslieville",
-      "description": "Professional fridge repair service in Leslieville, East Toronto"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Leslieville",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in Leslieville. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

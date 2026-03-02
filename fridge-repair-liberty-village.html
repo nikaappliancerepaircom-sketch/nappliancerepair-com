@@ -39,13 +39,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in Liberty Village",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Liberty Village",
-      "description": "Professional fridge repair service in Liberty Village, Toronto"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Liberty Village",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in Liberty Village. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

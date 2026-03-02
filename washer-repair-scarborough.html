@@ -41,13 +41,29 @@
     },
     {
       "@type": "Service",
-      "name": "Washer Repair in Scarborough",
+      "serviceType": "Washing Machine Repair",
+      "name": "Washing Machine Repair in Scarborough",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Scarborough",
-      "description": "Professional washer repair service in Scarborough"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Scarborough",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in Scarborough. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

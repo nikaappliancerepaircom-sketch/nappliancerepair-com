@@ -39,13 +39,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Washing Machine Repair",
       "name": "Washing Machine Repair in Don Mills",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Don Mills",
-      "description": "Professional washer repair service in Don Mills, North York"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Don Mills",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in Don Mills. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

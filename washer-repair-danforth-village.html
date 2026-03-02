@@ -39,13 +39,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Washing Machine Repair",
       "name": "Washing Machine Repair in Danforth Village",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Danforth Village",
-      "description": "Professional washer repair service in Danforth Village, East Toronto"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Danforth Village",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional washing machine repair service in Danforth Village. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "380"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

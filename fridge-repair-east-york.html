@@ -31,14 +31,36 @@
         "ratingValue": "4.9",
         "reviewCount": "312"
       },
-      "openingHours": ["Mo-Sa 08:00-20:00","Su 09:00-18:00"]
+      "openingHours": [
+        "Mo-Sa 08:00-20:00",
+        "Su 09:00-18:00"
+      ]
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in East York",
-      "provider": {"@type": "LocalBusiness","name": "N Appliance Repair"},
-      "areaServed": "East York",
-      "description": "Professional fridge repair service in East York, Toronto"
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "N Appliance Repair"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "East York",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in East York. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
@@ -46,32 +68,50 @@
         {
           "@type": "Question",
           "name": "How much does fridge repair cost in East York?",
-          "acceptedAnswer": {"@type": "Answer","text": "Refrigerator repair in East York typically costs $150–$380. Our diagnostic fee is $89, credited toward the repair if you proceed. East York's working-class households often have Whirlpool, GE, and Maytag fridges that are 10–15 years old — these are cost-effective to repair rather than replace, and parts are widely available. We give you a written quote before touching anything."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Refrigerator repair in East York typically costs $150–$380. Our diagnostic fee is $89, credited toward the repair if you proceed. East York's working-class households often have Whirlpool, GE, and Maytag fridges that are 10–15 years old — these are cost-effective to repair rather than replace, and parts are widely available. We give you a written quote before touching anything."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you service older Whirlpool and Maytag fridges in East York bungalows?",
-          "acceptedAnswer": {"@type": "Answer","text": "Absolutely — Whirlpool and Maytag are among the most common brands we service throughout East York. Many bungalows built in the 1950s and 1960s still have full-size fridges from these brands that are 12–20 years old. Parts availability is excellent for these models, and repairs often make strong financial sense compared to purchasing a new unit. Our vans stock the most-requested components for both brands."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely — Whirlpool and Maytag are among the most common brands we service throughout East York. Many bungalows built in the 1950s and 1960s still have full-size fridges from these brands that are 12–20 years old. Parts availability is excellent for these models, and repairs often make strong financial sense compared to purchasing a new unit. Our vans stock the most-requested components for both brands."
+          }
         },
         {
           "@type": "Question",
           "name": "How fast can you come to East York for a fridge emergency?",
-          "acceptedAnswer": {"@type": "Answer","text": "We typically reach East York addresses within 2–3 hours of your call. East York sits between downtown Toronto and Scarborough, and our technicians travel the Danforth and O'Connor corridors daily. Call before 2 PM Monday through Saturday and we'll have someone there the same day. Sunday service is also available 9 AM to 6 PM."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We typically reach East York addresses within 2–3 hours of your call. East York sits between downtown Toronto and Scarborough, and our technicians travel the Danforth and O'Connor corridors daily. Call before 2 PM Monday through Saturday and we'll have someone there the same day. Sunday service is also available 9 AM to 6 PM."
+          }
         },
         {
           "@type": "Question",
           "name": "My East York bungalow has an older kitchen layout — can you still access and repair the fridge?",
-          "acceptedAnswer": {"@type": "Answer","text": "Yes. Post-war East York bungalows often have galley-style kitchens or small eat-in layouts where appliances are tightly fitted. Our technicians are experienced working in compact spaces — we carry extension tools and compact diagnostic equipment specifically for these situations. We'll protect your floors and cabinetry during the service visit."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Post-war East York bungalows often have galley-style kitchens or small eat-in layouts where appliances are tightly fitted. Our technicians are experienced working in compact spaces — we carry extension tools and compact diagnostic equipment specifically for these situations. We'll protect your floors and cabinetry during the service visit."
+          }
         },
         {
           "@type": "Question",
           "name": "Is it worth repairing a 12-year-old fridge in East York?",
-          "acceptedAnswer": {"@type": "Answer","text": "For a 12-year-old Whirlpool, GE, or Maytag fridge where the repair cost is under $300, repair is almost always worthwhile. These brands were built to last 15–20 years, and replacement parts remain affordable. We'll give you an honest assessment — if the compressor or sealed system is failing and repair cost approaches 60% of replacement value, we'll tell you so directly."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a 12-year-old Whirlpool, GE, or Maytag fridge where the repair cost is under $300, repair is almost always worthwhile. These brands were built to last 15–20 years, and replacement parts remain affordable. We'll give you an honest assessment — if the compressor or sealed system is failing and repair cost approaches 60% of replacement value, we'll tell you so directly."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you offer warranties on fridge repairs in East York?",
-          "acceptedAnswer": {"@type": "Answer","text": "Every fridge repair in East York includes our 90-day parts and labour warranty. If the same fault recurs within 90 days, we return at no charge. This applies to all brands — Whirlpool, GE, Maytag, LG, Samsung, and others. We use OEM or manufacturer-equivalent parts to ensure the repair holds."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every fridge repair in East York includes our 90-day parts and labour warranty. If the same fault recurs within 90 days, we return at no charge. This applies to all brands — Whirlpool, GE, Maytag, LG, Samsung, and others. We use OEM or manufacturer-equivalent parts to ensure the repair holds."
+          }
         }
       ]
     }

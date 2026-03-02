@@ -41,13 +41,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Dishwasher Repair",
       "name": "Dishwasher Repair in Mississauga",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Mississauga",
-      "description": "Professional dishwasher repair service in Mississauga"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Mississauga",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional dishwasher repair service in Mississauga. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "120",
+        "highPrice": "350"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

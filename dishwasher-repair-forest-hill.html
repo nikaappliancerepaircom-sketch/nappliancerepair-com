@@ -39,13 +39,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Dishwasher Repair",
       "name": "Dishwasher Repair in Forest Hill",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Forest Hill",
-      "description": "Professional dishwasher repair service in Forest Hill, Toronto"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Forest Hill",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional dishwasher repair service in Forest Hill. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "120",
+        "highPrice": "350"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

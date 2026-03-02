@@ -41,13 +41,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Refrigerator Repair",
       "name": "Refrigerator Repair in Humber Valley",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Humber Valley",
-      "description": "Professional refrigerator repair service in Humber Valley"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Humber Valley",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional refrigerator repair service in Humber Valley. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "150",
+        "highPrice": "450"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",

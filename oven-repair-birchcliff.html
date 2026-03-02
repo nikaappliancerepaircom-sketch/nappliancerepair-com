@@ -41,13 +41,29 @@
     },
     {
       "@type": "Service",
+      "serviceType": "Oven Repair",
       "name": "Oven Repair in Birchcliff",
       "provider": {
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "areaServed": "Birchcliff",
-      "description": "Professional oven repair service in Birchcliff"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Birchcliff",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Toronto Area, Ontario, Canada"
+        }
+      },
+      "description": "Professional oven repair service in Birchcliff. Same-day appointments available.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CAD",
+        "lowPrice": "130",
+        "highPrice": "400"
+      },
+      "termsOfService": "https://nappliancerepair.com/pricing",
+      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
     },
     {
       "@type": "FAQPage",
