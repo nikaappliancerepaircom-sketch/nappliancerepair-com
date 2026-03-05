@@ -20,6 +20,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Publish next queued location pages
+        env:
+          GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
+        run: node publish-next-page.js --count 5
+
       - name: Publish next queued blog post
         env:
           GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
