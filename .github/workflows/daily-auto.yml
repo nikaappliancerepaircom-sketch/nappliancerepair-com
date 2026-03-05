@@ -54,7 +54,10 @@ jobs:
       - name: Deploy to Vercel
         continue-on-error: true
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_REFRESH_TOKEN: ${{ secrets.VERCEL_REFRESH_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: npx vercel --prod --yes --token "$VERCEL_TOKEN"
+        run: |
+          mkdir -p ~/.local/share/com.vercel.cli
+          printf '{"token":"x","expiresAt":0,"refreshToken":"%s"}' "$VERCEL_REFRESH_TOKEN" > ~/.local/share/com.vercel.cli/auth.json
+          npx vercel --prod --yes
