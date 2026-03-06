@@ -10,7 +10,7 @@ const sites = [
 const CHECKS = [
   // ── Core Meta ──────────────────────────────────────────────────────────────
   { name: 'title present', fn: c => c.includes('<title>') },
-  { name: 'title length OK (30-70)', fn: c => { const m = c.match(/<title>([^<]+)<\/title>/); return m && m[1].length >= 30 && m[1].length <= 70; } },
+  { name: 'title length OK (30-60)', fn: c => { const m = c.match(/<title>([^<]+)<\/title>/); return m && m[1].length >= 30 && m[1].length <= 60; } },
   { name: 'meta description', fn: c => c.includes('name="description"') },
   { name: 'meta desc length OK (100-165)', fn: c => { const m = c.match(/name="description" content="([^"]+)"/); return m && m[1].length >= 100 && m[1].length <= 165; } },
   { name: 'canonical tag', fn: c => c.includes('<link rel="canonical"') },
@@ -24,6 +24,7 @@ const CHECKS = [
   // ── Open Graph / Social ────────────────────────────────────────────────────
   { name: 'og:title', fn: c => c.includes('og:title') },
   { name: 'og:description', fn: c => c.includes('og:description') },
+  { name: 'og:image present', fn: c => c.includes('og:image') },
   { name: 'og:type', fn: c => c.includes('og:type') },
   { name: 'og:url (no .html)', fn: c => {
     const m = c.match(/property="og:url"\s+content="([^"]+)"/);
@@ -65,6 +66,9 @@ const CHECKS = [
   { name: 'FAQPage or Article schema', fn: c => c.includes('FAQPage') || c.includes('"Article"') },
   { name: 'BreadcrumbList schema', fn: c => c.includes('BreadcrumbList') },
   { name: 'datePublished in schema', fn: c => c.includes('"datePublished"') },
+  { name: 'dateModified in schema', fn: c => c.includes('"dateModified"') },
+  { name: 'serviceArea in schema', fn: c => c.includes('"serviceArea"') || c.includes('"areaServed"') },
+  { name: 'priceRange in LocalBusiness', fn: c => c.includes('"priceRange"') },
 
   // ── Performance & Technical ────────────────────────────────────────────────
   { name: 'phone clickable tel:', fn: c => c.includes('href="tel:') },
@@ -87,6 +91,18 @@ const CHECKS = [
   { name: 'price mention (cost transparency)', fn: c => {
     // Page mentions pricing — trust signal and CTR booster
     return /\$\d+|\bprice\b|\bpricing\b|\bcost\b|\bfee\b/i.test(c);
+  }},
+  { name: 'E-E-A-T: experience signal', fn: c => {
+    return /since 2017|years|certified|licensed/i.test(c);
+  }},
+  { name: 'no inline scripts blocking render', fn: c => {
+    const headMatch = c.match(/<head[\s\S]*?<\/head>/i);
+    if (!headMatch) return true;
+    const head = headMatch[0];
+    const scripts = head.match(/<script[^>]*>/gi) || [];
+    return scripts.every(s =>
+      s.includes('defer') || s.includes('async') || s.includes('application/ld+json')
+    );
   }},
 
   // ── GEO — AI Search (ChatGPT, Perplexity, Google AI Overviews) 2026 ───────
@@ -219,23 +235,30 @@ const globalPct = Math.round((globalPass / globalTotal) * 100);
 console.log('\n=== OVERALL BMAD SCORE ===');
 console.log(globalPass + '/' + globalTotal + ' = ' + globalPct + '%');
 console.log(globalPct >= 95 ? 'EXCELLENT' : globalPct >= 85 ? 'GOOD - some fixes needed' : 'NEEDS WORK');
-console.log('\n─── BMAD v6 — Google + AI Search Rules (2026) ───────────────');
+console.log('\n─── BMAD v7 — Google + AI Search Rules (2026) ───────────────');
 console.log('── Meta & Technical ──');
-console.log('✓ Title 30-70 chars, meta desc 100-165 chars');
+console.log('✓ Title 30-60 chars (Google max ~60 chars / 525px)');
+console.log('✓ Meta desc 100-165 chars');
 console.log('✓ Canonical = clean URL (no .html), og:url matches canonical');
+console.log('✓ og:image present (social sharing preview)');
 console.log('✓ H1 present, H2 x3+, internal links x3+');
 console.log('✓ Images: alt text on all, loading=lazy on 50%+');
 console.log('✓ defer/async on all external scripts');
+console.log('✓ No inline scripts blocking render in <head>');
 console.log('── Schema ──');
 console.log('✓ LocalBusiness: telephone, address, openingHours');
 console.log('✓ AggregateRating in schema');
 console.log('✓ FAQPage or Article schema');
 console.log('✓ BreadcrumbList schema');
 console.log('✓ datePublished in JSON-LD (freshness signal)');
+console.log('✓ dateModified in JSON-LD (freshness signal)');
+console.log('✓ serviceArea / areaServed in schema (geo targeting for AI)');
+console.log('✓ priceRange in LocalBusiness (Google rich results)');
 console.log('✓ Service or HasOfferCatalog (AI can enumerate services)');
 console.log('── Content Quality ──');
 console.log('✓ Body text 400+ words (not counting nav/footer/schema)');
 console.log('✓ Price mention on page (transparency = higher CTR)');
+console.log('✓ E-E-A-T: experience signal (since 2017 / years / certified / licensed)');
 console.log('✓ Uniqueness 80%+ between service+city pages');
 console.log('✓ No doorway pages (same template, only city name changes)');
 console.log('✓ Blog posts 700+ words, truly unique, E-E-A-T signals');
