@@ -61,6 +61,12 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.nappliancerepair.com" }],
+      "destination": "https://nappliancerepair.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/home",
       "destination": "/",
       "permanent": true
