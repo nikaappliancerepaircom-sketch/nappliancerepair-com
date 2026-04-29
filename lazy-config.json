@@ -1,0 +1,63 @@
+{
+  "_schema_version": 1,
+  "site": {
+    "name": "N Appliance Repair",
+    "domain": "nappliancerepair.com",
+    "language": "en-CA",
+    "country": "CA",
+    "currency": "CAD"
+  },
+  "business": {
+    "niche": "local-service",
+    "is_local": true,
+    "schema_type": "LocalBusiness",
+    "founded_year": 2017,
+    "review_count": 180,
+    "rating": 4.9,
+    "team_size": 8
+  },
+  "contact": {
+    "email": "info@nappliancerepair.com",
+    "phone": "+1-437-524-1053",
+    "address": "York Region, Ontario, Canada",
+    "service_area": "York Region (Richmond Hill, Newmarket, Markham, Vaughan, Bradford)"
+  },
+  "brand": {
+    "primary_color": "#2563eb",
+    "secondary_color": "#1E40AF",
+    "logo_path": "/assets/logo.svg",
+    "font_family": "Inter"
+  },
+  "thresholds": {
+    "word_count": [1200, 4500],
+    "title_length": [40, 60],
+    "meta_desc_length": [140, 160],
+    "h2_count": [5, 12],
+    "h3_count_min": 3,
+    "internal_links_min": 5,
+    "external_links_max": 10,
+    "images_min": 1,
+    "reading_level": [7, 11],
+    "faq_count_min": 3,
+    "paragraph_max_sentences": 5,
+    "section_max_words": 500,
+    "duplicate_sentence_max": 3
+  },
+  "rules": {
+    "no_cross_link_domains": ["nikaappliancerepair.com", "appliancerepairneary.com", "fixlifyservices.com"],
+    "required_mentions_in_h1_or_first_paragraph": ["N Appliance Repair"],
+    "required_schemas": ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
+    "no_fake_urgency_phrases": ["only X spots left", "limited time", "act now", "don't miss out"]
+  },
+  "niche_overrides": {
+    "niche": "local-service",
+    "schema_type": "LocalBusiness",
+    "is_local": true,
+    "required_schemas": ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
+    "thresholds_override": {"word_count": [1200, 4500], "internal_links_min": 5},
+    "required_cta_types": ["phone", "contact_form", "emergency_call"],
+    "required_trust_signals": ["license_number", "insured_badge", "warranty", "reviews", "years_in_business"],
+    "psychology_focus": ["urgency_truthful", "trust", "authority", "social_proof"],
+    "forbidden_psychology": ["fake_countdown", "fake_inventory"]
+  }
+}
