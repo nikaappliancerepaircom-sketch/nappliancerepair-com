@@ -1,0 +1,16 @@
+{
+  "_comment": "Example profile — auto-detected on Article/NewsArticle schema or author/byline content.",
+  "niche": "publisher",
+  "schema_type": "NewsMediaOrganization",
+  "is_local": false,
+  "required_schemas": ["Article", "Organization", "Person", "BreadcrumbList"],
+  "thresholds_override": {
+    "word_count": [1000, 5000],
+    "internal_links_min": 8,
+    "external_links_max": 25
+  },
+  "required_cta_types": ["newsletter_signup", "subscribe", "share"],
+  "required_trust_signals": ["author_bio", "publish_date", "modified_date", "sources_cited"],
+  "psychology_focus": ["expertise", "authority", "freshness"],
+  "forbidden_psychology": ["clickbait", "fake_scarcity"]
+}

@@ -1,0 +1,15 @@
+{
+  "_comment": "Example profile — auto-detected on Plumber/HVAC/Electrician/etc schema or repair/emergency language.",
+  "niche": "local-service",
+  "schema_type": "LocalBusiness",
+  "is_local": true,
+  "required_schemas": ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
+  "thresholds_override": {
+    "word_count": [1200, 3000],
+    "internal_links_min": 5
+  },
+  "required_cta_types": ["phone", "contact_form", "emergency_call"],
+  "required_trust_signals": ["license_number", "insured_badge", "warranty", "reviews", "years_in_business"],
+  "psychology_focus": ["urgency_truthful", "trust", "authority", "social_proof"],
+  "forbidden_psychology": ["fake_countdown", "fake_inventory"]
+}

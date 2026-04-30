@@ -1,0 +1,14 @@
+{
+  "_comment": "Example profile — auto-detected on SoftwareApplication schema or pricing/trial/demo content.",
+  "niche": "saas",
+  "schema_type": "SoftwareApplication",
+  "is_local": false,
+  "required_schemas": ["SoftwareApplication", "Organization", "FAQPage"],
+  "thresholds_override": {
+    "word_count": [800, 3000]
+  },
+  "required_cta_types": ["free_trial", "demo_request", "pricing"],
+  "required_trust_signals": ["customer_logos", "testimonials", "review_aggregator_badge", "security_certs"],
+  "psychology_focus": ["expertise", "social_proof", "value_proposition"],
+  "forbidden_psychology": ["fake_scarcity", "false_urgency"]
+}

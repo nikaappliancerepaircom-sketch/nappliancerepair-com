@@ -1,0 +1,16 @@
+{
+  "_comment": "Generic niche template. Copy this file to {your-niche}.json and edit the fields below to create a new niche profile. Drop it in this folder and it will appear in `--init` automatically.",
+
+  "niche": "generic",
+  "schema_type": "Organization",
+  "is_local": false,
+
+  "required_schemas": ["Organization", "BreadcrumbList"],
+
+  "thresholds_override": {},
+
+  "required_cta_types": ["contact_form"],
+  "required_trust_signals": [],
+  "psychology_focus": [],
+  "forbidden_psychology": ["fake_scarcity", "fake_countdown", "false_urgency"]
+}

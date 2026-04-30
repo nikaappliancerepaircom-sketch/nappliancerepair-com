@@ -1,0 +1,76 @@
+# Lazy Method CI workflow template.
+#
+# Copy this file to {your-site-repo}/.github/workflows/lazy-method.yml and adapt
+# the paths if needed. The workflow runs lazy-check.py on every changed HTML file
+# in pull requests and blocks the merge on any failure.
+
+name: Lazy Method QA
+
+on:
+  pull_request:
+    paths:
+      - "**/*.html"
+      - "lazy-method/**"
+      - "**/lazy-config.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.html"
+      - "lazy-method/**"
+      - "**/lazy-config.json"
+
+jobs:
+  lazy-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r lazy-method/requirements.txt
+
+      - name: Find changed HTML files
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="${{ github.base_ref }}"
+            git fetch origin "$BASE" --depth=1
+            FILES=$(git diff --name-only "origin/$BASE"...HEAD -- '*.html' | tr '\n' ' ')
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.html' | tr '\n' ' ')
+          fi
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "Changed HTML: $FILES"
+
+      - name: Run Lazy Method on changed pages
+        if: steps.changed.outputs.files != ''
+        run: |
+          # If a {site}/lazy-config.json exists, use it; otherwise fail.
+          CONFIGS=$(ls **/lazy-config.json 2>/dev/null || true)
+          if [ -z "$CONFIGS" ]; then
+            echo "No lazy-config.json found anywhere — skipping (configure your site first)."
+            exit 0
+          fi
+          # Use first config found. Multi-site repos should run this matrix-style.
+          CONFIG=$(echo "$CONFIGS" | head -1)
+          echo "Using config: $CONFIG"
+          python lazy-method/lazy-check.py --config="$CONFIG" --ci ${{ steps.changed.outputs.files }}
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lazy-method-report
+          path: lazy-method/reports/*.json
+          retention-days: 14

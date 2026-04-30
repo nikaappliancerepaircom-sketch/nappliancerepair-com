@@ -1,0 +1,4 @@
+beautifulsoup4>=4.12
+lxml>=5.0
+# Optional, for responsive + cross-browser checkers:
+# playwright>=1.40    -> then run: playwright install chromium firefox webkit

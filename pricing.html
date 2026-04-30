@@ -31,8 +31,16 @@
         "addressRegion": "Ontario",
         "addressCountry": "CA"
       },
-      "serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed": {
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.65,
+          "longitude": -79.38
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": {
         "@type": "City",
         "name": "Toronto"
       },
@@ -45,16 +53,64 @@
         "@type": "OfferCatalog",
         "name": "Appliance Repair Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Refrigerator Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Washer Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dryer Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dishwasher Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Oven Repair"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stove Repair"}}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Refrigerator Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Washer Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dryer Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dishwasher Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oven Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stove Repair"
+            }
+          }
         ]
       },
-      "openingHours": ["Mo-Fr 08:00-20:00", "Sa 08:00-20:00", "Su 09:00-18:00"],
-      "priceRange": "$$"
+      "openingHours": [
+        "Mo-Fr 08:00-20:00",
+        "Sa 08:00-20:00",
+        "Su 09:00-18:00"
+      ],
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "name": "Sergey"
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 8
+      }
     },
     {
       "@type": "FAQPage",
@@ -554,6 +610,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
   <meta name="twitter:title" content="Appliance Repair Pricing Toronto | Upfront Quotes">
   <meta name="twitter:description" content="Honest appliance repair pricing in Toronto. Diagnostic fee from $89. Most repairs $120&ndash;$350. 90-day parts &amp; labour warranty. No hidden fees. Call (437) 524-1053.">
   <meta property="og:image" content="https://nappliancerepair.com/og-image.jpg">
+<!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>
 

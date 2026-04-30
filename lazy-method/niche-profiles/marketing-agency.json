@@ -1,0 +1,15 @@
+{
+  "_comment": "Example profile — auto-detected when page has MarketingAgency schema or 'SEO/PPC/marketing' content. Edit or delete to fit your project.",
+  "niche": "marketing-agency",
+  "schema_type": "Organization",
+  "is_local": true,
+  "required_schemas": ["Organization", "Service", "FAQPage", "BreadcrumbList"],
+  "thresholds_override": {
+    "word_count": [1000, 3500],
+    "internal_links_min": 6
+  },
+  "required_cta_types": ["consultation", "contact_form", "phone"],
+  "required_trust_signals": ["client_logos", "case_studies", "testimonials", "team"],
+  "psychology_focus": ["authority", "social_proof", "expertise"],
+  "forbidden_psychology": ["fake_scarcity", "fake_countdown"]
+}

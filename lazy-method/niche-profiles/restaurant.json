@@ -1,0 +1,15 @@
+{
+  "_comment": "Example profile — auto-detected on Restaurant/Menu schema or food/reservation language.",
+  "niche": "restaurant",
+  "schema_type": "Restaurant",
+  "is_local": true,
+  "required_schemas": ["Restaurant", "LocalBusiness", "Menu", "BreadcrumbList"],
+  "thresholds_override": {
+    "word_count": [600, 2000],
+    "images_min": 5
+  },
+  "required_cta_types": ["reservation", "phone", "menu_view", "directions"],
+  "required_trust_signals": ["reviews", "rating", "hours"],
+  "psychology_focus": ["sensory_appeal", "social_proof", "local_authenticity"],
+  "forbidden_psychology": ["fake_scarcity"]
+}

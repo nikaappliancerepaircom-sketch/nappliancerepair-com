@@ -13,7 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/tokens.css">
 
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -38,7 +39,15 @@
       "openingHours": [
         "Mo-Sa 08:00-20:00",
         "Su 09:00-18:00"
-      ]
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Sergey"
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 8
+      }
     },
     {
       "@type": "Service",
@@ -47,8 +56,16 @@
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed": "North York",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.65,
+          "longitude": -79.38
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": "North York",
       "description": "Professional appliance repair in Toronto & GTA"
     },
     {
@@ -56,7 +73,8 @@
       "mainEntity": []
     }
   ]
-}</script>
+}
+</script>
 
 <style>
 /* =============================================
@@ -592,6 +610,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
   <meta name="twitter:title" content="Appliance Repair North York | Same-Day | (437) 524-1053">
   <meta name="twitter:description" content="Trusted appliance repair in North York. Licensed technicians fix fridges, washers, dryers &amp; dishwashers. Same-day service, $89 diagnostic — waived with repair. Call (437) 524-1053!">
   <meta property="og:image" content="https://nappliancerepair.com/og-image.jpg">
+<!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>
 

@@ -1,0 +1,16 @@
+{
+  "_comment": "Example profile — auto-detected on LegalService/Attorney/Accounting schema or consultation language.",
+  "niche": "professional-service",
+  "schema_type": "ProfessionalService",
+  "is_local": true,
+  "required_schemas": ["ProfessionalService", "Organization", "FAQPage", "BreadcrumbList"],
+  "thresholds_override": {
+    "word_count": [1500, 4000],
+    "reading_level": [9, 13],
+    "internal_links_min": 6
+  },
+  "required_cta_types": ["consultation_book", "contact_form", "phone"],
+  "required_trust_signals": ["credentials", "years_in_practice", "reviews", "team_bios"],
+  "psychology_focus": ["expertise", "authority", "trust"],
+  "forbidden_psychology": ["fake_scarcity", "high_pressure_tactics"]
+}

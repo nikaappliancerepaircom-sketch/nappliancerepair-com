@@ -1,0 +1,16 @@
+{
+  "_comment": "Example profile — auto-detected on Product/Store schema, $-prices, add-to-cart language.",
+  "niche": "ecommerce",
+  "schema_type": "Store",
+  "is_local": false,
+  "required_schemas": ["Product", "Organization", "BreadcrumbList", "Review"],
+  "thresholds_override": {
+    "word_count": [500, 2000],
+    "internal_links_min": 8,
+    "images_min": 3
+  },
+  "required_cta_types": ["add_to_cart", "buy_now"],
+  "required_trust_signals": ["reviews", "shipping_policy", "return_policy", "secure_checkout_badge"],
+  "psychology_focus": ["social_proof", "scarcity_truthful", "loss_aversion"],
+  "forbidden_psychology": ["fake_countdown", "fake_inventory_count"]
+}

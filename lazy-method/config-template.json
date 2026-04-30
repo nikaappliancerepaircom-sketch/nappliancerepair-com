@@ -1,0 +1,68 @@
+{
+  "_comment": "Universal Lazy Method config. Copy to {site}/lazy-config.json and fill in. Use python lazy-method/lazy-check.py --init to generate interactively.",
+  "_schema_version": 1,
+
+  "site": {
+    "name": null,
+    "domain": null,
+    "language": "en-US",
+    "country": null,
+    "currency": null
+  },
+
+  "business": {
+    "niche": null,
+    "is_local": null,
+    "schema_type": null,
+    "founded_year": null,
+    "review_count": 0,
+    "rating": 0,
+    "team_size": null
+  },
+
+  "contact": {
+    "email": null,
+    "phone": null,
+    "address": null,
+    "service_area": null
+  },
+
+  "brand": {
+    "primary_color": null,
+    "secondary_color": null,
+    "logo_path": "/assets/logo.svg",
+    "font_family": null
+  },
+
+  "thresholds": {
+    "word_count": [800, 3000],
+    "title_length": [40, 60],
+    "meta_desc_length": [140, 160],
+    "h2_count": [5, 12],
+    "h3_count_min": 3,
+    "internal_links_min": 5,
+    "external_links_max": 10,
+    "images_min": 1,
+    "reading_level": [7, 11],
+    "faq_count_min": 3,
+    "paragraph_max_sentences": 5,
+    "section_max_words": 500,
+    "duplicate_sentence_max": 3
+  },
+
+  "rules": {
+    "no_cross_link_domains": [],
+    "required_mentions_in_h1_or_first_paragraph": ["${site.name}"],
+    "required_schemas": [],
+    "no_fake_urgency_phrases": [
+      "only X spots left",
+      "limited time",
+      "act now",
+      "don't miss out"
+    ]
+  },
+
+  "niche_overrides": {
+    "_comment": "Filled from niche-profiles/{niche}.json at load time"
+  }
+}

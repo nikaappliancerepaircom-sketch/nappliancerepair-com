@@ -13,7 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/tokens.css">
 
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -38,7 +39,15 @@
       "openingHours": [
         "Mo-Sa 08:00-20:00",
         "Su 09:00-18:00"
-      ]
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Sergey"
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 8
+      }
     },
     {
       "@type": "Service",
@@ -48,8 +57,16 @@
         "@type": "LocalBusiness",
         "name": "N Appliance Repair"
       },
-      "serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed": {
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.65,
+          "longitude": -79.38
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": {
         "@type": "AdministrativeArea",
         "name": "Islington Village",
         "containedInPlace": {
@@ -121,7 +138,8 @@
       ]
     }
   ]
-}</script>
+}
+</script>
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -225,6 +243,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
   <meta name="twitter:title" content="Dishwasher Repair Islington Village | (437) 524-1053">
   <meta name="twitter:description" content="Fast dishwasher repair in Islington Village. Licensed technicians fix Samsung, LG, Bosch &amp; all brands same day. $89 flat diagnostic. Call (437) 524-1053!">
   <meta property="og:image" content="https://nappliancerepair.com/og-image.jpg">
+<!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>
 
