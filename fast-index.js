@@ -16,6 +16,74 @@ const https = require('https');
 
 const SITES = [
   {
+    domain: 'https://nikaappliancerepair.com',
+    name: 'nikaappliancerepair',
+    urls: [
+      // Homepage
+      '/',
+      // Core service pages
+      '/services/refrigerator-repair',
+      '/services/washer-repair',
+      '/services/dryer-repair',
+      '/services/dishwasher-repair',
+      '/services/oven-repair',
+      '/services/stove-repair',
+      // City hub pages
+      '/locations/toronto',
+      '/locations/scarborough',
+      '/locations/north-york',
+      '/locations/etobicoke',
+      '/locations/mississauga',
+      '/locations/brampton',
+      '/locations/vaughan',
+      '/locations/markham',
+      '/locations/richmond-hill',
+      '/locations/oakville',
+      '/locations/burlington',
+      '/locations/pickering',
+      '/locations/ajax',
+      '/locations/whitby',
+      '/locations/oshawa',
+      // Service+city pages (highest GSC opportunity)
+      '/dishwasher-repair-richmond-hill',
+      '/dishwasher-repair-north-york',
+      '/dishwasher-repair-toronto',
+      '/dishwasher-repair-scarborough',
+      '/dishwasher-repair-mississauga',
+      '/fridge-repair-toronto',
+      '/fridge-repair-mississauga',
+      '/fridge-repair-north-york',
+      '/fridge-repair-scarborough',
+      '/fridge-repair-vaughan',
+      '/washer-repair-toronto',
+      '/washer-repair-mississauga',
+      '/washer-repair-north-york',
+      '/washer-repair-scarborough',
+      '/dryer-repair-toronto',
+      '/dryer-repair-mississauga',
+      '/dryer-repair-north-york',
+      '/oven-repair-toronto',
+      '/oven-repair-mississauga',
+      '/stove-repair-toronto',
+      // Brand pages
+      '/brands/lg',
+      '/brands/samsung',
+      '/brands/whirlpool',
+      '/brands/bosch',
+      '/brands/ge',
+      '/brands/miele',
+      '/brands/frigidaire',
+      '/brands/kenmore',
+      '/brands/kitchenaid',
+      // Utility / new pages
+      '/about',
+      '/privacy',
+      '/terms',
+      '/accessibility',
+      '/blog-nika-appliance-repair',
+    ],
+  },
+  {
     domain: 'https://nappliancerepair.com',
     name: 'nappliancerepair',
     urls: [
@@ -282,14 +350,16 @@ async function getAccessToken(saJson) {
   // Simple JWT-based service account auth
   const { createSign } = require('crypto');
   const sa = JSON.parse(saJson);
-  const now = Math.floor(Date.now() / 1000) - 3600; // subtract 1h for local clock skew
+  const now = Math.floor(Date.now() / 1000);
+  const iat = now - 60; // 1 min in past for clock-skew tolerance
+  const exp = now + 3000; // 50 min in future (Google requires <60 min lifetime, > now)
   const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
   const payload = Buffer.from(JSON.stringify({
     iss: sa.client_email,
     scope: 'https://www.googleapis.com/auth/indexing',
     aud: 'https://oauth2.googleapis.com/token',
-    exp: now + 3600,
-    iat: now,
+    exp,
+    iat,
   })).toString('base64url');
   const sign = createSign('RSA-SHA256');
   sign.update(`${header}.${payload}`);
