@@ -540,6 +540,43 @@ h1.page-h1 {
     </nav>
     <div class="page-eyebrow">Service Areas</div>
     <h1 class="page-h1">Areas We Serve</h1>
+<!-- TRUST-BLOCK-v1 -->
+<section class="lz-trust-block" aria-labelledby="lz-trust-heading">
+  <h2 id="lz-trust-heading" class="lz-trust-h">Why local homeowners book us in your area</h2>
+  <p class="lz-trust-intro">Our team in your area is led by <strong>Sergey</strong>, supported by <strong>8 TSSA-licensed technicians</strong>. Every visit comes with a written quote, a 90-day parts &amp; labour warranty, and a free diagnostic when you proceed with the repair.</p>
+  <ul class="lz-trust-points">
+    <li><strong>Same-day service</strong> when you book before 12&nbsp;PM on a weekday.</li>
+    <li><strong>Upfront pricing.</strong> No hourly rates, no surprises.</li>
+    <li><strong>Insured &amp; bonded</strong> &mdash; certified to work on Samsung, LG, Whirlpool, Bosch, GE, Frigidaire, Kenmore, KitchenAid, and Miele.</li>
+  </ul>
+  <form class="lz-quick-form" action="/contact" method="post" aria-label="Quick repair request">
+    <p class="lz-quick-form-lead">Prefer to type? Send a quick request and we'll call you back within 30 minutes.</p>
+    <label class="lz-quick-field"><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
+    <label class="lz-quick-field"><span>Phone number</span><input type="tel" name="phone" autocomplete="tel" required></label>
+    <label class="lz-quick-field"><span>City</span><input type="text" name="city" value="your area" autocomplete="address-level2"></label>
+    <label class="lz-quick-field"><span>What needs fixing?</span><textarea name="issue" rows="3" placeholder="e.g. Samsung fridge not cooling"></textarea></label>
+    <button type="submit" class="lz-quick-submit">Request a callback</button>
+  </form>
+</section>
+<style>
+.lz-trust-block{max-width:880px;margin:24px auto;padding:24px 20px;border:1px solid rgba(15,23,42,0.08);border-radius:12px;background:#FAFAFA;font-size:15px;line-height:1.65;color:#374151}
+.lz-trust-h{font-size:1.2rem;margin:0 0 10px;color:#0f172a;font-weight:700}
+.lz-trust-intro{margin:0 0 14px;color:#334155}
+.lz-trust-intro strong{color:#0f172a}
+.lz-trust-points{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px}
+.lz-trust-points li{padding-left:22px;position:relative;color:#475569;font-size:14px}
+.lz-trust-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#2563eb;font-weight:700}
+.lz-quick-form{display:grid;gap:10px;margin:0;padding:14px;border:1px dashed rgba(15,23,42,0.12);border-radius:10px;background:#fff}
+.lz-quick-form-lead{margin:0 0 4px;font-size:13px;color:#475569}
+.lz-quick-field{display:flex;flex-direction:column;gap:4px;font-size:12px;color:#475569;font-weight:600}
+.lz-quick-field input,.lz-quick-field textarea{padding:8px 10px;border:1px solid #cbd5e1;border-radius:6px;font-size:14px;color:#0f172a;background:#fff;font-family:inherit}
+.lz-quick-field input:focus,.lz-quick-field textarea:focus{outline:none;border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,0.15)}
+.lz-quick-submit{padding:10px 18px;background:#2563eb;color:#fff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:14px;margin-top:4px}
+.lz-quick-submit:hover{background:#1d4ed8}
+@media (prefers-color-scheme:dark){.lz-trust-block{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);color:rgba(232,244,253,0.7)}.lz-trust-h{color:rgba(232,244,253,0.95)}.lz-trust-intro{color:rgba(232,244,253,0.7)}.lz-trust-intro strong{color:rgba(232,244,253,0.95)}.lz-trust-points li{color:rgba(232,244,253,0.65)}.lz-quick-form{background:rgba(255,255,255,0.02);border-color:rgba(255,255,255,0.12)}.lz-quick-form-lead{color:rgba(232,244,253,0.6)}.lz-quick-field{color:rgba(232,244,253,0.7)}.lz-quick-field input,.lz-quick-field textarea{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:rgba(232,244,253,0.95)}}
+</style>
+<!-- END-TRUST-BLOCK-v1 -->
+
     <p class="page-lead">N Appliance Repair provides same-day appliance repair across Toronto and 15+ cities throughout the Greater Toronto Area. Call (437) 524-1053 — Mon–Sat 8am–8pm. We dispatch from multiple locations to keep response times short, with 2-hour arrival windows and no all-day waiting.</p>
   </div>
 </section>
