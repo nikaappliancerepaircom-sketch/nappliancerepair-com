@@ -31,7 +31,7 @@ jobs:
         run: node publish-next.js
 
       - name: Regenerate sitemap
-        run: node gen-sitemap-self.js
+        run: node gen-sitemap-full.js
 
       - name: Drip 4 URLs to Google Indexing API
         env:
