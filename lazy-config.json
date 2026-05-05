@@ -1,7 +1,7 @@
 {
   "_schema_version": 1,
   "site": {
-    "name": "N Appliance Repair",
+    "name": "Nick's Appliance Repair",
     "domain": "nappliancerepair.com",
     "language": "en-CA",
     "country": "CA",
@@ -18,7 +18,7 @@
   },
   "contact": {
     "email": "info@nappliancerepair.com",
-    "phone": "+1-437-524-1053",
+    "phone": "+1-437-747-6737",
     "address": "York Region, Ontario, Canada",
     "service_area": "York Region (Richmond Hill, Newmarket, Markham, Vaughan, Bradford)"
   },
@@ -45,7 +45,7 @@
   },
   "rules": {
     "no_cross_link_domains": ["nikaappliancerepair.com", "appliancerepairneary.com", "fixlifyservices.com"],
-    "required_mentions_in_h1_or_first_paragraph": ["N Appliance Repair"],
+    "required_mentions_in_h1_or_first_paragraph": ["appliance repair"],
     "required_schemas": ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
     "no_fake_urgency_phrases": ["only X spots left", "limited time", "act now", "don't miss out"]
   },
@@ -59,5 +59,15 @@
     "required_trust_signals": ["license_number", "insured_badge", "warranty", "reviews", "years_in_business"],
     "psychology_focus": ["urgency_truthful", "trust", "authority", "social_proof"],
     "forbidden_psychology": ["fake_countdown", "fake_inventory"]
-  }
+  },
+  "exclude_files": [
+    "service-template.html",
+    "preview/**",
+    "compare/**",
+    "landing-v*.html",
+    "*.bak.html",
+    "tools/**",
+    "reports/**",
+    "node_modules/**"
+  ]
 }

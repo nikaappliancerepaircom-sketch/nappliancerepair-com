@@ -425,39 +425,60 @@ window.addEventListener('message',function(e){if(e.data&&e.data.type==='fixlify-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "How does online booking work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Select your preferred date and 2-hour arrival window from the booking calendar. You receive instant confirmation. Our technician calls 30 minutes before arrival. The $89 diagnostic fee is waived when you approve the repair."
-      }
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does online booking work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Select your preferred date and 2-hour arrival window from the booking calendar. You receive instant confirmation. Our technician calls 30 minutes before arrival. The $89 diagnostic fee is waived when you approve the repair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is same-day service available when booking online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, same-day slots appear in real time if they are available for your area. For the fastest same-day booking, you can also call (437) 524-1053 directly — we serve Toronto, Mississauga, Brampton, Scarborough, North York, and all GTA cities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What appliances can I book a repair for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can book a repair for any household appliance: refrigerators, washing machines, dryers, dishwashers, ovens, ranges, and stoves. All major brands are supported — Samsung, LG, Whirlpool, Bosch, GE, Frigidaire, Kenmore, KitchenAid, Miele, and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I need to cancel or reschedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call us at (437) 524-1053 and we will reschedule at no penalty. We only ask for as much notice as possible so we can fill the slot for another customer."
+          }
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Is same-day service available when booking online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, same-day slots appear in real time if they are available for your area. For the fastest same-day booking, you can also call (437) 524-1053 directly — we serve Toronto, Mississauga, Brampton, Scarborough, North York, and all GTA cities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What appliances can I book a repair for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can book a repair for any household appliance: refrigerators, washing machines, dryers, dishwashers, ovens, ranges, and stoves. All major brands are supported — Samsung, LG, Whirlpool, Bosch, GE, Frigidaire, Kenmore, KitchenAid, Miele, and more."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if I need to cancel or reschedule?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Call us at (437) 524-1053 and we will reschedule at no penalty. We only ask for as much notice as possible so we can fill the slot for another customer."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nappliancerepair.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Book Same-Day Appliance Repair"
+        }
+      ]
     }
   ]
 }
