@@ -30,10 +30,10 @@ jobs:
           GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
         run: node publish-next.js
 
-      - name: Drip 4 URLs to Google Indexing API
+      - name: Drip 12 URLs to Google Indexing API
         env:
           GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
-        run: node drip-index.js --count 4
+        run: node drip-index.js --count 12
 
       - name: Regenerate sitemap (full filesystem scan — must run last)
         run: node gen-sitemap-full.js
