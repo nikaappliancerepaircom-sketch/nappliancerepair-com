@@ -28,7 +28,11 @@ function walk(dir, prefix = '') {
   return out;
 }
 
-const today = new Date().toISOString().slice(0, 10);
+function mtime(relPath) {
+  try { return fs.statSync(path.join(DIR, relPath)).mtime.toISOString().slice(0, 10); }
+  catch { return new Date().toISOString().slice(0, 10); }
+}
+
 const files = walk(DIR);
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +41,7 @@ ${files.map(f => {
   const urlPath = f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, '');
   return `  <url>
     <loc>${DOMAIN}${urlPath}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${mtime(f)}</lastmod>
     <priority>${f === 'index.html' ? '1.0' : '0.8'}</priority>
   </url>`;
 }).join('\n')}
