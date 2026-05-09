@@ -7,6 +7,23 @@ const sites = [
   { dir: 'C:/fixlifyservices', domain: 'https://fixlifyservices.com' },
 ];
 
+// Alberta city slugs — pages that serve Alberta are noindex'd and excluded from sitemap
+const ALBERTA_CITIES = [
+  'calgary', 'edmonton', 'airdrie', 'beaumont', 'canmore', 'chestermere',
+  'cochrane', 'devon', 'leduc', 'okotoks', 'fort-saskatchewan', 'strathmore',
+  'high-river', 'banff', 'spruce-grove', 'stony-plain', 'st-albert',
+  'sherwood-park', 'morinville'
+];
+
+function isAlbertaFile(filename) {
+  const base = filename.replace(/\.html$/, '');
+  if (ALBERTA_CITIES.includes(base)) return true;
+  for (const city of ALBERTA_CITIES) {
+    if (base.endsWith('-' + city)) return true;
+  }
+  return false;
+}
+
 // Spread dates naturally over past 4 months to look organic
 function getLastmod(filename) {
   // Homepage and top service pages — oldest (established)
@@ -51,7 +68,7 @@ sites.forEach(({ dir, domain }) => {
   // Get all HTML files recursively (root + blog/)
   const exclude = ['service-template.html', '404.html'];
   let files = fs.readdirSync(dir)
-    .filter(f => f.endsWith('.html') && !exclude.includes(f))
+    .filter(f => f.endsWith('.html') && !exclude.includes(f) && !isAlbertaFile(f))
     .map(f => f);
 
   // Also check blog/ subfolder
