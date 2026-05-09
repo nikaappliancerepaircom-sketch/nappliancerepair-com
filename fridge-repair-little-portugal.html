@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/fridge-repair-little-portugal#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Refrigerator Repair in Little Portugal","serviceType":"Refrigerator Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Little Portugal, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"120-250"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/fridge-repair-little-portugal#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Refrigerator Repair in Little Portugal",
+  "serviceType": "Refrigerator Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Little Portugal, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "120-250"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair appliances in Little Portugal's older semi-detached homes? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We navigate narrow kitchen and basement configurations in Little Portugal's 1910s to 1940s semis regularly. Our compact tool sets work in tight spaces without difficulty."}},
-    {"@type":"Question","name":"My stove in Little Portugal has uneven heating on the burners. Can you fix it? +","acceptedAnswer":{"@type":"Answer","text":"Uneven heating on gas burners is typically caused by clogged burner ports or a failing burner valve. On electric stoves a failing element is the usual culprit. We fix both same-day in most cases."}},
-    {"@type":"Question","name":"Can you access basement laundry rooms in Little Portugal homes? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Basement laundry with washer and dryer stacks or side-by-side configurations in older Little Portugal homes are routine service calls for our team."}},
-    {"@type":"Question","name":"What brands do you service most in Little Portugal? +","acceptedAnswer":{"@type":"Answer","text":"Whirlpool and Maytag are most common in older Little Portugal homes. LG and Samsung appear in recently renovated properties. We service all major brands."}},
-    {"@type":"Question","name":"How quickly can you arrive in Little Portugal? +","acceptedAnswer":{"@type":"Answer","text":"Little Portugal is within our core west Toronto service area. Same-day service within 2 to 4 hours is standard Monday through Saturday."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/fridge-repair-little-portugal#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair appliances in Little Portugal's older semi-detached homes? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We navigate narrow kitchen and basement configurations in Little Portugal's 1910s to 1940s semis regularly. Our compact tool sets work in tight spaces without difficulty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My stove in Little Portugal has uneven heating on the burners. Can you fix it? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uneven heating on gas burners is typically caused by clogged burner ports or a failing burner valve. On electric stoves a failing element is the usual culprit. We fix both same-day in most cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you access basement laundry rooms in Little Portugal homes? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Basement laundry with washer and dryer stacks or side-by-side configurations in older Little Portugal homes are routine service calls for our team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What brands do you service most in Little Portugal? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whirlpool and Maytag are most common in older Little Portugal homes. LG and Samsung appear in recently renovated properties. We service all major brands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you arrive in Little Portugal? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Little Portugal is within our core west Toronto service area. Same-day service within 2 to 4 hours is standard Monday through Saturday."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

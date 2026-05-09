@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/dryer-repair-thorncliffe-park#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Dryer Repair in Thorncliffe Park","serviceType":"Dryer Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Thorncliffe Park, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"80-180"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/dryer-repair-thorncliffe-park#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dryer Repair in Thorncliffe Park",
+  "serviceType": "Dryer Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Thorncliffe Park, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "80-180"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair stoves with heavy spice cooking residue in Thorncliffe Park? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Heavy South Asian cooking creates substantial grease and carbon buildup on burners, igniters, and oven walls. We deep-clean and restore stove function alongside all mechanical repairs needed."}},
-    {"@type":"Question","name":"How do you handle service in Thorncliffe Park apartment buildings? +","acceptedAnswer":{"@type":"Answer","text":"We contact building management for elevator access and required permissions, then work with both tenants and building superintendents to minimize wait times. Same-day service is our standard in this area."}},
-    {"@type":"Question","name":"My always-full Thorncliffe fridge is not cooling properly. What is the cause? +","acceptedAnswer":{"@type":"Answer","text":"Overfull refrigerators restrict internal airflow causing temperature instability. We check condenser coils, evaporator fan motors, and thermostat settings as standard on every Thorncliffe fridge call."}},
-    {"@type":"Question","name":"Do you service Haier appliances in Thorncliffe Park? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Haier appliances are popular for their value pricing in Thorncliffe Park units. We service Haier washers, dryers, refrigerators, and other products."}},
-    {"@type":"Question","name":"What is the most common appliance issue in Thorncliffe Park? +","acceptedAnswer":{"@type":"Answer","text":"Stove burner failures from cooking residue, washer bearing failures from heavy use, and fridge cooling problems from high occupancy are our most frequent Thorncliffe calls."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/dryer-repair-thorncliffe-park#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair stoves with heavy spice cooking residue in Thorncliffe Park? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Heavy South Asian cooking creates substantial grease and carbon buildup on burners, igniters, and oven walls. We deep-clean and restore stove function alongside all mechanical repairs needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle service in Thorncliffe Park apartment buildings? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We contact building management for elevator access and required permissions, then work with both tenants and building superintendents to minimize wait times. Same-day service is our standard in this area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My always-full Thorncliffe fridge is not cooling properly. What is the cause? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Overfull refrigerators restrict internal airflow causing temperature instability. We check condenser coils, evaporator fan motors, and thermostat settings as standard on every Thorncliffe fridge call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you service Haier appliances in Thorncliffe Park? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Haier appliances are popular for their value pricing in Thorncliffe Park units. We service Haier washers, dryers, refrigerators, and other products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common appliance issue in Thorncliffe Park? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stove burner failures from cooking residue, washer bearing failures from heavy use, and fridge cooling problems from high occupancy are our most frequent Thorncliffe calls."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

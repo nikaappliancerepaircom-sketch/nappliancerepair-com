@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/washer-repair-corso-italia#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Washer Repair in Corso Italia","serviceType":"Washer Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Corso Italia, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"100-200"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/washer-repair-corso-italia#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Washer Repair in Corso Italia",
+  "serviceType": "Washer Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Corso Italia, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "100-200"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair older appliances in Corso Italia homes? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Many Corso Italia homes have well-maintained 15 to 20 year old GE, Whirlpool, or Maytag appliances that are absolutely worth repairing. We source legacy parts and have deep experience with older North American models."}},
-    {"@type":"Question","name":"Is my 20-year-old fridge in Corso Italia worth fixing? +","acceptedAnswer":{"@type":"Answer","text":"Often yes. If the repair cost is under 50 percent of a comparable new unit's price and the appliance is otherwise running well, repairing makes clear financial sense. We give you an honest cost-benefit assessment."}},
-    {"@type":"Question","name":"Do you service in-law suite appliances in Corso Italia? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Many Corso Italia homes have basement apartments with their own fridge, stove, and washer. We service the main unit and in-law suite appliances in a single visit when possible."}},
-    {"@type":"Question","name":"What is the most common appliance repair in Corso Italia? +","acceptedAnswer":{"@type":"Answer","text":"Older refrigerator compressor issues, washer transmission failures in older top-loaders, and oven element replacements are our most common Corso Italia calls."}},
-    {"@type":"Question","name":"How do you source parts for older appliances in Corso Italia? +","acceptedAnswer":{"@type":"Answer","text":"We maintain relationships with specialty parts distributors for legacy North American and European appliance lines. Most parts arrive within 1 to 3 business days when not in stock on our vehicle."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/washer-repair-corso-italia#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair older appliances in Corso Italia homes? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many Corso Italia homes have well-maintained 15 to 20 year old GE, Whirlpool, or Maytag appliances that are absolutely worth repairing. We source legacy parts and have deep experience with older North American models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my 20-year-old fridge in Corso Italia worth fixing? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes. If the repair cost is under 50 percent of a comparable new unit's price and the appliance is otherwise running well, repairing makes clear financial sense. We give you an honest cost-benefit assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you service in-law suite appliances in Corso Italia? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many Corso Italia homes have basement apartments with their own fridge, stove, and washer. We service the main unit and in-law suite appliances in a single visit when possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common appliance repair in Corso Italia? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Older refrigerator compressor issues, washer transmission failures in older top-loaders, and oven element replacements are our most common Corso Italia calls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you source parts for older appliances in Corso Italia? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We maintain relationships with specialty parts distributors for legacy North American and European appliance lines. Most parts arrive within 1 to 3 business days when not in stock on our vehicle."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

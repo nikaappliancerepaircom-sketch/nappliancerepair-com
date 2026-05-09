@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/stove-repair-dufferin-grove#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Stove & Range Repair in Dufferin Grove","serviceType":"Stove & Range Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Dufferin Grove, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"90-200"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/stove-repair-dufferin-grove#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Stove & Range Repair in Dufferin Grove",
+  "serviceType": "Stove & Range Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Dufferin Grove, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "90-200"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you service rental units in Dufferin Grove? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We work regularly in Dufferin Grove rental properties, communicating with both tenants for access and landlords for payment and approval. We adapt to different coordination arrangements."}},
-    {"@type":"Question","name":"My landlord-owned appliance in Dufferin Grove is broken. How does service work? +","acceptedAnswer":{"@type":"Answer","text":"Call us at (437) 524-1053. We can coordinate directly with your landlord for authorization and payment if you provide their contact details. Same-day diagnostics are available."}},
-    {"@type":"Question","name":"Do you repair budget brand appliances in Dufferin Grove rentals? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Frigidaire, GE, Whirlpool, and other value-tier brands in rental units are all serviceable. We carry common parts for these brands on our vehicles."}},
-    {"@type":"Question","name":"What is the most common appliance call in Dufferin Grove? +","acceptedAnswer":{"@type":"Answer","text":"Washer spin failures, fridges not cooling, and stove burner issues are most frequent. Rental unit appliances with deferred maintenance often develop multiple issues at once."}},
-    {"@type":"Question","name":"Do you repair appliances on weekends in Dufferin Grove? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Saturday service runs 8am to 8pm. Sunday service is available 9am to 6pm. Weekend calls receive the same priority as weekday calls."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/stove-repair-dufferin-grove#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you service rental units in Dufferin Grove? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We work regularly in Dufferin Grove rental properties, communicating with both tenants for access and landlords for payment and approval. We adapt to different coordination arrangements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My landlord-owned appliance in Dufferin Grove is broken. How does service work? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call us at (437) 524-1053. We can coordinate directly with your landlord for authorization and payment if you provide their contact details. Same-day diagnostics are available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you repair budget brand appliances in Dufferin Grove rentals? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Frigidaire, GE, Whirlpool, and other value-tier brands in rental units are all serviceable. We carry common parts for these brands on our vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common appliance call in Dufferin Grove? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Washer spin failures, fridges not cooling, and stove burner issues are most frequent. Rental unit appliances with deferred maintenance often develop multiple issues at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you repair appliances on weekends in Dufferin Grove? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Saturday service runs 8am to 8pm. Sunday service is available 9am to 6pm. Weekend calls receive the same priority as weekday calls."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

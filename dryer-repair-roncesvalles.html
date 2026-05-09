@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/dryer-repair-roncesvalles#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Dryer Repair in Roncesvalles","serviceType":"Dryer Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Roncesvalles, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"80-180"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/dryer-repair-roncesvalles#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dryer Repair in Roncesvalles",
+  "serviceType": "Dryer Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Roncesvalles, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "80-180"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you service high-volume washers and dryers in Roncesvalles family homes? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Young families in Roncy run 1 to 2 wash loads per day on average. We frequently service drum bearings, door seals, and heating elements in this neighbourhood due to high-volume laundry use."}},
-    {"@type":"Question","name":"My Roncesvalles home has a narrow kitchen. Can you still access the appliances? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We carry compact tool sets and are experienced with the narrow galley-style kitchens common in older Roncy semi-detached homes. No kitchen configuration is too tight for our team."}},
-    {"@type":"Question","name":"What brands do Roncesvalles families typically have? +","acceptedAnswer":{"@type":"Answer","text":"Whirlpool and Maytag are longstanding favourites in older Roncy homes. LG and Bosch appear in renovated properties. We service all of these brands."}},
-    {"@type":"Question","name":"How quickly can you reach Roncesvalles? +","acceptedAnswer":{"@type":"Answer","text":"Roncesvalles is a priority west Toronto service zone. Same-day service within 2 to 4 hours is standard Monday through Saturday."}},
-    {"@type":"Question","name":"Do you repair dishwashers in Roncesvalles family homes? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Dishwashers in Roncy family homes run multiple cycles per day. Drainage failures, door latch problems, and poor cleaning are typically same-day fixable."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/dryer-repair-roncesvalles#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you service high-volume washers and dryers in Roncesvalles family homes? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Young families in Roncy run 1 to 2 wash loads per day on average. We frequently service drum bearings, door seals, and heating elements in this neighbourhood due to high-volume laundry use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My Roncesvalles home has a narrow kitchen. Can you still access the appliances? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We carry compact tool sets and are experienced with the narrow galley-style kitchens common in older Roncy semi-detached homes. No kitchen configuration is too tight for our team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What brands do Roncesvalles families typically have? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whirlpool and Maytag are longstanding favourites in older Roncy homes. LG and Bosch appear in renovated properties. We service all of these brands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you reach Roncesvalles? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roncesvalles is a priority west Toronto service zone. Same-day service within 2 to 4 hours is standard Monday through Saturday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you repair dishwashers in Roncesvalles family homes? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Dishwashers in Roncy family homes run multiple cycles per day. Drainage failures, door latch problems, and poor cleaning are typically same-day fixable."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

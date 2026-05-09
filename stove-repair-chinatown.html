@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/stove-repair-chinatown#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Stove & Range Repair in Chinatown","serviceType":"Stove & Range Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Chinatown, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"90-200"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/stove-repair-chinatown#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Stove & Range Repair in Chinatown",
+  "serviceType": "Stove & Range Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Chinatown, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "90-200"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair Haier and compact appliances in Chinatown? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Haier compact units, countertop dishwashers, and apartment-sized washers common in Chinatown's smaller units are all serviceable. We stock parts for compact and non-standard sizes."}},
-    {"@type":"Question","name":"My stove in Chinatown has heavy grease buildup from wok cooking. Can you service it? +","acceptedAnswer":{"@type":"Answer","text":"Yes. High-heat wok cooking accelerates grease buildup in burner ports and around igniter electrodes. We clean, adjust, and repair stoves affected by intensive high-heat cooking styles."}},
-    {"@type":"Question","name":"Do you service apartment buildings in Chinatown? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We serve apartment buildings along Spadina, Dundas, and surrounding streets. We coordinate with building superintendents for elevator access as needed."}},
-    {"@type":"Question","name":"How do I communicate my appliance problem? +","acceptedAnswer":{"@type":"Answer","text":"Call (437) 524-1053 and describe as best you can. Our team will help clarify. Photos via text message also help us assess the issue accurately before arrival."}},
-    {"@type":"Question","name":"What is the most common appliance repair in Chinatown? +","acceptedAnswer":{"@type":"Answer","text":"Stove igniter and burner issues from heavy cooking, fridge compressor issues in older apartment buildings, and washer spin failures are our most frequent Chinatown calls."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/stove-repair-chinatown#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair Haier and compact appliances in Chinatown? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Haier compact units, countertop dishwashers, and apartment-sized washers common in Chinatown's smaller units are all serviceable. We stock parts for compact and non-standard sizes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My stove in Chinatown has heavy grease buildup from wok cooking. Can you service it? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. High-heat wok cooking accelerates grease buildup in burner ports and around igniter electrodes. We clean, adjust, and repair stoves affected by intensive high-heat cooking styles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you service apartment buildings in Chinatown? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We serve apartment buildings along Spadina, Dundas, and surrounding streets. We coordinate with building superintendents for elevator access as needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I communicate my appliance problem? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call (437) 524-1053 and describe as best you can. Our team will help clarify. Photos via text message also help us assess the issue accurately before arrival."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common appliance repair in Chinatown? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stove igniter and burner issues from heavy cooking, fridge compressor issues in older apartment buildings, and washer spin failures are our most frequent Chinatown calls."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/dishwasher-repair-etobicoke-village#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Dishwasher Repair in Etobicoke Village","serviceType":"Dishwasher Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Etobicoke Village, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"90-200"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-etobicoke-village#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dishwasher Repair in Etobicoke Village",
+  "serviceType": "Dishwasher Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Etobicoke Village, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "90-200"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you service Etobicoke Village same-day? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Etobicoke Village is within our regular Etobicoke service route. Same-day service within 2 to 4 hours is available Monday through Saturday."}},
-    {"@type":"Question","name":"My Etobicoke Village home has a finished basement laundry. Can you service appliances down there? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Finished basement laundry rooms even with tight access are routine for our technicians. We bring compact tools for low-ceiling and tight-space work in Etobicoke Village bungalows."}},
-    {"@type":"Question","name":"What brands are most common in Etobicoke Village? +","acceptedAnswer":{"@type":"Answer","text":"Whirlpool and Maytag are longstanding staples. GE and Frigidaire also appear frequently. Newer residents often have LG units. We service all of these brands with parts typically in stock."}},
-    {"@type":"Question","name":"Is my older Maytag washer in Etobicoke Village worth fixing? +","acceptedAnswer":{"@type":"Answer","text":"Almost certainly yes. Maytag washers from the 1990s to 2000s are often repairable. A door seal or pump repair is typically $120 to $250 - far less than replacement. We give you a fair cost assessment upfront."}},
-    {"@type":"Question","name":"How much do appliance repairs typically cost in Etobicoke Village? +","acceptedAnswer":{"@type":"Answer","text":"Diagnostic is $119 and waived with repair. Typical repairs run $120 to $450 depending on the appliance and part required. We provide a written quote before starting any work."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-etobicoke-village#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you service Etobicoke Village same-day? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Etobicoke Village is within our regular Etobicoke service route. Same-day service within 2 to 4 hours is available Monday through Saturday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My Etobicoke Village home has a finished basement laundry. Can you service appliances down there? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Finished basement laundry rooms even with tight access are routine for our technicians. We bring compact tools for low-ceiling and tight-space work in Etobicoke Village bungalows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What brands are most common in Etobicoke Village? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whirlpool and Maytag are longstanding staples. GE and Frigidaire also appear frequently. Newer residents often have LG units. We service all of these brands with parts typically in stock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my older Maytag washer in Etobicoke Village worth fixing? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost certainly yes. Maytag washers from the 1990s to 2000s are often repairable. A door seal or pump repair is typically $120 to $250 - far less than replacement. We give you a fair cost assessment upfront."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do appliance repairs typically cost in Etobicoke Village? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diagnostic is $119 and waived with repair. Typical repairs run $120 to $450 depending on the appliance and part required. We provide a written quote before starting any work."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

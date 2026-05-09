@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/dishwasher-repair-st-lawrence#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Dishwasher Repair in St. Lawrence","serviceType":"Dishwasher Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"St. Lawrence, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"90-200"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-st-lawrence#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dishwasher Repair in St. Lawrence",
+  "serviceType": "Dishwasher Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "St. Lawrence, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "90-200"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair Sub-Zero refrigerators in St. Lawrence condos? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Sub-Zero built-in and panel-ready refrigerators common in St. Lawrence luxury condos are fully serviced. We handle compressors, condensers, ice makers, and water filters on all Sub-Zero models."}},
-    {"@type":"Question","name":"Can you access my St. Lawrence condo building for repairs? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We work with concierge and building management for elevator access and building security. We can meet your doorman if you are not home. Just provide contact details when booking."}},
-    {"@type":"Question","name":"Do you repair GE Monogram appliances in St. Lawrence? +","acceptedAnswer":{"@type":"Answer","text":"Yes. GE Monogram refrigerators, dishwashers, and ranges are fully serviced by our technicians. GE Monogram has specific diagnostic protocols we are trained and equipped to handle."}},
-    {"@type":"Question","name":"My Wolf range in a St. Lawrence loft has an ignition issue. Can you fix it? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Wolf range ignition failures involving spark modules, electrodes, or gas valves are diagnosable and typically repairable same-day. Wolf parts are held in our specialty inventory."}},
-    {"@type":"Question","name":"How are Miele washing machines different to service? +","acceptedAnswer":{"@type":"Answer","text":"Miele uses a honeycomb drum design and proprietary motors requiring specific service tools. We are fully equipped for Miele appliance service including washing machines, dryers, and dishwashers."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-st-lawrence#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair Sub-Zero refrigerators in St. Lawrence condos? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Sub-Zero built-in and panel-ready refrigerators common in St. Lawrence luxury condos are fully serviced. We handle compressors, condensers, ice makers, and water filters on all Sub-Zero models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you access my St. Lawrence condo building for repairs? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We work with concierge and building management for elevator access and building security. We can meet your doorman if you are not home. Just provide contact details when booking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you repair GE Monogram appliances in St. Lawrence? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GE Monogram refrigerators, dishwashers, and ranges are fully serviced by our technicians. GE Monogram has specific diagnostic protocols we are trained and equipped to handle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My Wolf range in a St. Lawrence loft has an ignition issue. Can you fix it? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wolf range ignition failures involving spark modules, electrodes, or gas valves are diagnosable and typically repairable same-day. Wolf parts are held in our specialty inventory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are Miele washing machines different to service? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Miele uses a honeycomb drum design and proprietary motors requiring specific service tools. We are fully equipped for Miele appliance service including washing machines, dryers, and dishwashers."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/dishwasher-repair-king-west#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Dishwasher Repair in King West","serviceType":"Dishwasher Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"King West, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"90-200"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-king-west#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dishwasher Repair in King West",
+  "serviceType": "Dishwasher Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "King West, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "90-200"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair Bosch and Miele appliances in King West condos? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Bosch and Miele are the dominant premium brands in King West buildings. We service their full appliance lines including dishwashers, washing machines, dryers, and refrigerators."}},
-    {"@type":"Question","name":"How does appliance service work in King West high-rises? +","acceptedAnswer":{"@type":"Answer","text":"We confirm elevator booking with building management before arrival. Most King West buildings work best for daytime service. We communicate clearly about arrival windows and can text you 20 minutes ahead."}},
-    {"@type":"Question","name":"My King West stacked LG dryer is not heating. Can you fix it? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Stacked laundry units are standard in King West condos. Dryer heating failures are typically a burned heating element, failed thermal fuse, or blocked exhaust duct. All are same-day fixable in most cases."}},
-    {"@type":"Question","name":"What are the most common appliance repairs in King West condos? +","acceptedAnswer":{"@type":"Answer","text":"Dishwasher drainage and cleaning issues, washer door latch failures, and fridge ice maker problems in Samsung and LG units are the top calls we receive from King West residents."}},
-    {"@type":"Question","name":"Can you text me when you are on your way to King West? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We send an estimated arrival window text. For King West residents often at nearby offices, we can text 20 minutes ahead so you can leave to meet us."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-king-west#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair Bosch and Miele appliances in King West condos? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Bosch and Miele are the dominant premium brands in King West buildings. We service their full appliance lines including dishwashers, washing machines, dryers, and refrigerators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does appliance service work in King West high-rises? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We confirm elevator booking with building management before arrival. Most King West buildings work best for daytime service. We communicate clearly about arrival windows and can text you 20 minutes ahead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My King West stacked LG dryer is not heating. Can you fix it? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Stacked laundry units are standard in King West condos. Dryer heating failures are typically a burned heating element, failed thermal fuse, or blocked exhaust duct. All are same-day fixable in most cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the most common appliance repairs in King West condos? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dishwasher drainage and cleaning issues, washer door latch failures, and fridge ice maker problems in Samsung and LG units are the top calls we receive from King West residents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you text me when you are on your way to King West? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We send an estimated arrival window text. For King West residents often at nearby offices, we can text 20 minutes ahead so you can leave to meet us."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

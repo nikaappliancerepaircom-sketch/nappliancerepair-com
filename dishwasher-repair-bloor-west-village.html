@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/dishwasher-repair-bloor-west-village#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Dishwasher Repair in Bloor West Village","serviceType":"Dishwasher Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"Bloor West Village, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"90-200"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-bloor-west-village#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dishwasher Repair in Bloor West Village",
+  "serviceType": "Dishwasher Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Bloor West Village, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "90-200"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you repair large-capacity appliances in Bloor West Village? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Large-capacity Whirlpool and LG washers, French door refrigerators, and full-size Bosch dishwashers are among the most common units we service in Bloor West Village family homes."}},
-    {"@type":"Question","name":"How quickly can you reach Bloor West Village? +","acceptedAnswer":{"@type":"Answer","text":"Bloor West Village is a priority zone. We typically dispatch within the hour and arrive within 2 to 4 hours. Same-day service is available Monday through Saturday."}},
-    {"@type":"Question","name":"My Bloor West washer is not spinning. What is wrong? +","acceptedAnswer":{"@type":"Answer","text":"The most common cause is an overloaded drum, worn drive belt, or failing door latch on front-load models. We diagnose the exact cause on the first visit and carry most common parts in stock."}},
-    {"@type":"Question","name":"Can you access appliances in older Bloor West homes with updated kitchens? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We frequently work in older Bloor West homes with Victorian structures and modern kitchens. We take care to protect existing cabinetry and finishes during all appliance access."}},
-    {"@type":"Question","name":"What is the diagnostic fee for Bloor West Village? +","acceptedAnswer":{"@type":"Answer","text":"The diagnostic fee is $119 and is waived completely when you proceed with the repair. No hidden charges. You receive a full written quote before we start any work."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/dishwasher-repair-bloor-west-village#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you repair large-capacity appliances in Bloor West Village? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Large-capacity Whirlpool and LG washers, French door refrigerators, and full-size Bosch dishwashers are among the most common units we service in Bloor West Village family homes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you reach Bloor West Village? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bloor West Village is a priority zone. We typically dispatch within the hour and arrive within 2 to 4 hours. Same-day service is available Monday through Saturday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My Bloor West washer is not spinning. What is wrong? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common cause is an overloaded drum, worn drive belt, or failing door latch on front-load models. We diagnose the exact cause on the first visit and carry most common parts in stock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you access appliances in older Bloor West homes with updated kitchens? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We frequently work in older Bloor West homes with Victorian structures and modern kitchens. We take care to protect existing cabinetry and finishes during all appliance access."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the diagnostic fee for Bloor West Village? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The diagnostic fee is $119 and is waived completely when you proceed with the repair. No hidden charges. You receive a full written quote before we start any work."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>

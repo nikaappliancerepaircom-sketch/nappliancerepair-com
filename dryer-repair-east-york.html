@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@id": "https://nappliancerepair.com/#business",
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N Appliance Repair",
@@ -68,6 +69,7 @@
       }
     },
     {
+      "@id": "https://nappliancerepair.com/dryer-repair-east-york#breadcrumb",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -86,8 +88,62 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Dryer Repair in East York","serviceType":"Dryer Repair","provider":{"@type":"LocalBusiness","name":"N Appliance Repair","telephone":"+14375241053"},"serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.65, "longitude": -79.38}, "geoRadius": "50000"},
-    "areaServed":{"@type":"Place","name":"East York, Toronto"},"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"119"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Standard Repair"},"priceSpecification":{"@type":"PriceSpecification","priceCurrency":"CAD","price":"80-180"}}]}}</script>
+<script type="application/ld+json">
+{
+  "@id": "https://nappliancerepair.com/dryer-repair-east-york#service",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dryer Repair in East York",
+  "serviceType": "Dryer Repair",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "N Appliance Repair",
+    "telephone": "+14375241053"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.65,
+      "longitude": -79.38
+    },
+    "geoRadius": "50000"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "East York, Toronto"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Diagnostic"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "119"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Standard Repair"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CAD",
+          "price": "80-180"
+        }
+      }
+    ]
+  }
+}
+</script>
 $$
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,18 +210,54 @@ $$
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {"@type":"Question","name":"Do you service East York on the same day? +","acceptedAnswer":{"@type":"Answer","text":"Yes. We dispatch to all East York streets including O'Connor Drive, Cosburn Avenue, and Woodbine Heights within 2 to 4 hours. East York is a core Toronto service area for us."}},
-    {"@type":"Question","name":"Does older wiring in my East York home cause a problem? +","acceptedAnswer":{"@type":"Answer","text":"Not at all. Our technicians handle older electrical configurations common in East York bungalows and will tell you if an electrician is also needed."}},
-    {"@type":"Question","name":"Can you access basement laundry rooms in East York bungalows? +","acceptedAnswer":{"@type":"Answer","text":"Yes. Basement laundry setups including stacked and side-by-side units in older East York homes are routine calls. Tight spaces are no issue with our compact tool kits."}},
-    {"@type":"Question","name":"What appliance brands are most common in East York? +","acceptedAnswer":{"@type":"Answer","text":"Whirlpool and Maytag are most common in older East York homes. GE and Frigidaire also appear frequently. Newer residents often have LG and Samsung. We service all of these."}},
-    {"@type":"Question","name":"How much do repairs cost in East York? +","acceptedAnswer":{"@type":"Answer","text":"Most repairs in East York range from $120 to $450 depending on the issue. The $119 diagnostic fee is waived when you proceed with the repair."}}
-    ]
-  }
-  </script>
+{
+  "@id": "https://nappliancerepair.com/dryer-repair-east-york#faq",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you service East York on the same day? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We dispatch to all East York streets including O'Connor Drive, Cosburn Avenue, and Woodbine Heights within 2 to 4 hours. East York is a core Toronto service area for us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does older wiring in my East York home cause a problem? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at all. Our technicians handle older electrical configurations common in East York bungalows and will tell you if an electrician is also needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you access basement laundry rooms in East York bungalows? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Basement laundry setups including stacked and side-by-side units in older East York homes are routine calls. Tight spaces are no issue with our compact tool kits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What appliance brands are most common in East York? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whirlpool and Maytag are most common in older East York homes. GE and Frigidaire also appear frequently. Newer residents often have LG and Samsung. We service all of these."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do repairs cost in East York? +",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most repairs in East York range from $120 to $450 depending on the issue. The $119 diagnostic fee is waived when you proceed with the repair."
+      }
+    }
+  ]
+}
+</script>
 <!-- SCHEMA-ENRICH-v1 -->
 </head>
 <body>
