@@ -12,6 +12,13 @@ const SITEMAP_FILE = path.join(DIR, 'sitemap.xml');
 const SKIP_FILES = new Set(['404.html','service-template.html','ajax.html','book.html','preview.html','sitemap.html']);
 const SKIP_DIRS  = new Set(['node_modules','.git','_queue','assets','css','js','images','fonts','components','templates','styles','backups','backup','old','archive','reports','tools']);
 
+function hasNoindex(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8').slice(0, 2000);
+    return /noindex/.test(content);
+  } catch { return false; }
+}
+
 function walk(dir, prefix = '') {
   const out = [];
   let items; try { items = fs.readdirSync(dir, { withFileTypes: true }); } catch { return out; }
@@ -21,7 +28,10 @@ function walk(dir, prefix = '') {
       out.push(...walk(path.join(dir, item.name), prefix + item.name + '/'));
     } else if (item.name.endsWith('.html') && !item.name.includes('.bak')) {
       if (!SKIP_FILES.has(item.name) && !item.name.startsWith('landing-')) {
-        out.push(prefix + item.name);
+        const fullPath = path.join(dir, item.name);
+        if (!hasNoindex(fullPath)) {
+          out.push(prefix + item.name);
+        }
       }
     }
   }
