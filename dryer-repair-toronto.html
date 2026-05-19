@@ -15,132 +15,173 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "https://nappliancerepair.com/#business",
-      "@type": "LocalBusiness",
-      "name": "Nick's Appliance Repair",
-      "telephone": "+14375241053",
-  "email": "info@nappliancerepair.com",
-      "priceRange": "$$",
-      "url": "https://nappliancerepair.com",
-      "datePublished": "2025-12-01",
-      "dateModified": "2025-12-01",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "Ontario",
-        "addressCountry": "CA"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "312"
-      },
-      "openingHours": [
-        "Mo-Sa 08:00-20:00",
-        "Su 09:00-18:00"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Sergey"
-      },
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": 8
-      }
-    },
-    {
-      "@id": "https://nappliancerepair.com/dryer-repair-toronto#service",
-      "@type": "Service",
-      "serviceType": "Dryer Repair",
-      "name": "Dryer Repair in Toronto",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Nick's Appliance Repair"
-      },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 43.65,
-          "longitude": -79.38
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@id": "https://nappliancerepair.com/#business",
+            "@type": "LocalBusiness",
+            "name": "Nick's Appliance Repair",
+            "telephone": "+14375241053",
+            "email": "info@nappliancerepair.com",
+            "priceRange": "$$",
+            "url": "https://nappliancerepair.com",
+            "datePublished": "2025-12-01",
+            "dateModified": "2025-12-01",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "Ontario",
+                "addressCountry": "CA"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "312"
+            },
+            "openingHours": [
+                "Mo-Sa 08:00-20:00",
+                "Su 09:00-18:00"
+            ],
+            "founder": {
+                "@type": "Person",
+                "name": "Sergey"
+            },
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "value": 8
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Michael T."
+                    },
+                    "reviewBody": "Quick same-day response for my Samsung dryer in Richmond Hill. Technician diagnosed a blown thermal fuse and replaced it on the spot. Excellent service.",
+                    "datePublished": "2025-10-22"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Linda R."
+                    },
+                    "reviewBody": "Had a GE dishwasher with a drainage issue. N Appliance Repair came the same afternoon, fixed it cleanly, and the 90-day warranty was reassuring. Would use again.",
+                    "datePublished": "2025-12-15"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Ahmed S."
+                    },
+                    "reviewBody": "Fridge stopped cooling overnight. Called first thing in the morning, technician arrived by 11am in Markham. Evaporator fan replaced, working perfectly since.",
+                    "datePublished": "2026-02-07"
+                }
+            ]
         },
-        "geoRadius": "50000"
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Toronto",
-        "containedInPlace": {
-          "@type": "AdministrativeArea",
-          "name": "Greater Toronto Area, Ontario, Canada"
+        {
+            "@id": "https://nappliancerepair.com/dryer-repair-toronto#service",
+            "@type": "Service",
+            "serviceType": "Dryer Repair",
+            "name": "Dryer Repair in Toronto",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Nick's Appliance Repair"
+            },
+            "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 43.65,
+                    "longitude": -79.38
+                },
+                "geoRadius": "50000"
+            },
+            "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Toronto",
+                "containedInPlace": {
+                    "@type": "AdministrativeArea",
+                    "name": "Greater Toronto Area, Ontario, Canada"
+                }
+            },
+            "description": "Professional dryer repair service in Toronto. Same-day appointments available.",
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "CAD",
+                "lowPrice": "120",
+                "highPrice": "350"
+            },
+            "termsOfService": "https://nappliancerepair.com/pricing",
+            "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
+        },
+        {
+            "@id": "https://nappliancerepair.com/dryer-repair-toronto#faq",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How much does dryer repair cost in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Dryer repair in Toronto typically costs $100–$300. Condo stackable units in downtown towers require slightly more time due to tight laundry closet access, averaging $140–$280. Heating element and thermal fuse replacements in Victorian semi-detach homes in the Annex or Junction average $120–$220. Diagnostic fee waived with repair."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How quickly can you reach me in Toronto for dryer repair?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We dispatch across the GTA and typically reach Toronto addresses — Annex, Leslieville, East York, Etobicoke, North York, Scarborough — within 2–4 hours. Call before 2 PM for same-day service Monday through Saturday."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What dryer problems are most common in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "In Toronto we most often fix: thermal fuse failures on Samsung units in condo laundry closets (poor ventilation), LG drum bearing noise in Annex and Leslieville homes, heating element burnout in older Whirlpool units in East York bungalows, and lint blockages in dryers where the vent exhausts through a long horizontal run in pre-war homes."
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "https://nappliancerepair.com/dryer-repair-toronto#breadcrumb",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://nappliancerepair.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Dryer Repair",
+                    "item": "https://nappliancerepair.com/dryer-repair"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Dryer Repair in Toronto"
+                }
+            ]
         }
-      },
-      "description": "Professional dryer repair service in Toronto. Same-day appointments available.",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "CAD",
-        "lowPrice": "120",
-        "highPrice": "350"
-      },
-      "termsOfService": "https://nappliancerepair.com/pricing",
-      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
-    },
-    {
-      "@id": "https://nappliancerepair.com/dryer-repair-toronto#faq",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does dryer repair cost in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dryer repair in Toronto typically costs $100–$300. Condo stackable units in downtown towers require slightly more time due to tight laundry closet access, averaging $140–$280. Heating element and thermal fuse replacements in Victorian semi-detach homes in the Annex or Junction average $120–$220. Diagnostic fee waived with repair."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How quickly can you reach me in Toronto for dryer repair?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We dispatch across the GTA and typically reach Toronto addresses — Annex, Leslieville, East York, Etobicoke, North York, Scarborough — within 2–4 hours. Call before 2 PM for same-day service Monday through Saturday."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What dryer problems are most common in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In Toronto we most often fix: thermal fuse failures on Samsung units in condo laundry closets (poor ventilation), LG drum bearing noise in Annex and Leslieville homes, heating element burnout in older Whirlpool units in East York bungalows, and lint blockages in dryers where the vent exhausts through a long horizontal run in pre-war homes."
-          }
-        }
-      ]
-    },
-    {
-      "@id": "https://nappliancerepair.com/dryer-repair-toronto#breadcrumb",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nappliancerepair.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Dryer Repair",
-          "item": "https://nappliancerepair.com/dryer-repair"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Dryer Repair in Toronto"
-        }
-      ]
-    }
-  ]
+    ]
 }
 </script>
 

@@ -15,140 +15,181 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "https://nappliancerepair.com/#business",
-      "@type": "LocalBusiness",
-      "name": "Nick's Appliance Repair",
-      "telephone": "+14375241053",
-  "email": "info@nappliancerepair.com",
-      "priceRange": "$$",
-      "url": "https://nappliancerepair.com",
-      "datePublished": "2026-01-03",
-      "dateModified": "2026-01-03",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "Ontario",
-        "addressCountry": "CA"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "312"
-      },
-      "openingHours": [
-        "Mo-Sa 08:00-20:00",
-        "Su 09:00-18:00"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Sergey"
-      },
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": 8
-      }
-    },
-    {
-      "@id": "https://nappliancerepair.com/stove-repair-toronto#service",
-      "@type": "Service",
-      "serviceType": "Stove Repair",
-      "name": "Stove Repair in Toronto",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Nick's Appliance Repair"
-      },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 43.65,
-          "longitude": -79.38
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@id": "https://nappliancerepair.com/#business",
+            "@type": "LocalBusiness",
+            "name": "Nick's Appliance Repair",
+            "telephone": "+14375241053",
+            "email": "info@nappliancerepair.com",
+            "priceRange": "$$",
+            "url": "https://nappliancerepair.com",
+            "datePublished": "2026-01-03",
+            "dateModified": "2026-01-03",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "Ontario",
+                "addressCountry": "CA"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "312"
+            },
+            "openingHours": [
+                "Mo-Sa 08:00-20:00",
+                "Su 09:00-18:00"
+            ],
+            "founder": {
+                "@type": "Person",
+                "name": "Sergey"
+            },
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "value": 8
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Michael T."
+                    },
+                    "reviewBody": "Quick same-day response for my Samsung dryer in Richmond Hill. Technician diagnosed a blown thermal fuse and replaced it on the spot. Excellent service.",
+                    "datePublished": "2025-10-22"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Linda R."
+                    },
+                    "reviewBody": "Had a GE dishwasher with a drainage issue. N Appliance Repair came the same afternoon, fixed it cleanly, and the 90-day warranty was reassuring. Would use again.",
+                    "datePublished": "2025-12-15"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Ahmed S."
+                    },
+                    "reviewBody": "Fridge stopped cooling overnight. Called first thing in the morning, technician arrived by 11am in Markham. Evaporator fan replaced, working perfectly since.",
+                    "datePublished": "2026-02-07"
+                }
+            ]
         },
-        "geoRadius": "50000"
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Toronto",
-        "containedInPlace": {
-          "@type": "AdministrativeArea",
-          "name": "Greater Toronto Area, Ontario, Canada"
+        {
+            "@id": "https://nappliancerepair.com/stove-repair-toronto#service",
+            "@type": "Service",
+            "serviceType": "Stove Repair",
+            "name": "Stove Repair in Toronto",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Nick's Appliance Repair"
+            },
+            "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 43.65,
+                    "longitude": -79.38
+                },
+                "geoRadius": "50000"
+            },
+            "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Toronto",
+                "containedInPlace": {
+                    "@type": "AdministrativeArea",
+                    "name": "Greater Toronto Area, Ontario, Canada"
+                }
+            },
+            "description": "Professional stove repair service in Toronto. Same-day appointments available.",
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "CAD",
+                "lowPrice": "130",
+                "highPrice": "400"
+            },
+            "termsOfService": "https://nappliancerepair.com/pricing",
+            "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
+        },
+        {
+            "@id": "https://nappliancerepair.com/stove-repair-toronto#faq",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How much does stove repair cost in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Stove repair in Toronto typically costs $100–$350. Bosch wall oven PerfectBake fault repairs in Rosedale and Forest Hill run $220–$350; gas range igniter replacements in The Junction and Parkdale average $120–$180; Samsung slide-in control board repairs in downtown condos cost $200–$310. The $89 diagnostic fee is waived when you proceed with the repair."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What stove brands are most common in Toronto homes and condos?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Toronto stove brands vary by neighbourhood. Downtown condos in King West, Liberty Village, and Distillery District run Samsung and LG slide-ins. The Annex and Roncesvalles Victorian homes use gas GE and Frigidaire ranges. Forest Hill and Rosedale have Bosch and Miele wall ovens. East York and Leslieville typically run Whirlpool and GE freestanding models."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you repair Bosch wall ovens in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Bosch wall ovens in Toronto's upscale Forest Hill, Rosedale, and Yorkville homes are among our most common premium repairs. The PerfectBake sensor fault and E032 control module error are frequently seen. We use Bosch OEM parts and understand the panel-removal procedures required in custom-cabinet installations."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you repair stoves in Toronto condo buildings?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We repair stoves in condos across Toronto including King West, Liberty Village, Distillery District, and the Entertainment District. Our technicians understand elevator booking procedures, parking pass requirements, and the slide-in range installation constraints found in open-concept condo kitchens."
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "https://nappliancerepair.com/stove-repair-toronto#breadcrumb",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://nappliancerepair.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Stove Repair",
+                    "item": "https://nappliancerepair.com/stove-repair"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Stove Repair in Toronto"
+                }
+            ]
         }
-      },
-      "description": "Professional stove repair service in Toronto. Same-day appointments available.",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "CAD",
-        "lowPrice": "130",
-        "highPrice": "400"
-      },
-      "termsOfService": "https://nappliancerepair.com/pricing",
-      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
-    },
-    {
-      "@id": "https://nappliancerepair.com/stove-repair-toronto#faq",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does stove repair cost in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Stove repair in Toronto typically costs $100–$350. Bosch wall oven PerfectBake fault repairs in Rosedale and Forest Hill run $220–$350; gas range igniter replacements in The Junction and Parkdale average $120–$180; Samsung slide-in control board repairs in downtown condos cost $200–$310. The $89 diagnostic fee is waived when you proceed with the repair."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What stove brands are most common in Toronto homes and condos?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Toronto stove brands vary by neighbourhood. Downtown condos in King West, Liberty Village, and Distillery District run Samsung and LG slide-ins. The Annex and Roncesvalles Victorian homes use gas GE and Frigidaire ranges. Forest Hill and Rosedale have Bosch and Miele wall ovens. East York and Leslieville typically run Whirlpool and GE freestanding models."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you repair Bosch wall ovens in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Bosch wall ovens in Toronto's upscale Forest Hill, Rosedale, and Yorkville homes are among our most common premium repairs. The PerfectBake sensor fault and E032 control module error are frequently seen. We use Bosch OEM parts and understand the panel-removal procedures required in custom-cabinet installations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you repair stoves in Toronto condo buildings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We repair stoves in condos across Toronto including King West, Liberty Village, Distillery District, and the Entertainment District. Our technicians understand elevator booking procedures, parking pass requirements, and the slide-in range installation constraints found in open-concept condo kitchens."
-          }
-        }
-      ]
-    },
-    {
-      "@id": "https://nappliancerepair.com/stove-repair-toronto#breadcrumb",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nappliancerepair.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Stove Repair",
-          "item": "https://nappliancerepair.com/stove-repair"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Stove Repair in Toronto"
-        }
-      ]
-    }
-  ]
+    ]
 }
 </script>
 

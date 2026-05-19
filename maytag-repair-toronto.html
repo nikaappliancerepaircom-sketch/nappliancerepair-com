@@ -15,90 +15,131 @@
 <!-- JSONLD-REGEN-v1 -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "https://nappliancerepair.com/#business",
-      "@type": "LocalBusiness",
-      "name": "Nick's Appliance Repair",
-      "telephone": "+1-437-524-1053",
-      "email": "info@nappliancerepair.com",
-      "url": "https://nappliancerepair.com",
-      "priceRange": "$$",
-      "datePublished": "2026-02-22",
-      "dateModified": "2026-04-30",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "Ontario",
-        "addressCountry": "CA"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "180"
-      },
-      "openingHours": [
-        "Mo-Sa 08:00-20:00",
-        "Su 09:00-18:00"
-      ],
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": 8
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Toronto, Ontario, Canada"
-      }
-    },
-    {
-      "@id": "https://nappliancerepair.com/maytag-repair-toronto#faq",
-      "@type": "FAQPage",
-      "mainEntity": [
+    "@context": "https://schema.org",
+    "@graph": [
         {
-          "@type": "Question",
-          "name": "How much does appliance repair cost in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Appliance Repair in Toronto typically costs $89–$450 depending on the issue and parts required. N Appliance Repair provides upfront pricing before any work begins. Call +1-437-524-1053 for a free estimate."
-          }
+            "@id": "https://nappliancerepair.com/#business",
+            "@type": "LocalBusiness",
+            "name": "Nick's Appliance Repair",
+            "telephone": "+1-437-524-1053",
+            "email": "info@nappliancerepair.com",
+            "url": "https://nappliancerepair.com",
+            "priceRange": "$$",
+            "datePublished": "2026-02-22",
+            "dateModified": "2026-04-30",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "Ontario",
+                "addressCountry": "CA"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "180"
+            },
+            "openingHours": [
+                "Mo-Sa 08:00-20:00",
+                "Su 09:00-18:00"
+            ],
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "value": 8
+            },
+            "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Toronto, Ontario, Canada"
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Michael T."
+                    },
+                    "reviewBody": "Quick same-day response for my Samsung dryer in Richmond Hill. Technician diagnosed a blown thermal fuse and replaced it on the spot. Excellent service.",
+                    "datePublished": "2025-10-22"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Linda R."
+                    },
+                    "reviewBody": "Had a GE dishwasher with a drainage issue. N Appliance Repair came the same afternoon, fixed it cleanly, and the 90-day warranty was reassuring. Would use again.",
+                    "datePublished": "2025-12-15"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Ahmed S."
+                    },
+                    "reviewBody": "Fridge stopped cooling overnight. Called first thing in the morning, technician arrived by 11am in Markham. Evaporator fan replaced, working perfectly since.",
+                    "datePublished": "2026-02-07"
+                }
+            ]
         },
         {
-          "@type": "Question",
-          "name": "Do you offer same-day appliance repair in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, N Appliance Repair offers same-day appliance repair in Toronto. Book before 12 PM on a weekday for best availability. Call +1-437-524-1053."
-          }
+            "@id": "https://nappliancerepair.com/maytag-repair-toronto#faq",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How much does appliance repair cost in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Appliance Repair in Toronto typically costs $89–$450 depending on the issue and parts required. N Appliance Repair provides upfront pricing before any work begins. Call +1-437-524-1053 for a free estimate."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer same-day appliance repair in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, N Appliance Repair offers same-day appliance repair in Toronto. Book before 12 PM on a weekday for best availability. Call +1-437-524-1053."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is your repair work covered by a warranty?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "All appliance repair performed by N Appliance Repair comes with a 90-day parts and labour warranty from the repair date."
+                    }
+                }
+            ]
         },
         {
-          "@type": "Question",
-          "name": "Is your repair work covered by a warranty?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All appliance repair performed by N Appliance Repair comes with a 90-day parts and labour warranty from the repair date."
-          }
+            "@id": "https://nappliancerepair.com/maytag-repair-toronto#breadcrumb",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://nappliancerepair.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Maytag Appliance Repair Toronto | Same-Day | (437) 524-1053"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "@id": "https://nappliancerepair.com/maytag-repair-toronto#breadcrumb",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nappliancerepair.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Maytag Appliance Repair Toronto | Same-Day | (437) 524-1053"
-        }
-      ]
-    }
-  ]
+    ]
 }
 </script>
 <style>

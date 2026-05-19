@@ -15,156 +15,197 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "https://nappliancerepair.com/#business",
-      "@type": "LocalBusiness",
-      "name": "Nick's Appliance Repair",
-      "telephone": "+14375241053",
-  "email": "info@nappliancerepair.com",
-      "priceRange": "$$",
-      "url": "https://nappliancerepair.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "Ontario",
-        "addressCountry": "CA"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "312"
-      },
-      "openingHours": [
-        "Mo-Sa 08:00-20:00",
-        "Su 09:00-18:00"
-      ],
-      "datePublished": "2024-01-15",
-      "dateModified": "2026-03-05",
-      "founder": {
-        "@type": "Person",
-        "name": "Sergey"
-      },
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": 8
-      }
-    },
-    {
-      "@id": "https://nappliancerepair.com/dishwasher-installation-toronto#service",
-      "@type": "Service",
-      "serviceType": "Dishwasher Installation",
-      "name": "Dishwasher Installation in Toronto",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Nick's Appliance Repair"
-      },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 43.65,
-          "longitude": -79.38
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@id": "https://nappliancerepair.com/#business",
+            "@type": "LocalBusiness",
+            "name": "Nick's Appliance Repair",
+            "telephone": "+14375241053",
+            "email": "info@nappliancerepair.com",
+            "priceRange": "$$",
+            "url": "https://nappliancerepair.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "Ontario",
+                "addressCountry": "CA"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "312"
+            },
+            "openingHours": [
+                "Mo-Sa 08:00-20:00",
+                "Su 09:00-18:00"
+            ],
+            "datePublished": "2024-01-15",
+            "dateModified": "2026-03-05",
+            "founder": {
+                "@type": "Person",
+                "name": "Sergey"
+            },
+            "numberOfEmployees": {
+                "@type": "QuantitativeValue",
+                "value": 8
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Michael T."
+                    },
+                    "reviewBody": "Quick same-day response for my Samsung dryer in Richmond Hill. Technician diagnosed a blown thermal fuse and replaced it on the spot. Excellent service.",
+                    "datePublished": "2025-10-22"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Linda R."
+                    },
+                    "reviewBody": "Had a GE dishwasher with a drainage issue. N Appliance Repair came the same afternoon, fixed it cleanly, and the 90-day warranty was reassuring. Would use again.",
+                    "datePublished": "2025-12-15"
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Ahmed S."
+                    },
+                    "reviewBody": "Fridge stopped cooling overnight. Called first thing in the morning, technician arrived by 11am in Markham. Evaporator fan replaced, working perfectly since.",
+                    "datePublished": "2026-02-07"
+                }
+            ]
         },
-        "geoRadius": "50000"
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Toronto",
-        "containedInPlace": {
-          "@type": "AdministrativeArea",
-          "name": "Greater Toronto Area, Ontario, Canada"
+        {
+            "@id": "https://nappliancerepair.com/dishwasher-installation-toronto#service",
+            "@type": "Service",
+            "serviceType": "Dishwasher Installation",
+            "name": "Dishwasher Installation in Toronto",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Nick's Appliance Repair"
+            },
+            "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 43.65,
+                    "longitude": -79.38
+                },
+                "geoRadius": "50000"
+            },
+            "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Toronto",
+                "containedInPlace": {
+                    "@type": "AdministrativeArea",
+                    "name": "Greater Toronto Area, Ontario, Canada"
+                }
+            },
+            "description": "Professional dishwasher installation service in Toronto. Same-day appointments available.",
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "CAD",
+                "lowPrice": "150",
+                "highPrice": "400"
+            },
+            "termsOfService": "https://nappliancerepair.com/pricing",
+            "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
+        },
+        {
+            "@id": "https://nappliancerepair.com/dishwasher-installation-toronto#faq",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How much does dishwasher installation cost in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Standard dishwasher installation in Toronto costs $149-$199. Replacement installation (removing old unit and installing new) runs $199-$249. Complex installations requiring plumbing modifications, granite countertop brackets, or panel-ready integration cost $299-$399. N Appliance Repair provides a firm written quote before work begins."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer same-day dishwasher installation in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. N Appliance Repair offers same-day dishwasher installation in Toronto when you call before 2 PM. Our installers arrive with all necessary connection hardware, mounting brackets, and tools. Call (437) 524-1053 to check today's availability."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What does dishwasher installation include?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our dishwasher installation in Toronto includes: removal and disposal of the old unit, positioning the new dishwasher, connecting the hot water supply line, routing the drain hose with a proper high loop, making the electrical connection, leveling and securing to the cabinet, and running a complete test cycle. All connections are leak-tested before we leave."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you install a dishwasher where there wasn't one before in Toronto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. First-time dishwasher installation in Toronto homes is one of our specialties. We create the cabinet opening, run a dedicated hot water supply line from the under-sink shutoff, route the drain hose to the sink drain or garbage disposal connection, and ensure a proper electrical connection. This is classified as a complex installation ($299-$399)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do I need to buy the dishwasher first?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes — we are an installation service, not a retailer. Purchase your new dishwasher from any retailer and have it delivered to your Toronto home. We handle the professional installation. If you need help choosing the right model for your kitchen layout, call us at (437) 524-1053 and we can advise on sizing and compatibility."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is there a warranty on the installation?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Every dishwasher installation by N Appliance Repair in Toronto includes a 90-day warranty on our workmanship — all connections, mounting, and plumbing. If any connection we made develops an issue within 90 days, we return and fix it at no charge. The dishwasher itself is covered by the manufacturer's warranty."
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "https://nappliancerepair.com/dishwasher-installation-toronto#breadcrumb",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://nappliancerepair.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Dishwasher Repair",
+                    "item": "https://nappliancerepair.com/dishwasher-repair"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Professional Dishwasher Installation in Toronto"
+                }
+            ]
         }
-      },
-      "description": "Professional dishwasher installation service in Toronto. Same-day appointments available.",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "CAD",
-        "lowPrice": "150",
-        "highPrice": "400"
-      },
-      "termsOfService": "https://nappliancerepair.com/pricing",
-      "serviceOutput": "Repaired appliance with 90-day warranty on parts and labour"
-    },
-    {
-      "@id": "https://nappliancerepair.com/dishwasher-installation-toronto#faq",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does dishwasher installation cost in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard dishwasher installation in Toronto costs $149-$199. Replacement installation (removing old unit and installing new) runs $199-$249. Complex installations requiring plumbing modifications, granite countertop brackets, or panel-ready integration cost $299-$399. N Appliance Repair provides a firm written quote before work begins."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer same-day dishwasher installation in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. N Appliance Repair offers same-day dishwasher installation in Toronto when you call before 2 PM. Our installers arrive with all necessary connection hardware, mounting brackets, and tools. Call (437) 524-1053 to check today's availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does dishwasher installation include?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our dishwasher installation in Toronto includes: removal and disposal of the old unit, positioning the new dishwasher, connecting the hot water supply line, routing the drain hose with a proper high loop, making the electrical connection, leveling and securing to the cabinet, and running a complete test cycle. All connections are leak-tested before we leave."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you install a dishwasher where there wasn't one before in Toronto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. First-time dishwasher installation in Toronto homes is one of our specialties. We create the cabinet opening, run a dedicated hot water supply line from the under-sink shutoff, route the drain hose to the sink drain or garbage disposal connection, and ensure a proper electrical connection. This is classified as a complex installation ($299-$399)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to buy the dishwasher first?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — we are an installation service, not a retailer. Purchase your new dishwasher from any retailer and have it delivered to your Toronto home. We handle the professional installation. If you need help choosing the right model for your kitchen layout, call us at (437) 524-1053 and we can advise on sizing and compatibility."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there a warranty on the installation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Every dishwasher installation by N Appliance Repair in Toronto includes a 90-day warranty on our workmanship — all connections, mounting, and plumbing. If any connection we made develops an issue within 90 days, we return and fix it at no charge. The dishwasher itself is covered by the manufacturer's warranty."
-          }
-        }
-      ]
-    },
-    {
-      "@id": "https://nappliancerepair.com/dishwasher-installation-toronto#breadcrumb",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nappliancerepair.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Dishwasher Repair",
-          "item": "https://nappliancerepair.com/dishwasher-repair"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Professional Dishwasher Installation in Toronto"
-        }
-      ]
-    }
-  ]
+    ]
 }
 </script>
 
