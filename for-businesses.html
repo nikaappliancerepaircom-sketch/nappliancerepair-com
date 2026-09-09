@@ -58,6 +58,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Software Behind Our Appliance Repair Operations in Toronto">
 <meta name="twitter:description" content="If you run an appliance repair business, this is how we handle dispatch, booking, invoicing, and customer communication using Fixlify.">
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 
@@ -88,7 +90,7 @@
     <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
   <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
 </section>
@@ -208,6 +210,7 @@
 </div>
 
 </main>
+<div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
 <div id="footer-placeholder"><!-- N Appliance Repair — Global Footer -->
 <footer class="narf" role="contentinfo">
   <div class="narf-top">
@@ -273,7 +276,7 @@
             <li><a href="/contact">Contact</a></li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" target="_blank" rel="noopener">Book Online</a></li>
+            <li><a href="/book" rel="noopener">Book Online</a></li>
             <li><a href="/sitemap.xml">Sitemap</a></li>
           </ul>
           <div class="narf-contact">

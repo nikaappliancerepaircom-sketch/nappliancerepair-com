@@ -101,6 +101,8 @@ footer a { color: #60a5fa; }
 
   $$
 <!-- SCHEMA-ENRICH-v1 -->
+<link rel="stylesheet" href="/css/site-booking.css">
+<script src="/js/site-booking.js" defer></script>
 </head>
 <body>
 <header>
@@ -134,7 +136,7 @@ footer a { color: #60a5fa; }
     <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
   <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
   <p data-callback-status role="status" aria-live="polite"></p>
-  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+  <noscript><p>JavaScript is required for this form. <a href="/book">Open online booking</a> or call the number on this page.</p></noscript>
 </form>
 <script src="/js/callback-form.js" defer></script>
 </section>
@@ -244,7 +246,7 @@ footer a { color: #60a5fa; }
 <div class="cta-inline">
   <h3>Samsung Ice Maker Not Making Ice in Toronto?</h3>
   <p>We fix Samsung ice makers same-day across all Toronto and GTA neighbourhoods. 4.9&#9733; rated, 90-day warranty, $89 diagnostic fee waived with repair.</p>
-  <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" class="btn" rel="noopener">Book Same-Day Repair</a>
+  <a href="/book" class="btn" rel="noopener">Book Same-Day Repair</a>
   <a href="tel:+14375241053" class="btn btn-outline">Call (437) 524-1053</a>
 </div>
 
@@ -309,5 +311,6 @@ footer a { color: #60a5fa; }
   </div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<div class="site-booking-card" data-booking-card><h2>Book your appliance repair</h2><p>Complete your booking on our secure booking page. Diagnostic visit: $89, waived when we carry out the repair.</p><a class="site-booking-button" href="/book">Book repair online</a></div>
 </body>
 </html>

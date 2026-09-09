@@ -23,3 +23,6 @@ fetch('/includes/header.html')
       document.body.appendChild(s);
     });
   });
+
+// Keep booking navigation consistent on newly published pages.
+(function(){if(!document.querySelector('script[src="/js/site-booking.js"]')){var s=document.createElement("script");s.src="/js/site-booking.js";s.defer=true;document.head.appendChild(s);}})();
