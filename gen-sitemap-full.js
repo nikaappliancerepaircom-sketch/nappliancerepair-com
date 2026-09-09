@@ -1,61 +1,64 @@
-/**
- * gen-sitemap-full.js — Full filesystem sitemap for nappliancerepair.com
- * Replaces drip-feed approach: scans ALL HTML files in the directory.
- */
-const fs = require('fs');
-const path = require('path');
-
+// Preserve the published URL set, including only indexable canonical pages.
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
 const DOMAIN = 'https://nappliancerepair.com';
-const DIR = __dirname;
-const SITEMAP_FILE = path.join(DIR, 'sitemap.xml');
-
-const SKIP_FILES = new Set(['404.html','service-template.html','ajax.html','book.html','preview.html','sitemap.html']);
-const SKIP_DIRS  = new Set(['node_modules','.git','_queue','assets','css','js','images','fonts','components','templates','styles','backups','backup','old','archive','reports','tools']);
-
-function hasNoindex(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8').slice(0, 2000);
-    return /noindex/.test(content);
-  } catch { return false; }
+const root = __dirname;
+const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+const sitemapFile = path.join(root, 'sitemap.xml');
+const previous = fs.readFileSync(sitemapFile, 'utf8');
+function cleanUrl(value) {
+  const url = new URL(value.replace(/&amp;/g, '&'));
+  let route = url.pathname.replace(/\.html$/, '').replace(/\/index$/, '').replace(/\/$/, '') || '/';
+  return 'https://' + url.hostname.replace(/^www\./, '') + route;
 }
-
-function walk(dir, prefix = '') {
-  const out = [];
-  let items; try { items = fs.readdirSync(dir, { withFileTypes: true }); } catch { return out; }
-  for (const item of items) {
-    if (item.isDirectory()) {
-      if (SKIP_DIRS.has(item.name)) continue;
-      out.push(...walk(path.join(dir, item.name), prefix + item.name + '/'));
-    } else if (item.name.endsWith('.html') && !item.name.includes('.bak')) {
-      if (!SKIP_FILES.has(item.name) && !item.name.startsWith('landing-')) {
-        const fullPath = path.join(dir, item.name);
-        if (!hasNoindex(fullPath)) {
-          out.push(prefix + item.name);
-        }
-      }
-    }
+// Publish scripts add their selected pages to sitemap.xml before this final cleanup.
+const published = new Set([...previous.matchAll(/<loc>\s*([^<]+)\s*<\/loc>/g)].map(m => cleanUrl(m[1].trim())));
+for (const rule of config.redirects || []) {
+  if (!rule.has && !rule.source.includes(':') && published.has(DOMAIN + rule.source)) {
+    const destination = cleanUrl(new URL(rule.destination, DOMAIN).href);
+    if (new URL(destination).origin === DOMAIN) published.add(destination);
   }
-  return out;
 }
-
-function mtime(relPath) {
-  try { return fs.statSync(path.join(DIR, relPath)).mtime.toISOString().slice(0, 10); }
-  catch { return new Date().toISOString().slice(0, 10); }
+const redirects = new Set((config.redirects || []).filter(r => !r.has && !r.source.includes(':')).map(r => r.source));
+const skipDirs = new Set(['node_modules', '.git', '.github', '.claude', '_queue', '_drafts', 'assets', 'css', 'js', 'images', 'img', 'fonts', 'includes', 'components', 'templates', 'styles', 'backups', 'backup', 'old', 'archive', 'reports', 'tools', 'tests', 'test-components', 'preview', 'premium-blog', 'src']);
+const skipFiles = new Set(['404.html', 'service-template.html', 'preview.html']);
+const urls = new Set();
+const skipped = {};
+function skip(reason) { skipped[reason] = (skipped[reason] || 0) + 1; }
+function attrs(tag) {
+  const result = {};
+  for (const match of tag.matchAll(/([\w:-]+)\s*=\s*(["'])(.*?)\2/gs)) result[match[1].toLowerCase()] = match[3];
+  return result;
 }
-
-const files = walk(DIR);
-
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${files.map(f => {
-  const urlPath = f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, '');
-  return `  <url>
-    <loc>${DOMAIN}${urlPath}</loc>
-    <lastmod>${mtime(f)}</lastmod>
-    <priority>${f === 'index.html' ? '1.0' : '0.8'}</priority>
-  </url>`;
-}).join('\n')}
-</urlset>`;
-
-fs.writeFileSync(SITEMAP_FILE, xml);
-console.log(`Sitemap: ${files.length} URLs → nappliancerepair.com/sitemap.xml`);
+function walk(dir, prefix = '') {
+  for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+    if (entry.isDirectory()) {
+      if (!skipDirs.has(entry.name) && !entry.name.startsWith('.')) walk(path.join(dir, entry.name), prefix + entry.name + '/');
+      continue;
+    }
+    if (!entry.isFile() || !entry.name.endsWith('.html') || skipFiles.has(entry.name) || /\.bak\.|^landing[-.]/.test(entry.name)) continue;
+    const rel = prefix + entry.name;
+    let route = '/' + rel.replace(/\.html$/, '').replace(/(^|\/)index$/, '');
+    route = route.replace(/\/$/, '') || '/';
+    if (!published.has(DOMAIN + route)) { skip('not_in_published_sitemap'); continue; }
+    if (redirects.has(route)) { skip('redirect'); continue; }
+    const text = fs.readFileSync(path.join(dir, entry.name), 'utf8');
+    const head = text.split(/<\/head\s*>/i)[0];
+    const metas = [...head.matchAll(/<meta\b[^>]*>/gi)].map(m => attrs(m[0]));
+    if (metas.some(m => /^(robots|googlebot)$/i.test(m.name || '') && /\bnoindex\b/i.test(m.content || ''))) { skip('noindex'); continue; }
+    const canonical = [...head.matchAll(/<link\b[^>]*>/gi)].map(m => attrs(m[0])).filter(a => (a.rel || '').toLowerCase() === 'canonical');
+    if (canonical.length !== 1) { skip('missing_or_multiple_canonical'); continue; }
+    const expected = DOMAIN + route;
+    if ((canonical[0].href || '').replace(/\/$/, '') !== expected.replace(/\/$/, '')) { skip('alternate_or_invalid_canonical'); continue; }
+    urls.add(expected);
+  }
+}
+walk(root);
+const escapeXml = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+// Checkout mtimes do not establish when content changed; omit optional lastmod.
+const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+  + [...urls].sort().map(url => `  <url><loc>${escapeXml(url)}</loc></url>`).join('\n')
+  + '\n</urlset>\n';
+fs.writeFileSync(sitemapFile, xml);
+console.log(JSON.stringify({domain: DOMAIN, urls: urls.size, skipped}));
