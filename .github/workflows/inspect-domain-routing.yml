@@ -1,0 +1,37 @@
+name: Inspect domain routing
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read project domain status
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          node --input-type=module <<'JS'
+          const token = process.env.VERCEL_TOKEN;
+          if (!token) throw new Error('VERCEL_TOKEN is not configured');
+          const team = 'team_rGZDvVE6QH6tiEW89jMEd1al';
+          const projects = [
+            ['nappliancerepair.com', 'prj_hn3veesPIIs3mF3VEbwzdXt7vVjo'],
+            ['appliancerepairneary.com', 'prj_FD761BZQz0XWwgwNnzyDzBjGJZvM'],
+            ['fixlifyservices.com', 'prj_A0WxXGXw98m1vVjZdbbjsVcngkxQ'],
+            ['nikaappliancerepair.com', 'prj_RJvJx4p2p4vbVXUI2hs3RRSCx324'],
+          ];
+          for (const [domain, project] of projects) {
+            const response = await fetch(`https://api.vercel.com/v9/projects/${project}/domains?teamId=${team}`, {
+              headers: {Authorization: `Bearer ${token}`}, signal: AbortSignal.timeout(30000),
+            });
+            const data = await response.json();
+            console.log(JSON.stringify({domain, status: response.status, error: data.error?.code,
+              domains: data.domains?.map(d => ({name: d.name, verified: d.verified, redirect: d.redirect, redirectStatusCode: d.redirectStatusCode}))}));
+            if (response.status === 401 || response.status === 403) throw new Error('Stored Vercel token cannot read the authorized team');
+          }
+          JS
