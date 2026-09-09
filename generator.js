@@ -51,7 +51,7 @@ const INTRO_TEMPLATES = {
     (s) => `<p>When your ${s.name.toLowerCase()} breaks down, you need fast and reliable repair from a technician who knows the brand. Our certified appliance repair technicians have serviced thousands of ${s.name.toLowerCase()}s across Toronto and GTA. We carry common parts in our trucks, so most repairs are completed in a single visit. Upfront pricing, 90-day warranty on all parts and labor.</p>
 <h2>Common ${s.name} Issues We Repair</h2>
 <ul>${s.commonIssues.map(i => `<li>${i.charAt(0).toUpperCase() + i.slice(1)}</li>`).join('')}</ul>
-<p>Typical repair cost: <strong>${s.priceRange}</strong>. Diagnostic fee ($80) is waived when you proceed with the repair.</p>`,
+<p>Typical repair cost: <strong>${s.priceRange}</strong>. Diagnostic fee ($89) is waived when you proceed with the repair.</p>`,
     (s) => `<p>A broken ${s.name.toLowerCase()} disrupts your whole household. N Appliance Repair provides expert ${s.name.toLowerCase()} repair across the GTA with same-day availability. Our licensed technicians diagnose the problem quickly and fix it right &mdash; with a 90-day warranty included on every repair.</p>
 <h2>Why Choose Us for ${s.name} Repair?</h2>
 <ul><li>Same-day scheduling available Monday through Saturday</li><li>90-day warranty on all parts and labour</li><li>Transparent pricing &mdash; written quote before any work begins</li><li>4.9&#9733; rated with over 5,200 GTA repairs completed</li><li>Licensed and insured technicians</li></ul>
@@ -163,7 +163,7 @@ function generateFAQ(type, data) {
     const s = service;
     items = [
       faqItem(`How much does ${s.name.toLowerCase()} repair cost in Toronto?`,
-        `${s.name} repair in Toronto and the GTA typically costs ${s.priceRange}. The exact price depends on the fault, brand, and parts required. We charge an $80 diagnostic fee, which is waived when you proceed with the repair. You receive a firm written quote before any work begins.`),
+        `${s.name} repair in Toronto and the GTA typically costs ${s.priceRange}. The exact price depends on the fault, brand, and parts required. We charge an $89 diagnostic fee, which is waived when you proceed with the repair. You receive a firm written quote before any work begins.`),
       faqItem(`How long does ${s.name.toLowerCase()} repair take?`,
         `Most ${s.name.toLowerCase()} repairs are completed in a single visit of 1\u20132 hours. Our technicians carry common parts on their service vehicles. If a specialty part is required, we typically complete the repair the next business day.`),
       faqItem(`Do you offer same-day ${s.name.toLowerCase()} repair in the GTA?`,
@@ -191,7 +191,7 @@ function generateFAQ(type, data) {
       faqItem(`What are your service hours in ${c.name}?`,
         `We operate Monday through Saturday 8am\u20138pm and Sunday 9am\u20136pm in ${c.name}. Same-day appointments are available during business hours.`),
       faqItem(`How much does appliance repair cost in ${c.name}?`,
-        `Repair costs in ${c.name} range from $100 for simple fixes to $450 for complex repairs like compressor replacement. An $80 diagnostic fee applies but is waived when you proceed with the repair. You receive a written quote before any work begins.`),
+        `Repair costs in ${c.name} range from $100 for simple fixes to $450 for complex repairs like compressor replacement. An $89 diagnostic fee applies but is waived when you proceed with the repair. You receive a written quote before any work begins.`),
       faqItem(`Do you offer a warranty on repairs in ${c.name}?`,
         `Yes. All appliance repairs in ${c.name} are backed by our 90-day parts and labour warranty. If a covered issue recurs within 90 days, we return and fix it at no cost.`),
       faqItem(`What brands do you repair in ${c.name}?`,
@@ -204,7 +204,7 @@ function generateFAQ(type, data) {
     const c = city;
     items = [
       faqItem(`How much does ${s.name.toLowerCase()} repair cost in ${c.name}?`,
-        `${s.name} repair in ${c.name} typically costs ${s.priceRange}. The price depends on the fault and parts needed. Our $80 diagnostic fee is waived when you proceed with the repair. You receive a firm written quote before any work starts.`),
+        `${s.name} repair in ${c.name} typically costs ${s.priceRange}. The price depends on the fault and parts needed. Our $89 diagnostic fee is waived when you proceed with the repair. You receive a firm written quote before any work starts.`),
       faqItem(`Do you offer same-day ${s.name.toLowerCase()} repair in ${c.name}?`,
         `Yes. We offer same-day ${s.name.toLowerCase()} repair in ${c.name} and across ${c.region}, Monday through Saturday. Call (437) 524-1053 to check availability for today.`),
       faqItem(`What ${s.name.toLowerCase()} brands do you repair in ${c.name}?`,
@@ -225,7 +225,7 @@ function generateFAQ(type, data) {
     const s = service;
     items = [
       faqItem(`How much does ${b.name} ${s.name.toLowerCase()} repair cost in the GTA?`,
-        `${b.name} ${s.name.toLowerCase()} repair in the GTA typically costs ${s.priceRange}. The exact cost depends on the model, fault, and parts required. Diagnostic fee ($80) is waived with repair.`),
+        `${b.name} ${s.name.toLowerCase()} repair in the GTA typically costs ${s.priceRange}. The exact cost depends on the model, fault, and parts required. Diagnostic fee ($89) is waived with repair.`),
       faqItem(`Do you repair all ${b.name} ${s.name.toLowerCase()} models?`,
         `Yes. We repair all current and older ${b.name} ${s.name.toLowerCase()} models throughout the GTA. Our technicians carry ${b.name}-compatible parts and are up to date on the latest model error codes and repair procedures.`),
       faqItem(`How quickly can you fix my ${b.name} ${s.name.toLowerCase()}?`,
@@ -247,7 +247,7 @@ function generateFAQ(type, data) {
       faqItem(`What ${b.name} appliances do you repair?`,
         `We repair all ${b.name} household appliances: refrigerators, washing machines, dryers, dishwashers, ovens, ranges, and stoves. All models are covered throughout the GTA.`),
       faqItem(`How much does ${b.name} appliance repair cost in Toronto?`,
-        `${b.name} appliance repair cost depends on the appliance type and fault. Typical ranges: washers/dryers $100\u2013$350, refrigerators $150\u2013$400, dishwashers $120\u2013$350. The $80 diagnostic fee is waived with repair.`),
+        `${b.name} appliance repair cost depends on the appliance type and fault. Typical ranges: washers/dryers $100\u2013$350, refrigerators $150\u2013$400, dishwashers $120\u2013$350. The $89 diagnostic fee is waived with repair.`),
       faqItem(`Do you repair all ${b.name} models?`,
         `Yes. We repair all current and discontinued ${b.name} models. Our technicians are up to date on ${b.name} error codes, common failure points, and parts availability across the GTA.`),
       faqItem(`Is there a warranty on ${b.name} repairs?`,
@@ -268,7 +268,7 @@ function generateFAQ(type, data) {
       faqItem(`Do you repair ${b.name} appliances in ${c.name}?`,
         `Yes. We provide ${b.name} appliance repair throughout ${c.name} and ${c.region} with same-day availability. Our technicians carry ${b.name}-compatible parts for efficient on-site repairs.`),
       faqItem(`How much does ${b.name} repair cost in ${c.name}?`,
-        `${b.name} appliance repair in ${c.name} costs $100\u2013$450 depending on the appliance and fault. Diagnostic fee ($80) is waived when you proceed with the repair. Written quote provided before any work begins.`),
+        `${b.name} appliance repair in ${c.name} costs $100\u2013$450 depending on the appliance and fault. Diagnostic fee ($89) is waived when you proceed with the repair. Written quote provided before any work begins.`),
       faqItem(`How quickly can you come to ${c.name} for ${b.name} repair?`,
         `Same-day ${b.name} repair is available in ${c.name} Monday through Saturday. Call (437) 524-1053 before noon for the best chance of same-day service.`),
       faqItem(`What ${b.name} appliances do you fix in ${c.name}?`,

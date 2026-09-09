@@ -179,7 +179,7 @@ const services = [
       { name: 'Temperature Fluctuations', desc: 'Thermistor, damper control, air flow path, and sealed system diagnostics for inconsistent cooling.' }
     ],
     pricingRows: [
-      ['Diagnostic visit (waived with repair)', '$80'],
+      ['Diagnostic visit (waived with repair)', '$89'],
       ['Standard repair — thermostat, fan, defrost system', '$150 – $300'],
       ['Control board / main electronic component', '$220 – $380'],
       ['Compressor / sealed system repair', '$300 – $500']
@@ -225,7 +225,7 @@ const services = [
       { name: 'Control Board / Electronic', desc: 'Main board, display, sensors, and electronic component repair or replacement with OEM parts.' }
     ],
     pricingRows: [
-      ['Diagnostic visit (waived with repair)', '$80'],
+      ['Diagnostic visit (waived with repair)', '$89'],
       ['Standard repair — motor, pump, element, valve', '$150 – $280'],
       ['Control board / main electronic component', '$220 – $380'],
       ['Complex repair — bearing, drum, transmission', '$280 – $450']
@@ -271,7 +271,7 @@ const services = [
       { name: 'Overheating / Burning Smell', desc: 'Vent obstruction, thermostat, heating element, and lint buildup inspection — a fire safety priority.' }
     ],
     pricingRows: [
-      ['Diagnostic visit (waived with repair)', '$80'],
+      ['Diagnostic visit (waived with repair)', '$89'],
       ['Standard repair — element, belt, thermostat, fuse', '$150 – $290'],
       ['Control board / main electronic component', '$220 – $380'],
       ['Complex repair — motor, gas valve, drum bearing', '$280 – $450']
@@ -317,7 +317,7 @@ const services = [
       { name: 'Not Drying Dishes', desc: 'Heating element, vent, rinse aid dispenser, and fan motor diagnostics for drying failures.' }
     ],
     pricingRows: [
-      ['Diagnostic visit (waived with repair)', '$80'],
+      ['Diagnostic visit (waived with repair)', '$89'],
       ['Standard repair — pump, valve, gasket, latch', '$140 – $270'],
       ['Control board / main electronic component', '$220 – $370'],
       ['Complex repair — motor, tub seal, spray system', '$260 – $420']
@@ -363,7 +363,7 @@ const services = [
       { name: 'Gas Oven Ignition Problems', desc: 'Igniter, gas valve, flame sensor, and spark module diagnostics for gas ovens that won\'t light.' }
     ],
     pricingRows: [
-      ['Diagnostic visit (waived with repair)', '$80'],
+      ['Diagnostic visit (waived with repair)', '$89'],
       ['Standard repair — element, igniter, thermostat, sensor', '$150 – $300'],
       ['Control board / touchpad replacement', '$230 – $400'],
       ['Complex repair — gas valve, door mechanism, convection motor', '$280 – $480']
@@ -465,7 +465,7 @@ function generateContent(hood, svc) {
     contentBlocks.push(`<li><strong>Step ${i + 1}:</strong> ${step}</li>`);
   });
   contentBlocks.push('</ul>');
-  contentBlocks.push(`<p>Once we identify the problem, we provide a firm written quote before any repair work begins. The $80 diagnostic fee is waived when you proceed with the repair. Most ${s.applianceLower} repairs in ${h.name} are completed in one to two hours on the first visit.</p>`);
+  contentBlocks.push(`<p>Once we identify the problem, we provide a firm written quote before any repair work begins. The $89 diagnostic fee is waived when you proceed with the repair. Most ${s.applianceLower} repairs in ${h.name} are completed in one to two hours on the first visit.</p>`);
 
   // Cost guide
   // (handled in pricing table section)
@@ -506,7 +506,7 @@ function generateFAQs(hood, svc) {
   return [
     {
       q: `How much does ${s.applianceLower} repair cost in ${h.name}?`,
-      a: `${s.appliance} repair in ${h.name} typically costs ${s.costRange}. The exact price depends on the brand, model, and specific issue. ${brandList.split(',')[0].trim()} and ${brandList.split(',')[1].trim()} repairs in ${h.name}'s ${h.housingAge.split(',')[0]} homes are among our most common calls. The $80 diagnostic fee is waived when you proceed with the repair. We provide a firm written quote before any work begins.`
+      a: `${s.appliance} repair in ${h.name} typically costs ${s.costRange}. The exact price depends on the brand, model, and specific issue. ${brandList.split(',')[0].trim()} and ${brandList.split(',')[1].trim()} repairs in ${h.name}'s ${h.housingAge.split(',')[0]} homes are among our most common calls. The $89 diagnostic fee is waived when you proceed with the repair. We provide a firm written quote before any work begins.`
     },
     {
       q: `What ${s.applianceLower} brands do you repair in ${h.name}?`,
