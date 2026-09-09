@@ -180,14 +180,19 @@ a { color: #2563EB; text-decoration: none; } a:hover { text-decoration: underlin
     <li><strong>Upfront pricing.</strong> No hourly rates, no surprises.</li>
     <li><strong>Insured &amp; bonded</strong> &mdash; certified to work on Samsung, LG, Whirlpool, Bosch, GE, Frigidaire, Kenmore, KitchenAid, and Miele.</li>
   </ul>
-  <form class="lz-quick-form" action="/contact" method="post" aria-label="Quick repair request">
-    <p class="lz-quick-form-lead">Prefer to type? Send a quick request and we'll call you back within 30 minutes.</p>
-    <label class="lz-quick-field"><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
-    <label class="lz-quick-field"><span>Phone number</span><input type="tel" name="phone" autocomplete="tel" required></label>
-    <label class="lz-quick-field"><span>City</span><input type="text" name="city" value="Toronto" autocomplete="address-level2"></label>
-    <label class="lz-quick-field"><span>What needs fixing?</span><textarea name="issue" rows="3" placeholder="e.g. Samsung fridge not cooling"></textarea></label>
-    <button type="submit" class="lz-quick-submit">Request a callback</button>
-  </form>
+  <form class="lz-quick-form" action="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce" method="post" aria-label="Quick repair request">
+    <p class="lz-quick-form-lead">Prefer to type? Send a quick request and we'll contact you shortly.</p>
+    <label class="lz-quick-field"><span>Your name</span><input type="text" name="name" maxlength="80" autocomplete="name" required></label>
+    <label class="lz-quick-field"><span>Phone number</span><input type="tel" name="phone" maxlength="20" autocomplete="tel" required></label>
+    <label class="lz-quick-field"><span>Service address</span><input type="text" name="address" maxlength="200" autocomplete="street-address" required></label>
+  <label class="lz-quick-field"><span>City</span><input type="text" name="city" maxlength="80" value="Toronto" autocomplete="address-level2"></label>
+    <label class="lz-quick-field"><span>What needs fixing?</span><textarea name="issue" maxlength="1900" rows="3" placeholder="e.g. Samsung fridge not cooling"></textarea></label>
+    <button type="submit" disabled class="lz-quick-submit">Request a callback</button>
+  <label hidden aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+  <p data-callback-status role="status" aria-live="polite"></p>
+  <noscript><p>JavaScript is required for this form. <a href="https://hub.fixlify.app/book/nicks-appliance-repair-b8c8ce">Open online booking</a> or call the number on this page.</p></noscript>
+</form>
+<script src="/js/callback-form.js" defer></script>
 </section>
 <style>
 .lz-trust-block{max-width:880px;margin:24px auto;padding:24px 20px;border:1px solid rgba(15,23,42,0.08);border-radius:12px;background:#FAFAFA;font-size:15px;line-height:1.65;color:#374151}
